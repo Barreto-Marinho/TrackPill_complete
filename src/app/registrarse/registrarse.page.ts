@@ -41,7 +41,7 @@ export class RegistrarsePage implements OnInit {
           }
         }
       }else{
-        this.Imprimir_error("No todos los campos estan seleccionados")
+        this.Imprimir_error("Revise que todos los campos se llenaran correctamente")
       }
     }
     catch(error){console.log('Error',error)} 
