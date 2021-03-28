@@ -98,3 +98,4 @@ export class RegistrarsePage implements OnInit {
 
 }
 
+/*hola putito*/
