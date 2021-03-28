@@ -8,22 +8,23 @@
     <ion-icon name="arrow-back"></ion-icon>
   </ion-button>
   <ion-col> 
+    <ion-row>
     <div class="item_nombre">
       <label class="labels" >Nombre:</label>
-      <ion-input  placeholder="Nombre" #nombre></ion-input></div>  
-    <div class="item_apellido">
+      <ion-input  placeholder="Nombre" #nombre></ion-input></div>  </ion-row>
+      <ion-row><div class="item_apellido">
       <label class="labels"  >Apellido:</label>
-      <ion-input  placeholder="Apellido" #apellido></ion-input></div> 
-    <div class="item_correo">
+      <ion-input  placeholder="Apellido" #apellido></ion-input></div> </ion-row>
+      <ion-row><div class="item_correo">
       <label class="labels">Correo:</label>
-      <ion-input  placeholder="Correo" type="Correo" #email></ion-input></div> 
-    <div class="item_contra">
+      <ion-input  placeholder="Correo" type="Correo" #email></ion-input></div> </ion-row>
+      <ion-row><div class="item_contra">
       <label class="labels">Contraseña:</label>
-      <ion-input placeholder="Contraseña" type="password" #password ></ion-input></div> 
-    <div class="item_contra_Ver">
+      <ion-input placeholder="Contraseña" type="password" #password ></ion-input></div></ion-row> 
+      <ion-row><div class="item_contra_Ver">
       <label class="labels">Repita Contraseña :</label>
-      <ion-input placeholder="Repita Contraseña" type="password" #verify_password></ion-input></div> 
-    <div class="control_group">
+      <ion-input placeholder="Repita Contraseña" type="password" #verify_password></ion-input></div> </ion-row>
+      <ion-row><div class="control_group">
       <label  class="labels">Fecha de nacimiento:</label>
       <div class="controls">
         <select name="dob-day" id="dob-day" #dia>
@@ -202,18 +203,18 @@
           <option value="1900">1900</option>
         </select>
       </div>
-    </div>
-    <div class="Radio_sexo">
+    </div></ion-row>
+    <ion-row><div class="Radio_sexo">
       <label class="labels">Genero:</label>
       <form action="" #genero>
         <input type="radio" name="gender" value="male" (click)="male_boton()"> Male<br>
         <input type="radio" name="gender" value="female" (click)="female_boton()"> Female<br>
       </form>
-    </div>
-    <ion-button 
+    </div></ion-row>
+    <ion-row><ion-button 
       class="Boton_Reg"
       type="submit" (click)="onRegister(email, password,nombre,apellido, dia,mes, anio,verify_password)"
       
-    >Registrarse</ion-button>
+    >Registrarse</ion-button></ion-row>
   </ion-col>
 </ion-content>
