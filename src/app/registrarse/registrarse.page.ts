@@ -61,8 +61,8 @@ export class RegistrarsePage implements OnInit {
         }
       }
     }
-    if(password.length<=6){
-      this.Imprimir_error("La contraseña debe tener mas de 6 caracteres")
+    if(password.length<6){
+      this.Imprimir_error("La contraseña debe tener al menos 6 caracteres")
       return(0)
     }else{
       if(requisitos[0]==0){
