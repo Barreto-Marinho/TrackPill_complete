@@ -26,17 +26,22 @@ export class RegistrarsePage implements OnInit {
 
   async onRegister(email, password,nombre,apellido, dia, mes, anio,verify_password):Promise<void>{
     try{
-      if(this.verificar_contra(password.value)){
-        if(verify_password.value==password.value){
-          const user= await  this.authSvc.register(email.value,password.value,nombre.value,apellido.value,dia.value,mes.value,anio.value,this.var);
-          if(user){
-            this.router.navigate(['/verificacion']);
+      const user= await  this.authSvc.register(email.value,password.value,nombre.value,apellido.value,dia.value,mes.value,anio.value,this.var);
+      if((email.value!="")&&(password.value!="")&&(apellido.value!="")&&(dia.value!="")&&(mes.value!="")&&(anio.value!="")&&(verify_password.value!="")&&(this.var!="male")){
+        if(this.verificar_contra(password.value)){
+          if(verify_password.value==password.value){
+            const user= await  this.authSvc.register(email.value,password.value,nombre.value,apellido.value,dia.value,mes.value,anio.value,this.var);
+            if(user){
+              this.router.navigate(['/verificacion']);
+            }else{
+              this.Imprimir_error("El correo ya esta siendo usado por otra cuenta")
+            }
           }else{
-            this.Imprimir_error("El correo ya esta siendo usado por otra cuenta")
+            this.Imprimir_error("Las contraseñas no coinciden")
           }
-        }else{
-          this.Imprimir_error("Las contraseñas no coinciden")
         }
+      }else{
+
       }
     }
     catch(error){console.log('Error',error)} 
