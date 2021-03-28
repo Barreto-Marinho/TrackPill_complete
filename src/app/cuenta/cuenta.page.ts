@@ -1,5 +1,7 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,10 +10,8 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./cuenta.page.scss'],
 })
 export class CuentaPage implements OnInit {
-
-
-  
-  constructor(private authSvc:AuthService, private router: Router) { }
+  constructor(private authSvc:AuthService, private router:Router,
+              private alertController: AlertController){ }
 
   ngOnInit() {
   }
@@ -22,6 +22,8 @@ export class CuentaPage implements OnInit {
         const estaverificado = this.authSvc.isEmailVerify(user)
         console.log('verificado->',estaverificado)
         this.redigirir_usua(estaverificado);
+      }else{
+        this.Imprimir_error("Revise su datos: Contraseña y Correo no coinciden")
       }
     }
     catch(error){console.log('Error->',error)} 
@@ -34,4 +36,19 @@ export class CuentaPage implements OnInit {
     }
   }
 
+  async Imprimir_error(texto){
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Alert',
+
+      subHeader: texto,
+      //message: texto,
+      buttons: ['OK']
+    });
+
+    await alert.present();
 }
+ 
+
+}
+
