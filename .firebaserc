@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "trackpill-e723c": {
+      "hosting": {
+        "app": [
+          "trackpill-e723c"
+        ]
+      }
+    }
+  }
+}

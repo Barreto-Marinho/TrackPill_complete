@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>olvido contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="Recuperar(email)" expand="block">Enviar </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row>
+    <ion-col>
+      <p><a href="/cuenta">¿Ya tiene contraseña?</a></p>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "Trackpill",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

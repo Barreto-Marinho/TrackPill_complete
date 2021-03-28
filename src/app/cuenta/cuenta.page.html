@@ -1,0 +1,14 @@
+<ion-header class="ion-no-border">
+    <ion-title>Cuenta</ion-title>
+</ion-header>
+
+<ion-content>
+  <ion-label class="text_user"  >Usuario/email:</ion-label>
+  <ion-input class="user" placeholder="Usuario/email" #email></ion-input>
+  <ion-label class="text_contra">Contraseña:</ion-label>
+  <ion-input class="contra" type= "password" placeholder="Contraseña" #password></ion-input>
+  <ion-button class="Boton_Entrar" type="submit" (click)="onLogin(email, password)">Entrar</ion-button>
+  <ion-button [routerLink]="['/olvido-contra']" class="Boton_olvidar">¿Olvido la contraseña?</ion-button>
+  <ion-button [routerLink]="['/registrarse']" class="Boton_registrarse">Registrarse</ion-button>
+
+</ion-content>

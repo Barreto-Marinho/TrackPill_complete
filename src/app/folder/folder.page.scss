@@ -1,0 +1,142 @@
+ion-menu-button {
+  color: #010202;
+}
+
+
+ion-toolbar {
+  --background: #3d8af7;
+}
+
+ion-header {
+  --ion-background-color:#3d8af7;
+}
+
+ion-content {
+  --ion-background-color:#3d8af7;
+}
+
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.Comp1 {
+  --background:#ff5d55;
+  --background-activated:#fd6e67;
+  --color:#140b0a;
+  margin: 0;
+  position: absolute;
+  top: 24%;
+  right: 51.5%;
+  width: 37%;
+  height: 18%;
+  font-weight: 1000;
+  font-size:400% ;
+}
+.Comp2 {
+  --background:#77dd77;
+  --background-activated:#9cda9c;
+  --color:#140b0a;
+  margin: 0;
+  position: absolute;
+  top: 24%;
+  left: 51.5%;
+  width: 37%;
+  height: 18%;
+  font-weight: 1000;
+  font-size:400% ;
+}
+.Comp3 {
+  --background:#ffc581;
+  --background-activated:#ffd3a1;
+  --color:#140b0a;
+  margin: 0;
+  position: absolute;
+  top: 44%;
+  right: 51.5%;
+  width: 37%;
+  height: 18%;
+  font-weight: 1000;
+  font-size:400% ;
+}
+.Comp4 {
+  --background:#fef67f;
+  --background-activated:#fcf6a6;
+  --color:#140b0a;
+  margin: 0;
+  position: absolute;
+  top: 44%;
+  left: 51.5%;
+  width: 37%;
+  height: 18%;
+  font-weight: 1000;
+  font-size:400% ;
+
+}
+.Comp5 {
+  --background:#0c59cf;
+  --background-activated:#3874ce;
+  --color:#140b0a;
+  margin: 0;
+  position: absolute;
+  top: 64%;
+  right: 51.5%;
+  --expand: "full";
+  width: 37%;
+  height: 18%;
+  font-weight: 1000;
+  font-size:400% ;
+}
+.Comp6 {
+  --background:#e692f8;
+  --background-activated:#eab9f5;
+  --color:#140b0a;
+  margin: 0;
+  position: absolute;
+  top: 64%;
+  left: 51.5%;
+  width: 37%;
+  height: 18%;
+  font-weight: 1000;
+  font-size:400% ;
+}
+.seg_boton {
+  --background:#ffc581;
+  --background-activated:#fdd6a9;
+  --color:#140b0a;
+  position: absolute;
+  bottom: 2%;
+  right: 4%;
+  width: 30%;
+  height: 6%;
+  font-weight: 1000;
+  font-size:90% ;
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
