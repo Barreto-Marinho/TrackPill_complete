@@ -26,8 +26,7 @@ export class RegistrarsePage implements OnInit {
 
   async onRegister(email, password,nombre,apellido, dia, mes, anio,verify_password):Promise<void>{
     try{
-      this.verificar_contra(password.value)
-      if(0){
+      if(this.verificar_contra(password.value)){
         if(verify_password.value==password.value){
           const user= await  this.authSvc.register(email.value,password.value,nombre.value,apellido.value,dia.value,mes.value,anio.value,this.var);
           if(user){
@@ -38,8 +37,6 @@ export class RegistrarsePage implements OnInit {
         }else{
           this.Imprimir_error("Las contraseñas no coinciden")
         }
-      }else{
-
       }
     }
     catch(error){console.log('Error',error)} 
