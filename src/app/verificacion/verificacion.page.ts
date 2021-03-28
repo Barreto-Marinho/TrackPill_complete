@@ -21,6 +21,12 @@ export class VerificacionPage{
     }catch(error){console.log('Error->',error)}
   }
 
+  async Devolver():Promise<void>{
+    try{
+      this.router.navigate(['/cuenta/']);
+    }catch(error){console.log('Error->',error)}
+  }
+
   ngOnDestroy(): void{
     this.authSvc.logout();
   }
