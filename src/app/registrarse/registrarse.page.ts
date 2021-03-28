@@ -55,7 +55,7 @@ export class RegistrarsePage implements OnInit {
         if((asci>=97)&&(asci<=122)){
           requisitos[1]=1;//minus
         }else{
-          if((asci>=97)&&(asci<=122)){
+          if((asci>=48)&&(asci<=57)){
             requisitos[2]=1;//num
           }
         }
