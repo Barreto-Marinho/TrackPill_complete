@@ -11,14 +11,18 @@ ion-header {
     
   }
 
-
+ion-col{
+    position:absolute;
+    top :10%;
+    left: 12.5%;
+}
 
 .item_nombre{
     background-color:#75a9f9;
-    top:10%;
+    //top:10%;
     --background: #75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //right:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -27,10 +31,10 @@ ion-header {
 }
 .item_apellido{
     background-color:#75a9f9;
-    top:20%;
+    //top:20%;
     --background: #75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //right:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -38,11 +42,11 @@ ion-header {
     padding-bottom:0%;
 }
 .item_correo{
-    top: 30%;
+    //top: 30%;
     --background: #75a9f9;
     background-color:#75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //right:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -50,11 +54,11 @@ ion-header {
     padding-bottom:0%;
 }
 .item_contra{
-    top: 40%;
+    //top: 40%;
     --background: #75a9f9;
     background-color:#75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //right:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -62,11 +66,11 @@ ion-header {
     padding-bottom:0%;
 }
 .item_contra_Ver{
-    top: 50%;
+    //top: 50%;
     --background: #75a9f9;
     background-color:#75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //right:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -75,11 +79,11 @@ ion-header {
 }
 
 .item_sexo{
-    top: 70%;
+    //top: 70%;
     --background: #75a9f9;
     background-color:#75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //@at-root:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -104,9 +108,9 @@ ion-header {
     padding-bottom:3%;
     padding-top:3%;
     background-color:#75a9f9;
-    position: absolute;
-    top: 60.2%;
-    right:12.5%;
+    //position: absolute;
+    //top: 60.2%;
+    //right:12.5%;
     width:75%;
     border-radius: 10px ;
 }
@@ -117,11 +121,11 @@ select{
 
 
 .Radio_sexo{
-    top: 69.7%;
+    //top: 69.7%;
     --background: #75a9f9;
     background-color:#75a9f9;
-    position: absolute;
-    right:12.5%;
+    //position: absolute;
+    //right:12.5%;
     border-radius: 10px ;
     border: 10px solid #75a9f9;
     width:75%;
@@ -134,12 +138,12 @@ select{
     padding-top:3%
 }
 .Boton_Reg{
-    position: absolute;
-    top: 80%;
+    //position: absolute;
+    //top: 80%;
     --background:#75a9f9;
     --background-activated:rgb(143, 189, 253);
     --color:#140b0a;
-    right:25%;
+    //right:25%;
     height: 5%;
     width:50%;
     font-size:100% ;
