@@ -14,10 +14,12 @@ export class CuentaPage implements OnInit {
               private alertController: AlertController){ }
 
   ngOnInit() {
+    console.log("Prueba")
   }
   async onLogin(email,password){
     try{
       const user= await  this.authSvc.login(email.value,password.value);
+      console.log("Verificando...")
       if(user){
         const estaverificado = this.authSvc.isEmailVerify(user)
         console.log('verificado->',estaverificado)
