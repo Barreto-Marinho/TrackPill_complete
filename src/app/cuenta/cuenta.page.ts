@@ -36,7 +36,6 @@ export class CuentaPage implements OnInit {
     if(estaverificado){
       this.router.navigate(['/folder/ ']);
     }else{
-      this.router.navigate(['/cuenta/']);
       this.Imprimir_error("El correo aun no esta verificado")
     }
   }
