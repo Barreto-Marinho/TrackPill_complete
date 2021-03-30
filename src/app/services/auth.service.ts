@@ -23,6 +23,7 @@ export class AuthService {
     )
   }
 
+
  isEmailVerify(user:User):boolean{
       return(user.emailVerified===true ?true:false);
   }

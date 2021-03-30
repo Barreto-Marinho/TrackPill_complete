@@ -31,6 +31,7 @@ export class CuentaPage implements OnInit {
     catch(error){console.log('Error->',error)} 
   }
 
+
   redigirir_usua(estaverificado: boolean){
       // si el usuario esta bien, redigir a admin, sino dice que verificar
     if(estaverificado){

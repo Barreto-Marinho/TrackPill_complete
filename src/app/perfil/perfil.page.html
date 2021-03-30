@@ -9,10 +9,10 @@
     <ion-row>
       <div class="item_nombre">
         <label class="labels" >Nombre:</label>
-        <ion-input  disabled="{{isDisabled}}" placeholder="Nombre" #nombre></ion-input></div>  </ion-row>
+        <ion-input  disabled="{{isDisabled}}" placeholder={{place_nombre}} #nombre></ion-input></div>  </ion-row>
         <ion-row><div  class="item_apellido">
         <label class="labels"  >Apellido:</label>
-        <ion-input disabled={{isDisabled}} placeholder="Apellido" #apellido></ion-input></div> </ion-row>
+        <ion-input disabled={{isDisabled}} placeholder={{place_apellido}} #apellido></ion-input></div> </ion-row>
         <ion-row><div class="control_group">
         <label  class="labels">Fecha de nacimiento:</label>
         <div *ngIf="isDisabled" class="controls">
