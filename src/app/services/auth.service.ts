@@ -11,6 +11,7 @@ import{switchMap} from "rxjs/Operators";
 })
 export class AuthService {
   public user$: Observable<User>;
+  public usuario$: User;
   public datos$: datos_usuario; 
   constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore ){
     this.user$= this.afAuth.authState.pipe(
@@ -67,7 +68,7 @@ export class AuthService {
   async login(email: string ,password:string): Promise<User>{
     try{
       const{user}=await this.afAuth.signInWithEmailAndPassword(email,password)
-      console.log(user)
+      this.usuario$ = user;
       this.updateUserData(user);
       return user;
     }
@@ -85,9 +86,41 @@ export class AuthService {
   async logout(): Promise<void>{
     try{
       await this.afAuth.signOut();
+      this.usuario$= undefined;
+      this.datos$=undefined;
     }
     catch(error){console.log('Error->',error)}
   } 
+
+  async modificar_datos(user:User,nombre:string, apellido:string, anio:string,mes:string,dia:string,gener:string):Promise<void>{
+    try{
+      const dataRef = this.db.collection('Datos_Usuario').doc(user.uid);
+      await dataRef.set({
+        nombre: nombre,
+        apellido: apellido,
+        dia:dia,
+        mes:mes,
+        anio:anio,
+        genero:gener,
+      },{merge:true});
+    }
+    catch(error){console.log('Error->',error)}
+  }
+
+  async actualizar_datos():Promise<void>{
+    const dataRef = this.db.collection('Datos_Usuario').doc(this.usuario$.uid);
+    await dataRef.get().subscribe((Snapshot) => {
+      const datos:datos_usuario={
+        nombre: Snapshot.data()["nombre"],
+        apellido: Snapshot.data()["apellido"],
+        anio: Snapshot.data()["anio"],
+        mes: Snapshot.data()["mes"],
+        genero: Snapshot.data()["genero"],
+        dia: Snapshot.data()["dia"],
+      }
+        this.datos$= datos;
+        });
+  }
   async updateUserData(user:User): Promise<void>{
     try{
       const userRef:AngularFirestoreDocument<User>= this.afs.doc(`users/${user.uid}`)

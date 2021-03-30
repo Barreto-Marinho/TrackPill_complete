@@ -16,7 +16,7 @@
 
     ion-col{
         position:absolute;
-        top :5%;
+        top :10%;
         left: 12.5%;
     }
     ion-row{
@@ -28,6 +28,10 @@
         --background-activated:#1c7aff;
         color:#140b0a;
     }
+
+.espacio{
+    padding-top: 20%;
+}    
   
 .item_nombre{
     background-color:#75a9f9;

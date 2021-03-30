@@ -10,26 +10,36 @@ import { datos_usuario } from '../shared/user_interface';
 })
 export class PerfilPage implements OnInit {
   gen: string ="male";
+  public cerrar_nombre:string="Cerrar sesion";
+  public modifi_nombre:string="Modificar datos";
   public isDisabled: boolean=true;
   public isDis :boolean=false;
+  public place_check:boolean=false;
+  public n_place_check:boolean=false;
   public place_nombre:string;
   public place_apellido:string;
   public place_anio:string;
   public place_dia:string;
   public place_mes:string;
   public place_mes_Str:string;
+  public chequeador:string="checked";
   constructor(private authSvc:AuthService, private router:Router) { }
 
   ngOnInit() {
   }
 
   ionViewWillEnter(){
-    console.log("Olaaaaa",this.authSvc.datos$)
+    this.inicializar();
+  }
+
+  inicializar(){
     if(this.authSvc.datos$ != undefined){
       this.reestablacer_datos();  
     }
     this.isDisabled=true;
     this.isDis=false;
+    this.cerrar_nombre="Cerrar sesion";
+    this.modifi_nombre="Modificar datos";
   }
 
   reestablacer_datos(){
@@ -38,6 +48,13 @@ export class PerfilPage implements OnInit {
     this.place_anio= this.authSvc.datos$.anio;
     this.place_mes= this.authSvc.datos$.mes;
     this.place_dia= this.authSvc.datos$.dia;
+    if(this.authSvc.datos$.genero=="masculino"){
+      this.place_check=true;
+      this.n_place_check=false;
+    }else{
+      this.place_check=false;
+      this.n_place_check=true;
+    }
     switch(this.place_mes) { 
       case "01": { 
         this.place_mes_Str="Enero"
@@ -95,8 +112,15 @@ export class PerfilPage implements OnInit {
   }
 
   Modificar_datos(){
+    if(this.isDisabled==true){
+      this.modifi_nombre= "Cancelar";
+      this.cerrar_nombre= "Guardar";
+    }else{
+      this.modifi_nombre= "Cerrar sesion";
+      this.cerrar_nombre= "Modificar datos";
+    }
     this.isDisabled = !this.isDisabled;
-    this.isDis= !this.isDis; 
+    this.isDis= !this.isDis;
   }
   male_boton(){
     this.gen = "masculino";
@@ -105,9 +129,15 @@ export class PerfilPage implements OnInit {
     this.gen = "femenino";
   }
 
-  Cerrar_sesion(){
-    this.authSvc.logout();
-    this.router.navigate(['/cuenta']);
+  Cerrar_sesion(nombre, apellido, anio,mes,dia){
+    if(this.cerrar_nombre== "Guardar"){
+      this.authSvc.modificar_datos(this.authSvc.usuario$,nombre.value,apellido.value,anio.value,mes.value,dia.value, this.gen) 
+      this.authSvc.actualizar_datos();
+      this.inicializar();
+    }else{
+      this.authSvc.logout();
+      this.router.navigate(['/cuenta']);
+    }
   }
 
 }

@@ -15,21 +15,8 @@
         <ion-input disabled={{isDisabled}} placeholder={{place_apellido}} #apellido></ion-input></div> </ion-row>
         <ion-row><div class="control_group">
         <label  class="labels">Fecha de nacimiento:</label>
-        <div *ngIf="isDisabled" class="controls">
-          <select disabled name="dob-day" id="dob-day" #dia>
-            <option value="">{{place_dia}}</option>
-            <option value="">Dia</option>
-          </select>
-          <select disabled name="dob-month" id="dob-month" #mes>
-            <option value="">{{place_mes_Str}}</option>
-            <option value="09">Septiembre</option>
-          </select>
-          <select disabled name="dob-year" id="dob-year" #anio>
-            <option value="">{{place_anio}}</option>
-          </select>
-        </div>
-        <div *ngIf="isDis" class="controls">
-          <select  name="dob-day" id="dob-day" #dia>
+        <div  class="controls">
+          <select [disabled]="isDisabled" name="dob-day" id="dob-day" #dia>
             <option value={{place_dia}}>{{place_dia}}</option>
             <option value="">Dia</option>
             <option value="">---</option>
@@ -65,7 +52,7 @@
             <option value="30">30</option>
             <option value="31">31</option>
           </select>
-          <select  name="dob-month" id="dob-month" #mes>
+          <select [disabled]="isDisabled" name="dob-month" id="dob-month" #mes>
             <option value={{place_mes}}>{{place_mes_Str}}</option>
             <option value="">Mes</option>
             <option value="">-----</option>
@@ -82,7 +69,7 @@
             <option value="11">Noviembre</option>
             <option value="12">Diciembre</option>
           </select>
-          <select  name="dob-year" id="dob-year" #anio>
+          <select [disabled]="isDisabled" name="dob-year" id="dob-year" #anio>
             <option value={{place_anio}}>{{place_anio}}</option>
             <option value="">Año</option>
             <option value="">----</option>
@@ -212,18 +199,19 @@
       <ion-row *ngIf="isDisabled" ><div  class="Radio_sexo">
         <label class="labels">Genero:</label>
         <form  action="" #genero>
-          <input  disabled type="radio" name="gender" value="male" > Masculino<br>
-          <input  disabled type="radio" nsame="gender" value="female" > Femenino<br>
+          <input  disabled type="radio" name="gender" value="male" [checked]="place_check" > Masculino<br>
+          <input  disabled type="radio" nsame="gender" value="female" [checked]="n_place_check"> Femenino<br>
         </form>
       </div></ion-row>
       <ion-row *ngIf="isDis" ><div  class="Radio_sexo">
         <label class="labels">Genero:</label>
         <form  action="" #genero>
-          <input   type="radio" name="gender" value="male" (click)="male_boton()"> Masculino<br>
-          <input   type="radio" name="gender" value="female" (click)="female_boton()"> Femenino<br>
+          <input   type="radio" name="gender" value="male" (click)="male_boton()" [checked]="place_check" > Masculino<br>
+          <input   type="radio" name="gender" value="female" (click)="female_boton()" [checked]="n_place_check"> Femenino<br>
         </form>
       </div></ion-row>
-    <ion-row><ion-button (click)="Cerrar_sesion()">Cerrar sesion</ion-button>
-    <ion-button  (click)="Modificar_datos()">Modificar datos</ion-button></ion-row>
+      <ion-row class = espacio></ion-row>
+    <ion-row><ion-button type = "submit" (click)="Cerrar_sesion(nombre, apellido, anio,mes,dia)">{{cerrar_nombre}}</ion-button>
+    <ion-button  (click)="Modificar_datos()">{{modifi_nombre}}</ion-button></ion-row>
   </ion-col>
 </ion-content>
