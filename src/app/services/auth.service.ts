@@ -5,6 +5,7 @@ import {AngularFirestore,AngularFirestoreDocument } from '@angular/fire/firestor
 import { Observable, of } from 'rxjs';
 import{switchMap} from "rxjs/Operators";
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
-  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController ){
+  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,private router: Router ){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
         if(user){
@@ -33,6 +34,7 @@ export class AuthService {
   async resetPassword(email: string): Promise<void>{
     try{
       return this.afAuth.sendPasswordResetEmail(email);
+      this.router.navigate(['/cuenta']);
     }
     catch(error){console.log('Error->',error)
       if(error.message()=="There is no user record corresponding to this identifier. The user may have been deleted"){
