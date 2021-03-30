@@ -116,8 +116,8 @@ export class PerfilPage implements OnInit {
       this.modifi_nombre= "Cancelar";
       this.cerrar_nombre= "Guardar";
     }else{
-      this.modifi_nombre= "Cerrar sesion";
-      this.cerrar_nombre= "Modificar datos";
+      this.modifi_nombre= "Modificar datos";
+      this.cerrar_nombre= "Cerrar sesion";
     }
     this.isDisabled = !this.isDisabled;
     this.isDis= !this.isDis;
@@ -130,8 +130,16 @@ export class PerfilPage implements OnInit {
   }
 
   Cerrar_sesion(nombre, apellido, anio,mes,dia){
+    var name = nombre.value;
+    var Sname = apellido.value;
     if(this.cerrar_nombre== "Guardar"){
-      this.authSvc.modificar_datos(this.authSvc.usuario$,nombre.value,apellido.value,anio.value,mes.value,dia.value, this.gen) 
+      if(name = ""){
+        name = this.authSvc.datos$.nombre;
+      }
+      if(Sname = ""){
+        Sname = this.authSvc.datos$.apellido;
+      }
+      this.authSvc.modificar_datos(this.authSvc.usuario$,name,Sname,anio.value,mes.value,dia.value, this.gen) 
       this.authSvc.actualizar_datos();
       this.inicializar();
     }else{

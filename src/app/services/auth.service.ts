@@ -4,6 +4,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore,AngularFirestoreDocument } from '@angular/fire/firestore'
 import { Observable, of } from 'rxjs';
 import{switchMap} from "rxjs/Operators";
+import { AlertController } from '@ionic/angular';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
-  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore ){
+  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController ){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
         if(user){
@@ -33,7 +34,11 @@ export class AuthService {
     try{
       return this.afAuth.sendPasswordResetEmail(email);
     }
-    catch(error){console.log('Error->',error)} 
+    catch(error){console.log('Error->',error)
+      if(error.message()=="There is no user record corresponding to this identifier. The user may have been deleted"){
+        this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
+      }
+    } 
   } 
   /*async loginGoogle(): Promise<User>{
     try{
@@ -61,9 +66,23 @@ export class AuthService {
     }
     catch(error){
       console.log('Error->',error.message)
-      
+      this.Imprimir_error(error.message)
     }
   } 
+
+  
+  async Imprimir_error(texto){
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Alert',
+
+      subHeader: texto,
+      //message: texto,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+}
 
   async login(email: string ,password:string): Promise<User>{
     try{
