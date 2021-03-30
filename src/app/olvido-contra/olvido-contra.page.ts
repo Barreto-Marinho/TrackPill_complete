@@ -18,13 +18,7 @@ export class OlvidoContraPage implements OnInit {
 
   async Recuperar(email){
     try{
-      const user= await  this.authSvc.isEmailVerify(email.value);
-      if(user){
       await this.authSvc.resetPassword(email.value);
-      this.router.navigate(['/cuenta']);
-    }else{
-      this.Imprimir_error("El correo no esta registrado")
-    }
     }
     catch(error){console.log('Error->',error)} 
 

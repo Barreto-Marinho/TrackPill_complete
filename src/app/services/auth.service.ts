@@ -6,6 +6,7 @@ import { Observable, of } from 'rxjs';
 import{switchMap} from "rxjs/Operators";
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 
 @Injectable({
@@ -15,7 +16,7 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
-  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,private router: Router ){
+  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,public router: Router ){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
         if(user){
@@ -34,13 +35,13 @@ export class AuthService {
   async resetPassword(email: string): Promise<void>{
     try{
       return this.afAuth.sendPasswordResetEmail(email);
-      this.router.navigate(['/cuenta']);
     }
-    catch(error){console.log('Error->',error)
-      if(error.message()=="There is no user record corresponding to this identifier. The user may have been deleted"){
-        this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
-      }
+    catch(error){
+      console.log('Error->',error)
+      if(error.code=="auth/user-not-found"){
+       this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
     } 
+   }
   } 
   /*async loginGoogle(): Promise<User>{
     try{
