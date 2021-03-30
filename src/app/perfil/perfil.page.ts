@@ -9,23 +9,16 @@ import { AuthService } from '../services/auth.service';
 })
 export class PerfilPage implements OnInit {
   gen: string ="male";
-  variable =<HTMLInputElement> document.getElementById("dob-day");
-  public isDisabled: boolean=false;
+  public isDisabled: boolean=true;
+  public isDis :boolean=false;
   constructor(private authSvc:AuthService, private router:Router) { }
 
   ngOnInit() {
   }
 
   Modificar_datos(){
-    if(this.isDisabled==true){
-      //document.getElementById("dob-day").disabled = true;
-      this.variable.disabled=true;
-      this.isDisabled=false;
-    }else{
-      this.isDisabled=true;
-      this.variable.disabled=false;
-    }
-    console.log("Condicion es->",this.isDisabled)
+    this.isDisabled = !this.isDisabled;
+    this.isDis= !this.isDis; 
   }
   male_boton(){
     this.gen = "masculino";

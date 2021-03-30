@@ -12,7 +12,6 @@ import{switchMap} from "rxjs/Operators";
 export class AuthService {
   public user$: Observable<User>;
   public datos$: datos_usuario; 
-  public cats : any;
   constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore ){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
@@ -99,14 +98,14 @@ export class AuthService {
       };
       const dataRef = this.db.collection('Datos_Usuario').doc(user.uid);
 
-      await dataRef.get().subscribe((catsSnapshot) => {
+      await dataRef.get().subscribe((Snapshot) => {
       const datos:datos_usuario={
-        nombre: catsSnapshot.data()["nombre"],
-        apellido: catsSnapshot.data()["apellido"],
-        anio: catsSnapshot.data()["anio"],
-        mes: catsSnapshot.data()["mes"],
-        genero: catsSnapshot.data()["genero"],
-        dia: catsSnapshot.data()["dia"],
+        nombre: Snapshot.data()["nombre"],
+        apellido: Snapshot.data()["apellido"],
+        anio: Snapshot.data()["anio"],
+        mes: Snapshot.data()["mes"],
+        genero: Snapshot.data()["genero"],
+        dia: Snapshot.data()["dia"],
       }
         this.datos$= datos;
         });
