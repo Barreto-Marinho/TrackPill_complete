@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { datos_usuario } from '../shared/user_interface';
 
 @Component({
   selector: 'app-perfil',
@@ -9,23 +10,29 @@ import { AuthService } from '../services/auth.service';
 })
 export class PerfilPage implements OnInit {
   gen: string ="male";
-  variable =<HTMLInputElement> document.getElementById("dob-day");
-  public isDisabled: boolean=false;
+  public isDisabled: boolean=true;
+  public isDis :boolean=false;
+  public place_nombre:string="";
+  public place_apellido:string="";
   constructor(private authSvc:AuthService, private router:Router) { }
 
   ngOnInit() {
   }
 
-  Modificar_datos(){
-    if(this.isDisabled==true){
-      //document.getElementById("dob-day").disabled = true;
-      this.variable.disabled=true;
-      this.isDisabled=false;
-    }else{
-      this.isDisabled=true;
-      this.variable.disabled=false;
+  ionViewWillEnter(){
+    if(this.authSvc.datos$ != undefined){
+      this.reestablacer_datos();  
     }
-    console.log("Condicion es->",this.isDisabled)
+  }
+
+  reestablacer_datos(){
+    this.place_nombre= this.authSvc.datos$.nombre;
+    this.place_apellido=this.authSvc.datos$.apellido;
+  }
+
+  Modificar_datos(){
+    this.isDisabled = !this.isDisabled;
+    this.isDis= !this.isDis; 
   }
   male_boton(){
     this.gen = "masculino";
