@@ -2,14 +2,26 @@
    
   ion-header {
     --ion-background-color:#3d8af7;
+    top: 3%;
+    left: 3%;
   }
   
   ion-content {
     --ion-background-color:#3d8af7;
   }
 
-
- .Ya_tiene{
-     --color:#000408;
-     --background:#000408;
- }
+  ion-item {
+    --ion-background-color:#3d8af7;
+    top: 3%;
+    left: 3%;
+  } 
+  .boton1 {
+    position: relative;
+    top: 4%;
+    left: 37%;
+  }
+  .boton2 {
+    position: relative;
+    top: 10%;
+    left: -9%;
+  }
