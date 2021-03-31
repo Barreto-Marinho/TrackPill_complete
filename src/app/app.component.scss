@@ -1,29 +1,26 @@
+
 ion-content {
-  --ion-background-color:#75a9f9;
-}
-
-ion-button{
-  --border-radius: 0px;
-  width :100%;
-  --background:#75a9f9;
-  --background-activated:#4b8ff5;
-}
-
-ion-col{
-  position: absolute;
-  top :15%;
-  left: 0%;
-}
-
-ion-label{
-  left: 15%;
-  position: absolute;
-}
-ion-icon{
-  left: 0;
-  position: absolute;
-}
-
-
-
-
+    --ion-background-color:#75a9f9;
+  }
+  
+  ion-button{
+    --border-radius: 0px;
+    width :100%;
+    --background:#75a9f9;
+    --background-activated:#4b8ff5;
+  }
+  
+  ion-col{
+    position: absolute;
+    top :15%;
+    left: 0%;
+  }
+  
+  ion-label{
+    left: 15%;
+    position: absolute;
+  }
+  ion-icon{
+    left: 0;
+    position: absolute;
+  }

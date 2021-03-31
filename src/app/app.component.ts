@@ -11,7 +11,7 @@ export class AppComponent {
   public cuenta: string="";
   constructor(private authSvc:AuthService, private router:Router,public afAuth:AngularFireAuth) {}
 
-
+  
   ionViewWillEnter(){
     console.log("Hey")
     if(this.authSvc.usuario$ != undefined){
@@ -35,7 +35,6 @@ export class AppComponent {
       this.router.navigate(['/cuenta']);
       }
   }
-
 
  /* async casos(entrada){
       if(entrada=="1"){
