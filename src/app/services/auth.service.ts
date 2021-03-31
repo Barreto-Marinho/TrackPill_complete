@@ -36,17 +36,17 @@ export class AuthService {
     try{
      await this.afAuth.sendPasswordResetEmail(email);
      this.router.navigate(['/cuenta']);
-     await this.presentToast("El correo se ha enviado correctamente ");
+     this.presentToast("El correo se ha enviado correctamente ");
     }
     catch(error){
       console.log('Error->',error)
       console.log(error.message)
       if(error.message=="There is no user record corresponding to this identifier. The user may have been deleted."){
        this.Imprimir_error("Este usuario no corresponde a nunguna cuenta");
-       await this.presentToast("El correo no se ha enviado correctamente ");
+       this.presentToast("El correo no se ha enviado correctamente ");
     } else{
       this.Imprimir_error("El correo no esta escrito correctamente");
-      await this.presentToast("El correo no se ha enviado correctamente ");}
+      this.presentToast("El correo no se ha enviado correctamente ");}
    }
   } 
   /*async loginGoogle(): Promise<User>{
