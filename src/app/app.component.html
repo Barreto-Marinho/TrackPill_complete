@@ -1,23 +1,29 @@
+<!--<ion-app>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>-->
+
+
+
+
 
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+
+          <ion-note>{{cuenta}}</ion-note>
           <ion-col> 
             <ion-menu-toggle auto-hide="false">
               <ion-row>
               <ion-button  (click)="pag_princ()" >
                 <ion-icon  [ios]="'analytics' + '-outline'" [md]="'analytics' + '-sharp'"></ion-icon>
-                <ion-label>Pagina Principal</ion-label>
+                <ion-label>  Pagina Principal           </ion-label>
               </ion-button>
               </ion-row>
               <ion-row>
                 <ion-button  (click)="Conf_alarm()" >
                   <ion-icon  [ios]="'construct' + '-outline'" [md]="'construct' + '-sharp'"></ion-icon>
-                  <ion-label>Alarma estado</ion-label>
+                  <ion-label>  Alarma estado  </ion-label>
                 </ion-button>
                 </ion-row>
                 <ion-row>
@@ -28,13 +34,12 @@
                 </ion-row>
             </ion-menu-toggle>
         </ion-col>
-        </ion-list>
 
         
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>
 </ion-app>
 
 
