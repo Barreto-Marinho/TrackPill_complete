@@ -18,11 +18,9 @@ export class OlvidoContraPage implements OnInit {
 
   async Recuperar(email){
     try{
-      await this.authSvc.resetPassword(email.value);
+       await this.authSvc.resetPassword(email.value);
     }
     catch(error){console.log('Error->',error)} 
-
-
   }
 
   async Imprimir_error(texto){
