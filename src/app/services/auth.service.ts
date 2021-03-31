@@ -34,11 +34,13 @@ export class AuthService {
 
   async resetPassword(email: string): Promise<void>{
     try{
-      return this.afAuth.sendPasswordResetEmail(email);
+     await this.afAuth.sendPasswordResetEmail(email);
+     this.router.navigate(['/cuenta']);
     }
     catch(error){
       console.log('Error->',error)
-      if(error.code=="auth/user-not-found"){
+      console.log(error.message)
+      if(error.message=="There is no user record corresponding to this identifier. The user may have been deleted."){
        this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
     } 
    }
