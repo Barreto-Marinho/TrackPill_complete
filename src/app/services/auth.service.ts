@@ -42,7 +42,7 @@ export class AuthService {
       console.log(error.message)
       if(error.message=="There is no user record corresponding to this identifier. The user may have been deleted."){
        this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
-    } 
+    } else{this.Imprimir_error("El correo no esta escrito correctamente")}
    }
   } 
   /*async loginGoogle(): Promise<User>{

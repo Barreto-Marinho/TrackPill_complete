@@ -2,8 +2,8 @@
    
   ion-header {
     --ion-background-color:#3d8af7;
-    top: 3%;
-    left: 3%;
+    top: 4%;
+    left: 0%;
   }
   
   ion-content {
@@ -12,18 +12,22 @@
 
   ion-item {
     --ion-background-color:#3d8af7;
-    top: 3%;
+    top: 15%;
     left: 3%;
   } 
   .boton1 {
     position: relative;
-    top: 4%;
-    left: 37%;
+    --background:#75a9f9;
+    --background-activated:#9fc2f7;
+    top: 16%;
+    left: 30%;
   }
   .boton2 {
     position: relative;
-    top: 10%;
-    left: -5%;
+    --background:#75a9f9;
+    --background-activated:#9fc2f7;
+    top: 16%;
+    left: 30%;
   }
 
 //hola
