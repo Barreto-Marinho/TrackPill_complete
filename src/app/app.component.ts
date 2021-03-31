@@ -12,14 +12,6 @@ export class AppComponent {
   constructor(private authSvc:AuthService, private router:Router,public afAuth:AngularFireAuth) {}
 
   
-  ionViewWillEnter(){
-    console.log("Hey")
-    if(this.authSvc.usuario$ != undefined){
-      this.cuenta=this.authSvc.usuario$.email;
-    }else{
-      this.cuenta= "Inicie sesion";
-    }
-  }
 
   pag_princ(){
     this.router.navigate(['/folder/  ']);
