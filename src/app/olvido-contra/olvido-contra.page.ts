@@ -21,8 +21,7 @@ export class OlvidoContraPage implements OnInit {
       await this.authSvc.resetPassword(email.value);
     }
     catch(error){console.log('Error->',error)} 
-
-
+     this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
   }
 
   async Imprimir_error(texto){
