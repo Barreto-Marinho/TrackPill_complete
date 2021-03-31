@@ -1,6 +1,29 @@
+ion-header {
+  --ion-background-color:#3d8af7;
+  position: relative;
+  top: 3%;
+  left:0%;
+}
+
 ion-content {
     --ion-background-color:#3d8af7;
+    position: absolute;
+    top: 5%;
   }
 
+  .boton1 {
+    position: relative;
+    --background:#75a9f9;
+    --background-activated:#9fc2f7;
+    top: 0%;
+    left: 10%;
+  }
+  .boton2 {
+    position: relative;
+    --background:#75a9f9;
+    --background-activated:#9fc2f7;
+    top: 0%;
+    left: 10%;
+  }
   
 

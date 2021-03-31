@@ -1,7 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="ion-no-border">
     <ion-title>Verificacion</ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content  *ngIf="user$ | async as user">
@@ -12,11 +10,7 @@
       <p> Por favor revisa tu correo y haga click en el enlace de verificación</p>
     </ion-col>
   </ion-row>
-  <ion-row> 
-    <ion-col>
-      <ion-button type="submit" (click)="Reenvio()">Reenviar email de verificación</ion-button>
+      <ion-button type="submit" class="boton1" (click)="Reenvio()">Reenviar correo</ion-button>
       <!--<ion-button [routerLink]="['/Cuenta]" class="Boton_volver">Si ya confirmo el correo presione aqui</ion-button>-->
-    </ion-col>
-      <ion-button type="submit" (click)="Devolver()">Si ya confirmo el correo presione aqui</ion-button>
-  </ion-row>
+      <ion-button type="submit" class="boton1" (click)="Devolver()">Iniciar sesión</ion-button>
 </ion-content>
