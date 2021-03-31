@@ -2,15 +2,24 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import {AngularFireAuth} from '@angular/fire/auth';
-import { User } from './shared/user_interface';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-
+  public cuenta: string="";
   constructor(private authSvc:AuthService, private router:Router,public afAuth:AngularFireAuth) {}
+
+
+  ionViewWillEnter(){
+    console.log("Hey")
+    if(this.authSvc.usuario$ != undefined){
+      this.cuenta=this.authSvc.usuario$.email;
+    }else{
+      this.cuenta= "Inicie sesion";
+    }
+  }
 
   pag_princ(){
     this.router.navigate(['/folder/  ']);
