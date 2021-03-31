@@ -9,15 +9,26 @@ import { User } from './shared/user_interface';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Pagina Principal', url: "1", icon: 'analytics' },//'/folder/  '
-    { title: 'Alarma estado', url: "2", icon: 'construct' },//'/alarma'
-    { title: 'Cuenta', url: "3", icon: 'person' },
-  ];
 
   constructor(private authSvc:AuthService, private router:Router,public afAuth:AngularFireAuth) {}
 
-  async casos(entrada){
+  pag_princ(){
+    this.router.navigate(['/folder/  ']);
+  }
+  Conf_alarm(){
+    this.router.navigate(['/alarma']);
+  }
+
+  Cuenta(){
+    if(this.authSvc.usuario$ != undefined){
+      this.router.navigate(['/perfil']);
+    }else{
+      this.router.navigate(['/cuenta']);
+      }
+  }
+
+
+ /* async casos(entrada){
       if(entrada=="1"){
         this.router.navigate(['/folder/  ']);
       }else{
@@ -29,7 +40,7 @@ export class AppComponent {
               console.log("Aqui usuario bien")
               this.router.navigate(['/perfil']);
             }else{
-              console.log("Aqui usuario aml")
+              console.log("Aqui usuario mal")
               this.router.navigate(['/cuenta']);
             }
 
@@ -37,5 +48,5 @@ export class AppComponent {
           })
         }
       }
-    }
+    }*/
 }
