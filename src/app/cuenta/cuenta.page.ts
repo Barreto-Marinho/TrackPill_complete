@@ -1,7 +1,7 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController,ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -11,7 +11,8 @@ import { AuthService } from '../services/auth.service';
 })
 export class CuentaPage implements OnInit {
   constructor(private authSvc:AuthService, private router:Router,
-              private alertController: AlertController){ }
+              private alertController: AlertController,
+              public toastController: ToastController){ }
 
   ngOnInit() {
     console.log("Prueba")
@@ -24,6 +25,7 @@ export class CuentaPage implements OnInit {
         const estaverificado = this.authSvc.isEmailVerify(user)
         console.log('verificado->',estaverificado)
          this.redigirir_usua(estaverificado);
+         this.presentToast();
       }else{
         this.Imprimir_error("Revise su datos: Contraseña y Correo no coinciden")
       }
@@ -54,6 +56,13 @@ export class CuentaPage implements OnInit {
     await alert.present();
 }
  
+async presentToast() {
+  const toast = await this.toastController.create({
+    message: 'Sesion iniciada',
+    duration: 2000
+  });
+  toast.present();
+}
 
 }
 

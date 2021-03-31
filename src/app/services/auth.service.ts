@@ -4,7 +4,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore,AngularFirestoreDocument } from '@angular/fire/firestore'
 import { Observable, of } from 'rxjs';
 import{switchMap} from "rxjs/Operators";
-import { AlertController } from '@ionic/angular';
+import { AlertController,ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,7 +16,7 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
-  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,public router: Router ){
+  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,public router: Router,public toastController: ToastController ){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
         if(user){
@@ -36,13 +36,17 @@ export class AuthService {
     try{
      await this.afAuth.sendPasswordResetEmail(email);
      this.router.navigate(['/cuenta']);
+     await this.presentToast("El correo se ha enviado correctamente ");
     }
     catch(error){
       console.log('Error->',error)
       console.log(error.message)
       if(error.message=="There is no user record corresponding to this identifier. The user may have been deleted."){
-       this.Imprimir_error("Este usuario no corresponde a nunguna cuenta")
-    } else{this.Imprimir_error("El correo no esta escrito correctamente")}
+       this.Imprimir_error("Este usuario no corresponde a nunguna cuenta");
+       await this.presentToast("El correo no se ha enviado correctamente ");
+    } else{
+      this.Imprimir_error("El correo no esta escrito correctamente");
+      await this.presentToast("El correo no se ha enviado correctamente ");}
    }
   } 
   /*async loginGoogle(): Promise<User>{
@@ -74,6 +78,14 @@ export class AuthService {
       this.Imprimir_error(error.message)
     }
   } 
+ 
+  async presentToast(texto) {
+    const toast = await this.toastController.create({
+      message: texto,
+      duration: 2000
+    });
+    toast.present();
+  }
 
   
   async Imprimir_error(texto){

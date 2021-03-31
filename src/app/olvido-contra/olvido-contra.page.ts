@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController,ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-olvido-contra',
@@ -34,6 +34,7 @@ export class OlvidoContraPage implements OnInit {
   
       await alert.present();
   }
+
 
   }
 
