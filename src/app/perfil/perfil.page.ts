@@ -48,6 +48,7 @@ export class PerfilPage implements OnInit {
     this.place_anio= this.authSvc.datos$.anio;
     this.place_mes= this.authSvc.datos$.mes;
     this.place_dia= this.authSvc.datos$.dia;
+    this.gen="male";
     if(this.authSvc.datos$.genero=="masculino"){
       this.place_check=true;
       this.n_place_check=false;
@@ -133,14 +134,16 @@ export class PerfilPage implements OnInit {
     var name = nombre.value;
     var Sname = apellido.value;
     if(this.cerrar_nombre== "Guardar"){
-      if(name = ""){
+      if(name == ""){
         name = this.authSvc.datos$.nombre;
       }
-      if(Sname = ""){
+      if(Sname == ""){
         Sname = this.authSvc.datos$.apellido;
       }
+      console.log("Los datos subidos seran  ",name,Sname,anio.value,mes.value,dia.value, this.gen)
       this.authSvc.modificar_datos(this.authSvc.usuario$,name,Sname,anio.value,mes.value,dia.value, this.gen) 
       this.authSvc.actualizar_datos();
+      console.log(this.authSvc.datos$)
       this.inicializar();
     }else{
       this.authSvc.logout();

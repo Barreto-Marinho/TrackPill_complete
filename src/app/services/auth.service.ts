@@ -106,6 +106,7 @@ export class AuthService {
       const{user}=await this.afAuth.signInWithEmailAndPassword(email,password)
       this.usuario$ = user;
       this.updateUserData(user);
+      this.actualizar_datos();
       return user;
     }
     catch(error){console.log('Error->',error)}
@@ -130,6 +131,15 @@ export class AuthService {
 
   async modificar_datos(user:User,nombre:string, apellido:string, anio:string,mes:string,dia:string,gener:string):Promise<void>{
     try{
+      const  datos:datos_usuario={
+        nombre: nombre,
+        apellido:apellido,
+        anio: anio,
+        mes: mes,
+        genero: gener,
+        dia: dia,
+      }
+      this.datos$= datos;
       const dataRef = this.db.collection('Datos_Usuario').doc(user.uid);
       await dataRef.set({
         nombre: nombre,
@@ -143,10 +153,30 @@ export class AuthService {
     catch(error){console.log('Error->',error)}
   }
 
-  async actualizar_datos():Promise<void>{
-    const dataRef = this.db.collection('Datos_Usuario').doc(this.usuario$.uid);
-    await dataRef.get().subscribe((Snapshot) => {
-      const datos:datos_usuario={
+   /*actualizar_datos(){
+      const dataRef = this.db.collection('Datos_Usuario').doc(this.usuario$.uid);
+      dataRef.snapshotChanges().subscribe( (Snapshot) => {
+        const  datos:datos_usuario={
+         nombre: Snapshot.data()["nombre"],
+         apellido: Snapshot.data()["apellido"],
+         anio: Snapshot.data()["anio"],
+         mes: Snapshot.data()["mes"],
+         genero: Snapshot.data()["genero"],
+         dia: Snapshot.data()["dia"],
+       }
+         console.log("Actualizando...")
+         this.datos$= datos;
+         });
+         console.log("Acabe actualizar")
+    }*/
+
+
+
+async actualizar_datos(){
+  try{
+    const dataRef =await this.db.collection('Datos_Usuario').doc(this.usuario$.uid);
+     dataRef.get().subscribe( (Snapshot) => {
+       const  datos:datos_usuario={
         nombre: Snapshot.data()["nombre"],
         apellido: Snapshot.data()["apellido"],
         anio: Snapshot.data()["anio"],
@@ -154,9 +184,15 @@ export class AuthService {
         genero: Snapshot.data()["genero"],
         dia: Snapshot.data()["dia"],
       }
+        console.log("Actualizando...")
         this.datos$= datos;
         });
+        console.log("Acabe actualizar")
+      }catch(error){console.log('Error->',error)}
   }
+
+
+
   async updateUserData(user:User): Promise<void>{
     try{
       const userRef:AngularFirestoreDocument<User>= this.afs.doc(`users/${user.uid}`)
