@@ -48,11 +48,12 @@ export class PerfilPage implements OnInit {
     this.place_anio= this.authSvc.datos$.anio;
     this.place_mes= this.authSvc.datos$.mes;
     this.place_dia= this.authSvc.datos$.dia;
-    this.gen="male";
     if(this.authSvc.datos$.genero=="masculino"){
+      this.gen="masculino";
       this.place_check=true;
       this.n_place_check=false;
     }else{
+      this.gen="femenino";
       this.place_check=false;
       this.n_place_check=true;
     }
