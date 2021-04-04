@@ -25,7 +25,6 @@ export class CuentaPage implements OnInit {
         const estaverificado = this.authSvc.isEmailVerify(user)
         console.log('verificado->',estaverificado)
          this.redigirir_usua(estaverificado);
-         this.presentToast();
       }else{
         this.Imprimir_error("Revise su datos: Contraseña y Correo no coinciden")
       }
@@ -38,6 +37,7 @@ export class CuentaPage implements OnInit {
       // si el usuario esta bien, redigir a admin, sino dice que verificar
     if(estaverificado){
       this.router.navigate(['/folder/ ']);
+      this.presentToast();
     }else{
       this.Imprimir_error("El correo aun no esta verificado")
     }
