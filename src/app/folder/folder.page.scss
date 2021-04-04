@@ -15,7 +15,9 @@ ion-content {
   --ion-background-color:#3d8af7;
 }
 ion-img{
-  
+  width: 90%;
+  height: 15%;
+  padding-left: 8%;
 }
 
 #container {
@@ -44,25 +46,25 @@ ion-img{
 }
 
 .row2{
-  height: 33%;
+  height: 30%;
 
 }
 
 .row1{
   padding-top: 10%;
-  height: 80%;
+  height: 70%;
 }
 
 .col1{
   padding-left: 10%;
   width: 37%;
-  padding-top: 24%;
+  padding-top: 0%;
 }
 
 .col2{
   padding-right:10% ;
   width: 37%;
-  padding-top: 24%;
+  padding-top: 0%;
 }
 
 .Comp1 {
