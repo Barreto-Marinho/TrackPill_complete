@@ -1,5 +1,5 @@
 import { stringify } from '@angular/compiler/src/util';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController,ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
@@ -10,13 +10,21 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./cuenta.page.scss'],
 })
 export class CuentaPage implements OnInit {
+  @ViewChild('email') inputemail;
+  @ViewChild('password') inputpassword;
+  
   constructor(private authSvc:AuthService, private router:Router,
               private alertController: AlertController,
               public toastController: ToastController){ }
 
   ngOnInit() {
-    console.log("Prueba")
   }
+
+  ionViewWillEnter(){
+      this.inputemail.value='';
+      this.inputpassword.value='';
+  }
+
   async onLogin(email,password){
     try{
       const user= await  this.authSvc.login(email.value,password.value);

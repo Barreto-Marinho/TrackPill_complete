@@ -1,5 +1,5 @@
 import { stringify } from '@angular/compiler/src/util';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
@@ -11,10 +11,25 @@ import { AuthService } from '../services/auth.service';
 })
 export class RegistrarsePage implements OnInit {
   var: string ="male";
+  @ViewChild('nombre') inputname;
+  @ViewChild('apellido') inputapellido;
+  @ViewChild('email') inputemail;
+  @ViewChild('password') inputpassword;
+  @ViewChild('verify_password') inputverify_password;
+
   constructor(private authSvc:AuthService, private router:Router,
               private alertController: AlertController){ }
 
   ngOnInit() {
+  }
+
+  ionViewWillEnter(){
+    this.inputname.value='';
+    this.inputapellido.value='';
+    this.inputemail.value='';
+    this.inputpassword.value='';
+    this.inputverify_password.value='';
+    this.var = "male";
   }
 
   male_boton(){
