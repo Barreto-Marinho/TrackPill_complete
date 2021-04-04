@@ -13,11 +13,17 @@
 
 <ion-content [fullscreen]="true">
   <!--<ion-img src="C:/Users/xboxk/OneDrive/Documentos/7tmo_semestre/IOT/Aplicacion/Trackpill/src/assets/icon/logo.jpg"></ion-img>-->
-  <ion-button [routerLink]="['/compart1']" class="Comp1">1</ion-button>
-  <ion-button class="Comp2">2</ion-button>
-  <ion-button class="Comp3">3</ion-button>
-  <ion-button class="Comp4">4</ion-button>
-  <ion-button class="Comp5">5</ion-button>
-  <ion-button class="Comp6">6</ion-button>
+  <ion-row class="row2">
+    <ion-col class="col1" > 
+      <ion-row class="row1"><ion-button [routerLink]="['/compart1']" class="Comp1">1</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp3">3</ion-button> </ion-row>
+      <ion-row class="row1">  <ion-button class="Comp5">5</ion-button> </ion-row>
+    </ion-col>
+    <ion-col class="col2"> 
+      <ion-row class="row1"><ion-button class="Comp2">2</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp4">4</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp6">6</ion-button> </ion-row>
+    </ion-col>
+  </ion-row>
   <ion-button class="seg_boton">Seguimiento</ion-button>
 </ion-content>

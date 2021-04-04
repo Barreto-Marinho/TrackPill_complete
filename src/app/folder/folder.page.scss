@@ -41,57 +41,67 @@ ion-content {
   text-decoration: none;
 }
 
+.row2{
+  height: 33%;
+
+}
+
+.row1{
+  padding-top: 10%;
+  height: 80%;
+}
+
+.col1{
+  padding-left: 10%;
+  width: 37%;
+  padding-top: 24%;
+}
+
+.col2{
+  padding-right:10% ;
+  width: 37%;
+  padding-top: 24%;
+}
+
 .Comp1 {
   --background:#ff5d55;
   --background-activated:#fd6e67;
   --color:#140b0a;
   margin: 0;
-  position: absolute;
-  top: 24%;
-  right: 51.5%;
-  width: 37%;
-  height: 18%;
+  width: 100%;
+  height: 100%;
   font-weight: 1000;
-  font-size:400% ;
+  font-size:300% ;
 }
 .Comp2 {
   --background:#77dd77;
   --background-activated:#9cda9c;
   --color:#140b0a;
   margin: 0;
-  position: absolute;
-  top: 24%;
-  left: 51.5%;
-  width: 37%;
-  height: 18%;
+  width: 100%;
+  height: 100%;
   font-weight: 1000;
-  font-size:400% ;
+  font-size:300% ;
 }
 .Comp3 {
   --background:#ffc581;
   --background-activated:#ffd3a1;
   --color:#140b0a;
   margin: 0;
-  position: absolute;
-  top: 44%;
-  right: 51.5%;
-  width: 37%;
-  height: 18%;
+  width: 100%;
+  height: 100%;
   font-weight: 1000;
-  font-size:400% ;
+  font-size:300% ;
 }
 .Comp4 {
   --background:#fef67f;
   --background-activated:#fcf6a6;
   --color:#140b0a;
   margin: 0;
-  position: absolute;
-  top: 44%;
-  left: 51.5%;
-  width: 37%;
-  height: 18%;
+  width: 100%;
+  height: 100%;
   font-weight: 1000;
-  font-size:400% ;
+  font-size:300% ;
 
 }
 .Comp5 {
@@ -99,27 +109,20 @@ ion-content {
   --background-activated:#3874ce;
   --color:#140b0a;
   margin: 0;
-  position: absolute;
-  top: 64%;
-  right: 51.5%;
-  --expand: "full";
-  width: 37%;
-  height: 18%;
+  width: 100%;
+  height: 100%;
   font-weight: 1000;
-  font-size:400% ;
+  font-size:300% ;
 }
 .Comp6 {
   --background:#e692f8;
   --background-activated:#eab9f5;
   --color:#140b0a;
   margin: 0;
-  position: absolute;
-  top: 64%;
-  left: 51.5%;
-  width: 37%;
-  height: 18%;
+  width: 100%;
+  height: 100%;
   font-weight: 1000;
-  font-size:400% ;
+  font-size:300% ;
 }
 .seg_boton {
   --background:#ffc581;
