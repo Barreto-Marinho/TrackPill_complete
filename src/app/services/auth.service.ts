@@ -75,7 +75,7 @@ export class AuthService {
     }
     catch(error){
       console.log('Error->',error.message)
-      this.Imprimir_error(error.message)
+      //this.Imprimir_error(error.message)
     }
   } 
  

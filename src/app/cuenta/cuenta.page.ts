@@ -39,6 +39,8 @@ export class CuentaPage implements OnInit {
       this.router.navigate(['/folder/ ']);
       this.presentToast();
     }else{
+      this.authSvc.usuario$=undefined;
+      this.authSvc.logout();
       this.Imprimir_error("El correo aun no esta verificado")
     }
   }
