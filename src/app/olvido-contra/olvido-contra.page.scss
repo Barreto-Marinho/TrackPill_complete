@@ -2,18 +2,23 @@
    
   ion-header {
     --ion-background-color:#3d8af7;
-    top: 4%;
-    left: 0%;
+    position: absolute;
+    top: 3%;
+    left:0%;
   }
   
   ion-content {
     --ion-background-color:#3d8af7;
   }
 
+
   ion-item {
     --ion-background-color:#3d8af7;
     top: 15%;
-    left: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    //left: 3%;
   } 
   .boton1 {
     position: relative;

@@ -1,8 +1,13 @@
 ion-header {
   --ion-background-color:#3d8af7;
+  background-color: #3d8af7;
   position: relative;
-  top: 3%;
+  top: 0%;
   left:0%;
+}
+ion-title {
+  --ion-background-color:#3d8af7;
+  background-color: #3d8af7;
 }
 
 ion-content {

@@ -9,7 +9,7 @@ import { datos_usuario } from '../shared/user_interface';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
-  gen: string ="male";
+  gen: string ="masculino";
   public cerrar_nombre:string="Cerrar sesion";
   public modifi_nombre:string="Modificar datos";
   public isDisabled: boolean=true;
