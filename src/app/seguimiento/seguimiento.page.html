@@ -1,12 +1,20 @@
 <ion-header class="ion-no-border">
   <ion-toolbar class="ion-no-border">
     <ion-button [routerLink]="['/folder/ ']" class="Volver">
-      <ion-icon name="arrow-back"></ion-icon>
+      <ion-icon class="volverse" name="arrow-back"></ion-icon>
     </ion-button>
     <ion-title class="ion-no-border">Seguimiento</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content  [fullscreen]="true">
-
+  <ion-row  style="background-color: #3d8af7;"> 
+    <ion-button (click)="atras()" class="atra">
+      <ion-icon  class="flechas" name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-label class="dia">{{dias}} </ion-label>
+    <ion-button (click)="Adelante()" class="adel">
+      <ion-icon class="flechas" name="arrow-forward"></ion-icon>
+    </ion-button>
+  </ion-row>
 </ion-content>

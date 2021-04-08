@@ -9,7 +9,7 @@ ion-toolbar {
   ion-content {
     --ion-background-color:#3d8af7;
   }
-  ion-icon{
+  .volverse{
     font-size: 330%;
   }
   ion-title{
@@ -19,11 +19,48 @@ ion-toolbar {
       color: #140b0a;
   }
 
+  .dia{
+     width: 30%;
+      text-align: center;
+  }
+
   .Volver {
-    --background:#3d8af7;
-    --background-activated:#63a3fc;
     --color:#140b0a;
     width: 18%;
     --box-shadow:none;
     height: 7%;
+    --background: #3d8af7;
+    background-color:#3d8af7;
+  }
+
+  .flechas{
+    font-size: 200%;
+  }
+
+  .atra{
+    --color:#140b0a;
+    width: 30%;
+    --box-shadow:none;
+    height: 7%;
+    --background: #3d8af7;
+    background-color:#3d8af7;
+    padding-left: 5%;
+  }
+ .adel{
+    --color:#140b0a;
+    width: 30%;
+    --box-shadow:none;
+    height: 7%;
+    --background: #3d8af7;
+    background-color:#3d8af7;
+    //position: relative;
+    //right: 1%;
+  }
+
+
+
+  ion-row{
+    position: relative;
+    left:5%;
+    width: 90%;
   }
