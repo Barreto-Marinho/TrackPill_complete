@@ -41,8 +41,7 @@ export class RegistrarsePage implements OnInit {
 
   async onRegister(email, password,nombre,apellido, dia, mes, anio,verify_password):Promise<void>{
     try{
-      if((email.value!="")&&(password.value!="")&&(apellido.value!="")&&(dia.value!="")&&(mes.value!="")&&(anio.value!="")&&(verify_password.value!="")&&(this.var!="male")){
-        console.log("Olaaaa")
+      if((nombre.value!="")&&(email.value!="")&&(password.value!="")&&(apellido.value!="")&&(dia.value!="")&&(mes.value!="")&&(anio.value!="")&&(verify_password.value!="")&&(this.var!="male")){
         if(this.verificar_contra(password.value)){
           if(verify_password.value==password.value){
             const user= await  this.authSvc.register(email.value,password.value,nombre.value,apellido.value,dia.value,mes.value,anio.value,this.var);
@@ -63,7 +62,6 @@ export class RegistrarsePage implements OnInit {
   }
 
   verificar_contra(password){
-    console.log(password.charCodeAt(0))
     const len = password.length;
     var asci= 0;
     var requisitos=[0,0,0]
