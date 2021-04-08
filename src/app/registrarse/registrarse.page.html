@@ -3,7 +3,6 @@
 </ion-header>
 
 <ion-content>
-
   <ion-button [routerLink]="['/cuenta']" class="Volver">
     <ion-icon name="arrow-back"></ion-icon>
   </ion-button>
@@ -215,6 +214,9 @@
       class="Boton_Reg"
       type="submit" (click)="onRegister(email, password,nombre,apellido, dia,mes, anio,verify_password)"
       
-    >Registrarse</ion-button></ion-row>
+    >Registrarse</ion-button>
+    <ion-button class="Boton_ayuda" type="submit" (click)="Imprimir_ayuda()">
+      <ion-icon name="alert-outline"></ion-icon>
+    </ion-button></ion-row>
   </ion-col>
 </ion-content>

@@ -7,7 +7,7 @@ ion-header {
     --ion-background-color:#3d8af7;
     position: absolute;
     top: 3%;
-    left:30%;
+    left:0%;
     
   }
 
@@ -148,8 +148,14 @@ select{
     --background-activated:rgb(143, 189, 253);
     --color:#140b0a;
     //right:25%;
-    padding-left: 20%;
+    padding-left: 10%;
     //width:50%;
     font-size:100% ;
     font-weight: 700;
 }
+
+.Boton_ayuda{
+    //position: absolute;
+    padding-left: 0%;
+}
+
