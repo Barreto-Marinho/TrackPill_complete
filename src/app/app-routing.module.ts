@@ -18,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'alarma',
-    loadChildren: () => import('./alarma/alarma.module').then( m => m.AlarmaPageModule)
+    loadChildren: () => import('./alarma/alarma.module').then( m => m.AlarmaPageModule),
+    canActivate:[AuthGuard]
   },
   {
     path: 'cuenta',
@@ -47,7 +48,8 @@ const routes: Routes = [
   },
   {
     path: 'seguimiento',
-    loadChildren: () => import('./seguimiento/seguimiento.module').then( m => m.SeguimientoPageModule)
+    loadChildren: () => import('./seguimiento/seguimiento.module').then( m => m.SeguimientoPageModule),
+    canActivate:[AuthGuard]
   }
 ];
 
