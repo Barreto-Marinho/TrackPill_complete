@@ -116,4 +116,17 @@ export class RegistrarsePage implements OnInit {
       await alert.present();
   }
 
+  async Imprimir_ayuda(){
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Alert',
+  
+      subHeader: "La contraseña debe tener al menos 6 caracteres,1 número, una mayuscula o una miniscula",
+      //message: texto,
+      buttons: ['OK']
+    });
+  
+    await alert.present();
+  }
+
 }
