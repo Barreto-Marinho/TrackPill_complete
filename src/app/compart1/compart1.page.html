@@ -1,11 +1,32 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
+  <ion-toolbar class="ion-no-border">
+    <ion-button [routerLink]="['/folder/ ']" class="Volver">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
     <ion-title>Compartimento 1</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button [routerLink]="['/folder/ ']" class="Volver">
-    <ion-icon name="arrow-back"></ion-icon>
-  </ion-button>
+<ion-content  [fullscreen]="true">
+    <ion-col> 
+      <ion-row>
+      <div class="item">
+        <label class="labels" >Marca:</label>
+        <ion-input  placeholder="Ingresa marca" ></ion-input></div>  </ion-row>
+        <ion-row><div class="item">
+        <label class="labels"  >Medicamento:</label>
+        <ion-input  placeholder="Ingresa medicamento" ></ion-input></div> </ion-row>
+        <ion-row><div class="item">
+        <label class="labels">N° Pastillas:</label>
+        <ion-input  placeholder="Ingresa numero de pastillas"></ion-input></div> </ion-row>
+        <ion-row><div class="item">
+        <label class="labels">Patillas tratamiento:</label>
+        <ion-input placeholder="Ingresa pastillas tratamiento"></ion-input></div></ion-row> 
+        <ion-row><div class="item">
+        <label class="labels">Temperatura maxima:</label>
+        <ion-input placeholder="Ingresa temperatura max" ></ion-input></div> </ion-row>
+        <ion-row><div class="item">
+        <label class="labels">Humedad maxima:</label>
+        <ion-input placeholder="Ingresa humedad maxima" ></ion-input></div> </ion-row>
+    </ion-col>
 </ion-content>

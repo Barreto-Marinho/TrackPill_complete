@@ -1,0 +1,29 @@
+ion-toolbar {
+    --background: #3d8af7;
+  }
+  
+  ion-header {
+    --ion-background-color:#3d8af7;
+  }
+  
+  ion-content {
+    --ion-background-color:#3d8af7;
+  }
+  ion-icon{
+    font-size: 330%;
+  }
+  ion-title{
+      position: absolute;
+      top: 30%;
+      right: 30%;
+      color: #140b0a;
+  }
+
+  .Volver {
+    --background:#3d8af7;
+    --background-activated:#63a3fc;
+    --color:#140b0a;
+    width: 18%;
+    --box-shadow:none;
+    height: 7%;
+  }

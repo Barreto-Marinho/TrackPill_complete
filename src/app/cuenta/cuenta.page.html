@@ -1,8 +1,13 @@
 <ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-border">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Cuenta</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  [fullscreen]="true">
   <ion-col>
     <ion-row><ion-label class="text_user" id=prueba >Usuario/email:</ion-label></ion-row>
     <ion-row><ion-input class="user" placeholder="Usuario/email" #email></ion-input></ion-row>

@@ -13,14 +13,41 @@ ion-toolbar {
     font-size: 330%;
   }
 
+  ion-title{
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    color: #140b0a;
+}
+
   .Volver {
     --background:#3d8af7;
     --background-activated:#63a3fc;
     --color:#140b0a;
-    position: absolute;
+    /*position: absolute;
     top: 0%;
-    left: 0%;
+    left: 0%;*/
     width: 18%;
     --box-shadow:none;
     height: 7%;
   }
+
+
+ion-col{
+    position:absolute;
+    top :10%;
+    left: 12.5%;
+}
+ion-row{
+    padding-top: 2%;
+}
+
+.item{
+  background-color:#75a9f9;
+  --background: #75a9f9;
+  border-radius: 10px ;
+  border: 10px solid #75a9f9;
+  width:75%;
+  padding-bottom:0%;
+}
+

@@ -5,7 +5,6 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -25,5 +24,6 @@
       <ion-row class="row1"><ion-button class="Comp6">6</ion-button> </ion-row>
     </ion-col>
   </ion-row>
-  <ion-button class="seg_boton">Seguimiento</ion-button>
+
+  <ion-button [routerLink]="['/seguimiento']"  class="seg_boton">Seguimiento</ion-button>
 </ion-content>
