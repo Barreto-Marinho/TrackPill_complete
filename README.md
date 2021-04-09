@@ -85,5 +85,7 @@ Este archivo presenta la programación de las acciones de la aplicación, es el 
     }
   }
 ```
+## Archivos de interes:
 
+[Libreria principal para control de base de datos](src/app/services/auth.service.ts)
 
