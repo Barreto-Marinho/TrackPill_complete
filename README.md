@@ -2,7 +2,7 @@
 
 ## Descripcion del proyecto:
 
-El presente repositorio es el codigo de desarrollo de una aplica para una solucion en IOT, el proyecto se llama Trackpill en el que
+<p align="justify"> El presente repositorio es el codigo de desarrollo de una aplica para una solucion en IOT, el proyecto se llama Trackpill en el que
 se propone realizar un pastillero inteligente, este pastillero
 interactuará con una aplicación móvil, en donde el usuario tendrá la posibilidad de “ingresar” a cada compartimiento del
 pastillero, allí se podrá configurar el tipo de pastilla, nombre, laboratorio creador, horario de ingesta y la cantidad total de
@@ -21,7 +21,7 @@ preocuparse por proporcionar los datos de cuidado mostrados en los empaques de c
 le notificará al usuario para que tome las medidas correspondientes. La aplicacion para celular, se desarrolla un IONIC el cual es
 un framework para el desarrollo de las aplicaciones, una ventaja que tiene dicho framework es que la aplicacion se puede exportar
 para que funcione tanto en android como en !OS, en este caso se esta exportando a android y desde android studios se crea el apk necesario 
-para descargar la aplicacion el cual se encuentra en:
+para descargar la aplicacion el cual se encuentra en: </p>
 
 - [Locacion de apk](android/app/build/outputs/apk/debug)
 
@@ -39,12 +39,14 @@ la constraseña verificada sea la misma que la contraseña, la contraseña tenga
 - Guard: Funcion de Ionic para que no se pueda acceder a ciertas paginas si estar con un usuario activado.
 
 ## Explicación códigos 
-Debido al uso del Framework Angular con ionic, se generan diferentes archivos para el desarrollo del proyecto, pero debido a las necesidades del programador, los archivos que tienen mayor relevancia son aquellos que interfieren directamente en la visualización y funcionamiento de la app, entre ellos encontramos los siguientes: 
+<p align="justify"> Debido al uso del Framework Angular con ionic, se generan diferentes archivos para el desarrollo del proyecto, pero debido a las necesidades del programador, los archivos que tienen mayor relevancia son aquellos que interfieren directamente en la visualización y funcionamiento de la app, entre ellos encontramos los siguientes: </p>
+
 * _*page.ts*_
 * _*page.html*_
 * _*page.scss*_
 ### Archivos relevantes 
-Para acceder a estos 3 archivos se debe abrir la carpeta de cada “page”, y a allí estarán, de este modo en su editor de código, abra el proyecto y diríjase a una carpeta, por ejemplo _cuenta_ allí encontrará los archivos *cuenta.page.html*, *cuenta.page.scss* y *cuenta.page.ts*, a continuación, se hará breve explicación de la función a grandes rasgos que cada uno de este tipo de archivos hace. 
+<p align="justify"> Para acceder a estos 3 archivos se debe abrir la carpeta de cada “page”, y a allí estarán, de este modo en su editor de código, abra el proyecto y diríjase a una carpeta, por ejemplo _cuenta_ allí encontrará los archivos *cuenta.page.html*, *cuenta.page.scss* y *cuenta.page.ts*, a continuación, se hará breve explicación de la función a grandes rasgos que cada uno de este tipo de archivos hace. </p>
+
 1. _*page.html*_
 En este archivo se hace la estructura de las paginas de la aplicación mediante el lenguaje marcado HTML, a continuación, se muestra un fragmento de código en este lenguaje:
 ```HTML
