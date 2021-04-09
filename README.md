@@ -29,13 +29,16 @@ para descargar la aplicacion el cual se encuentra en: </p>
 
 En cuanto a la aplicacion actualmente cuenta con todas las paginas propuestas ya creadas, con funciones de:
 - Login: El usuario puede ingresar a la cuenta, la base de datos que se usa actualmente es firebase.
-- Registrarse: El usuario puede registrarse junto con todos sus datos, se incluyo la verificacion para que todos los campos esten completos, 
-la constraseña verificada sea la misma que la contraseña, la contraseña tenga al menos 6 caracteres, y que contenga al menos 1 mayuscula, 
-1 minuscula, y 1 numero. Luego de registrarse se enviara un correo de verificacion para el usuario.
+
+- <p align="justify"> Registrarse: El usuario puede registrarse junto con todos sus datos, se incluyo la verificacion para que todos los campos esten completos, la constraseña verificada sea la misma que la contraseña, la contraseña tenga al menos 6 caracteres, y que contenga al menos 1 mayuscula,  1 minuscula, y 1 numero. Luego de registrarse se enviara un correo de verificacion para el usuario. </p>
+
 - Verificacion: No se podra acceder a la cuenta a menos que ya se haya verificado el correo. No olvidar revisar en SPAM en el correo.
+
 - Modificacion de datos: El usuario una vez registrado en la pagina de cuenta se mostraran sus datos actuales, estos datos se podran modificar.
 - Olvido contraseña: Esta habilitada la opcion de olvido contraseña, el cual mandara al correo la opcion para esto.
+
 - Logout: Esta funcion permitira salirse de la cuenta al usuario.
+
 - Guard: Funcion de Ionic para que no se pueda acceder a ciertas paginas si estar con un usuario activado.
 
 ## Explicación códigos 
@@ -44,8 +47,9 @@ la constraseña verificada sea la misma que la contraseña, la contraseña tenga
 * _*page.ts*_
 * _*page.html*_
 * _*page.scss*_
+
 ### Archivos relevantes 
-<p align="justify"> Para acceder a estos 3 archivos se debe abrir la carpeta de cada “page”, y a allí estarán, de este modo en su editor de código, abra el proyecto y diríjase a una carpeta, por ejemplo _cuenta_ allí encontrará los archivos *cuenta.page.html*, *cuenta.page.scss* y *cuenta.page.ts*, a continuación, se hará breve explicación de la función a grandes rasgos que cada uno de este tipo de archivos hace. </p>
+<p align="justify"> Para acceder a estos 3 archivos se debe abrir la carpeta de cada “page”, y a allí estarán, de este modo en su editor de código, abra el proyecto y diríjase a una carpeta, por ejemplo _cuenta_ allí encontrará los archivos cuenta.page.html, cuenta.page.scss y cuenta.page.ts, a continuación, se hará breve explicación de la función a grandes rasgos que cada uno de este tipo de archivos hace. </p>
 
 1. _*page.html*_
 En este archivo se hace la estructura de las paginas de la aplicación mediante el lenguaje marcado HTML, a continuación, se muestra un fragmento de código en este lenguaje:
