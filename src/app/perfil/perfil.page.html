@@ -1,24 +1,24 @@
-<ion-header>
-  <ion-toolbar class="ion-no-border">
-    <ion-title>Cuenta</ion-title>
+<ion-header> <!--Se inicia el encabezado de la pagina-->  
+  <ion-toolbar class="ion-no-border">  <!--Se configura el toolbar sin borde--> 
+    <ion-title>Cuenta</ion-title> 
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <ion-col>
+<ion-content >  <!--Se inicia el contenido de la pagina, todos los elementos se ponen dentro de este contenido--> 
+  <ion-col>  <!--Se inicia una columna para organizacion de las inputs--> 
     <ion-row>
       <div class="item_nombre">
         <label class="labels" >Nombre:</label>
-        <ion-input  disabled="{{isDisabled}}" placeholder={{place_nombre}}  #nombre></ion-input></div>  </ion-row>
+        <ion-input  disabled="{{isDisabled}}" placeholder={{place_nombre}}  #nombre></ion-input></div>  </ion-row>  <!--Se habilita una iput para colocar el nombre--> 
         <ion-row><div  class="item_apellido">
         <label class="labels"  >Apellido:</label>
         <ion-input disabled={{isDisabled}} placeholder={{place_apellido}} #apellido></ion-input></div> </ion-row>
         <ion-row><div class="control_group">
         <label  class="labels">Fecha de nacimiento:</label>
         <div  class="controls">
-          <select [disabled]="isDisabled" name="dob-day" id="dob-day" #dia>
+          <select [disabled]="isDisabled" name="dob-day" id="dob-day" #dia>  <!--Se genera un select para la fecha de nacimeinto--> 
             <option value={{place_dia}}>{{place_dia}}</option>
-            <option value="">Dia</option>
+            <option value="">Dia</option>  <!--se definen las diferentes opciones --> 
             <option value="">---</option>
             <option value="01">01</option>
             <option value="02">02</option>
@@ -50,11 +50,11 @@
             <option value="28">28</option>
             <option value="29">29</option>
             <option value="30">30</option>
-            <option value="31">31</option>
+            <option value="31">31</option>  <!--Termina la opcion de dias --> 
           </select>
           <select [disabled]="isDisabled" name="dob-month" id="dob-month" #mes>
             <option value={{place_mes}}>{{place_mes_Str}}</option>
-            <option value="">Mes</option>
+            <option value="">Mes</option>  <!--Se definen las opciones de meses--> 
             <option value="">-----</option>
             <option value="01">Enero</option>
             <option value="02">Febrero</option>
@@ -67,13 +67,13 @@
             <option value="09">Septiembre</option>
             <option value="10">Octubre</option>
             <option value="11">Noviembre</option>
-            <option value="12">Diciembre</option>
+            <option value="12">Diciembre</option>  <!--Terminan las opciones--> 
           </select>
           <select [disabled]="isDisabled" name="dob-year" id="dob-year" #anio>
             <option value={{place_anio}}>{{place_anio}}</option>
             <option value="">Año</option>
             <option value="">----</option>
-            <option value="2020">2020</option>
+            <option value="2020">2020</option>  <!--Se inicia las opciones de año --> 
             <option value="2019">2019</option>
             <option value="2018">2018</option>
             <option value="2017">2017</option>
@@ -192,13 +192,13 @@
             <option value="1904">1904</option>
             <option value="1903">1903</option>
             <option value="1901">1901</option>
-            <option value="1900">1900</option>
-          </select>
+            <option value="1900">1900</option>  <!--Se termina la definicion de años--> 
+          </select>  <!--Todas la opciones se guardan gracias a la almuadilla #--> 
         </div>
       </div></ion-row>
       <ion-row *ngIf="isDisabled" ><div  class="Radio_sexo">
         <label class="labels">Genero:</label>
-        <form  action="" #genero>
+        <form  action="" #genero>  <!--se guarda la respuesta en genero, gracias a la almuadilla #--> 
           <input  disabled type="radio" name="gender" value="male" [checked]="place_check" > Masculino<br>
           <input  disabled type="radio" nsame="gender" value="female" [checked]="n_place_check"> Femenino<br>
         </form>
@@ -212,6 +212,6 @@
       </div></ion-row>
       <ion-row class = espacio></ion-row>
     <ion-row><ion-button type = "submit" (click)="Cerrar_sesion(nombre, apellido, anio,mes,dia)">{{cerrar_nombre}}</ion-button>
-    <ion-button  (click)="Modificar_datos()">{{modifi_nombre}}</ion-button></ion-row>
+    <ion-button  (click)="Modificar_datos()">{{modifi_nombre}}</ion-button></ion-row>  <!--Se define el boton y se configura para que al ser presionado se corra la funcion "Modificar_datos()" presente en perfil.page.ts--> 
   </ion-col>
-</ion-content>
+</ion-content>  <!--Se acaba la definicion del contenido--> 

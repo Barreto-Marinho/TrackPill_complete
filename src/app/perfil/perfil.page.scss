@@ -1,39 +1,40 @@
-    ion-header {
+   // se configuran todos los elementos presentes en perfil.page.html
+   ion-header { // se definen las caracteristicas del header presennte en el html
         --ion-background-color:#3d8af7;
         background-color: #3d8af7;
     }
-    ion-content {
+    ion-content { // se configura el color de la pagina
     --ion-background-color:#3d8af7;
     }
     ion-toolbar {
         --ion-background-color:#3d8af7;
         background-color: #3d8af7;
     }
-    ion-title{
+    ion-title{ // se configura el color de la toolbar
         --ion-background-color:#3d8af7;
         background-color: #3d8af7;
     }
 
-    ion-col{
+    ion-col{ // se configura la posicion de la columna
         position:absolute;
         top :10%;
         left: 12.5%;
     }
-    ion-row{
+    ion-row{ // se configura la posicion de la fila
         padding-top: 2%;
     }
 
-    ion-button{
+    ion-button{ // se configuran las caracteristicas del boton de regresar
         --background:#75a9f9;
         --background-activated:#1c7aff;
         color:#140b0a;
     }
 
-.espacio{
-    padding-top: 20%;
+.espacio{ // se configura las caracteristicas del elemento
+    padding-top: 20%; // esta alejadp del margen de arriba un porcentaje
 }    
   
-.item_nombre{
+.item_nombre{ // se configura las caracteristicas del elemento
     background-color:#75a9f9;
     //top:10%;
     --background: #75a9f9;
@@ -45,7 +46,7 @@
     //height: 7%;
     padding-bottom:0%;
 }
-.item_apellido{
+.item_apellido{ // se configura las caracteristicas del elemento
     background-color:#75a9f9;
     //top:20%;
     --background: #75a9f9;
@@ -57,7 +58,7 @@
     //height: 5%;
     padding-bottom:0%;
 }
-.item_correo{
+.item_correo{ // se configura las caracteristicas del elemento
     //top: 30%;
     --background: #75a9f9;
     background-color:#75a9f9;
@@ -71,32 +72,32 @@
 }
 
 
-.item_sexo{
+.item_sexo{ // se configura las caracteristicas del elemento
     //top: 70%;
     --background: #75a9f9;
     background-color:#75a9f9;
     //position: absolute;
     //@at-root:12.5%;
     border-radius: 10px ;
-    border: 10px solid #75a9f9;
+    border: 10px solid #75a9f9; // se configura la posicion del objeto
     width:75%;
     //height: 5%;
     padding-bottom:0%;
 }
 
 
-.Volver {
+.Volver { // se configura las caracteristicas del elemento
     --background:#3d8af7;
     --background-activated:#75a9f9;
     --color:#140b0a;
     position: absolute;
     top: 0%;
-    left: 0%;
-    width: 18%;
+    left: 0%; // se configura la posicion del objeto
+    width: 18%; // se configura la posicion del objeto
     height: 7%;
     --box-shadow:none;
   }
-.control_group{
+.control_group{ // se configura las caracteristicas del elemento
     padding-left: 3%;
     padding-bottom:3%;
     padding-top:3%;
@@ -107,26 +108,26 @@
     width:75%;
     border-radius: 10px ;
 }
-select{
+select{ // se configura las caracteristicas del elemento
     border-radius: 5px ;
     background-color: #b8d5fd;
 }
 
 
-.Radio_sexo{
+.Radio_sexo{ // se configura las caracteristicas del elemento
     //top: 69.7%;
     --background: #75a9f9;
     background-color:#75a9f9;
     //position: absolute;
     //right:12.5%;
-    border-radius: 10px ;
+    border-radius: 10px ; // se configura un poco redoneado 
     border: 10px solid #75a9f9;
     width:75%;
     //height: 5%;
 }
-.labels{
-    font-weight: 700;
+.labels{ // se configura las caracteristicas del elemento
+    font-weight: 700; // el tamaño de la fuente de la letra se configura
 }
-.controls{
+.controls{ // se configura las caracteristicas del elemento
     padding-top:3%
 }
