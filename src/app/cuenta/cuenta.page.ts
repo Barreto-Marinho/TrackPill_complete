@@ -20,11 +20,21 @@ export class CuentaPage implements OnInit {
   ngOnInit() {
   }
 
+/*****************************************************************************************************  
+  La funcion ionViewWillEnter se ejecuta cuando se imprima la pagina actual, con se puede inicializar
+  las variables de la pagina
+******************************************************************************************************/ 
   ionViewWillEnter(){
       this.inputemail.value='';
       this.inputpassword.value='';
   }
 
+/*****************************************************************************************************  
+La funcion onLogin() logea al usuario en firebase, y redirige al usuario ala pagina principal mientras
+que el usuario ya haya verificado la cuenta, de lo contrario mandara la alerta de que el correo no esta
+verificado, en caso de tener mal la contraseña o el correo este lo indicara, y mostrara un toast si 
+la sesion se inicio correctamente.
+******************************************************************************************************/
   async onLogin(email,password){
     try{
       const user= await  this.authSvc.login(email.value,password.value);
@@ -40,7 +50,10 @@ export class CuentaPage implements OnInit {
     catch(error){console.log('Error->',error)} 
   }
 
-
+/*****************************************************************************************************  
+En la funcion de redirigir_usua(),  se redirigira a la pagina principal, y se mostrara el toast 
+indicando que ya se ha iniciado la sesion, si no esta el correo verificado, manda la alerta. 
+******************************************************************************************************/
   redigirir_usua(estaverificado: boolean){
       // si el usuario esta bien, redigir a admin, sino dice que verificar
     if(estaverificado){
@@ -53,6 +66,10 @@ export class CuentaPage implements OnInit {
     }
   }
 
+/*****************************************************************************************************  
+La funcion Imprimir_error() recibe un string de texto, y lo imprime en una ventana de alert en el 
+celular
+******************************************************************************************************/
   async Imprimir_error(texto){
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
@@ -66,18 +83,11 @@ export class CuentaPage implements OnInit {
     await alert.present();
 }
  
-async Imprimir_ayuda(){
-  const alert = await this.alertController.create({
-    cssClass: 'my-custom-class',
-    header: 'Alert',
 
-    subHeader: "La contraseña debe tener al menos 6 caracteres,1 número, una mayuscula o una miniscula",
-    //message: texto,
-    buttons: ['OK']
-  });
-
-  await alert.present();
-}
+ /*****************************************************************************************************  
+La funcion presentToast es una funcion que recibe una variable texto, y la muestra en la pantalla
+durante unos pocos segundos.
+******************************************************************************************************/
 async presentToast() {
   const toast = await this.toastController.create({
     message: 'Sesion iniciada',
@@ -87,9 +97,3 @@ async presentToast() {
 }
 
 }
-
-//Comentario probar 
-//otro comentario
-
-
-//comentario de prueba 

@@ -107,10 +107,8 @@ correo de verificacion, se retorna usuario para poder saber si este se creo corr
 
 
  /*****************************************************************************************************  
-
 La funcion presentToast es una funcion que recibe una variable texto, y la muestra en la pantalla
 durante unos pocos segundos.
-
 ******************************************************************************************************/
   async presentToast(texto) {
     const toast = await this.toastController.create({
@@ -121,10 +119,8 @@ durante unos pocos segundos.
   }
 
  /*****************************************************************************************************  
-
 La funcion Imprimir_error es una funcion que recibe una variable texto, y la muestra un objeto de tipo
 alert en la pantalla.
-
 ******************************************************************************************************/
   async Imprimir_error(texto){
     const alert = await this.alertController.create({

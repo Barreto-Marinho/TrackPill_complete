@@ -23,6 +23,11 @@ export class RegistrarsePage implements OnInit {
   ngOnInit() {
   }
 
+
+/*****************************************************************************************************  
+  La funcion ionViewWillEnter se ejecuta cuando se imprima la pagina actual, con se puede inicializar
+  las variables de la pagina
+******************************************************************************************************/ 
   ionViewWillEnter(){
     this.inputname.value='';
     this.inputapellido.value='';
@@ -32,13 +37,27 @@ export class RegistrarsePage implements OnInit {
     this.var = "male";
   }
 
+
+/*****************************************************************************************************  
+ La funcion male_boton() ejecuta cambia el valor de la funcion var a masculino
+******************************************************************************************************/  
   male_boton(){
     this.var = "masculino";
   };
+
+/*****************************************************************************************************  
+ La funcion female_boton() ejecuta cambia el valor de la funcion var a masculino
+******************************************************************************************************/  
   female_boton(){
     this.var = "femenino";
   }
 
+/*****************************************************************************************************  
+ La funcion onRegister recibe los valores de email, password, nombre, apellido, dia, ani, 
+ verify_password, en esta funcion se verifica que todos los campos esten completados, que la 
+ contraseña tenga los minimos necesarios en su composicion, que el correo no haya sido registrado
+ anteriormente. Si se cumplen estas condiciones, se realiza el cambio a la pagina de verificacion.
+******************************************************************************************************/  
   async onRegister(email, password,nombre,apellido, dia, mes, anio,verify_password):Promise<void>{
     try{
       if((nombre.value!="")&&(email.value!="")&&(password.value!="")&&(apellido.value!="")&&(dia.value!="")&&(mes.value!="")&&(anio.value!="")&&(verify_password.value!="")&&(this.var!="male")){
@@ -61,6 +80,9 @@ export class RegistrarsePage implements OnInit {
     catch(error){console.log('Error',error)} 
   }
 
+/*****************************************************************************************************  
+La funcion verificar_contra() recibe la contraseña ingresada y verifica todas las condiciones a cumplir.
+******************************************************************************************************/  
   verificar_contra(password){
     const len = password.length;
     var asci= 0;
@@ -102,6 +124,12 @@ export class RegistrarsePage implements OnInit {
     }
   }
 
+
+
+/*****************************************************************************************************  
+La funcion Imprimir_error() recibe un string de texto, y lo imprime en una ventana de alert en el 
+celular
+******************************************************************************************************/ 
   async Imprimir_error(texto){
       const alert = await this.alertController.create({
         cssClass: 'my-custom-class',
@@ -114,6 +142,9 @@ export class RegistrarsePage implements OnInit {
       await alert.present();
   }
 
+/*****************************************************************************************************  
+La funcion Imprimir_error() imprime las condiciones de las contraseñas para que el usuario se entere
+******************************************************************************************************/ 
   async Imprimir_ayuda(){
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
