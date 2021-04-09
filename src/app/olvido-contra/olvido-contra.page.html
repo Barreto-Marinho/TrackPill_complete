@@ -1,12 +1,12 @@
-<ion-header class="ion-no-border">
+<ion-header class="ion-no-border">  <!--Se inicia el encabezado de la pagina--> 
     <ion-title>Olvido contraseña</ion-title>
 </ion-header>
 
-<ion-content>
-    <ion-item lines="full" >
-      <ion-label class="label" position="floating">Email</ion-label>
-      <ion-input class="input" type="text" #email required></ion-input>
+<ion-content>  <!--Se inicia el contenido de la pagina--> 
+    <ion-item lines="full" > 
+      <ion-label class="label" position="floating">Email</ion-label>  <!--Se crean nuevos labels--> 
+      <ion-input class="input" type="text" #email required></ion-input><!--se pide el correo y se guarada en #email--> 
     </ion-item>
-     <ion-button  (click)="Recuperar(email)" class="boton1">Enviar </ion-button>
-     <ion-button [routerLink]="['/cuenta']" class="boton2" >Volver</ion-button>
+     <ion-button  (click)="Recuperar(email)" class="boton1">Enviar </ion-button> <!--Al presionar el boton se corra la funcion--> 
+     <ion-button [routerLink]="['/cuenta']" class="boton2" >Volver</ion-button><!-- Al presioanar boton nos dirigimos a cuenta--> 
 </ion-content>
