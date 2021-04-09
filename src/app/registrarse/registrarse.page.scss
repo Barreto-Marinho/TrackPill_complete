@@ -1,9 +1,10 @@
+// se configuran todos los elementos presentes en registrar.page.html
 
-ion-content {
+ion-content {// se definen las caracteristicas del contenido pricipal de la pagina
     --ion-background-color:#3d8af7;
 }
 
-ion-header {
+ion-header {// se definen las caracteristicas del header principal
     --ion-background-color:#3d8af7;
     position: absolute;
     top: 3%;
@@ -11,19 +12,18 @@ ion-header {
     
   }
 
-ion-col{
+ion-col{// se definen las caracteristicas de la columna
     position:absolute;
     top :10%;
     left: 12.5%;
 }
-ion-row{
+ion-row{// se definen las caracteristicas de la fila
     padding-top: 2%;
 }
 
 
-.item_nombre{
+.item_nombre{// se definen las caracteristicas del label nombre
     background-color:#75a9f9;
-    //top:10%;
     --background: #75a9f9;
     //position: absolute;
     //right:12.5%;
@@ -33,7 +33,7 @@ ion-row{
     //height: 7%;
     padding-bottom:0%;
 }
-.item_apellido{
+.item_apellido{// se definen las caracteristicas del label apellido
     background-color:#75a9f9;
     //top:20%;
     --background: #75a9f9;
@@ -45,7 +45,7 @@ ion-row{
     //height: 5%;
     padding-bottom:0%;
 }
-.item_correo{
+.item_correo{// se definen las caracteristicas del label del correo
     //top: 30%;
     --background: #75a9f9;
     background-color:#75a9f9;
@@ -57,7 +57,7 @@ ion-row{
     //height: 5%;
     padding-bottom:0%;
 }
-.item_contra{
+.item_contra{// se definen las caracteristicas de la contraseña
     //top: 40%;
     --background: #75a9f9;
     background-color:#75a9f9;
@@ -69,7 +69,7 @@ ion-row{
     //height: 5%;
     padding-bottom:0%;
 }
-.item_contra_Ver{
+.item_contra_Ver{// se definen las caracteristicas de la contraseña con vereficacion
     //top: 50%;
     --background: #75a9f9;
     background-color:#75a9f9;
@@ -82,7 +82,7 @@ ion-row{
     padding-bottom:0%;
 }
 
-.item_sexo{
+.item_sexo{// se definen las caracteristicas del contenido de los botones de genero
     //top: 70%;
     --background: #75a9f9;
     background-color:#75a9f9;
@@ -96,7 +96,7 @@ ion-row{
 }
 
 
-.Volver {
+.Volver {// se definen las caracteristicas del boton de volver
     --background:#3d8af7;
     --background-activated:#75a9f9;
     --color:#140b0a;
@@ -107,7 +107,7 @@ ion-row{
     height: 7%;
     --box-shadow:none;
   }
-.control_group{
+.control_group{// se definen las caracteristicas para el div 
     padding-left: 3%;
     padding-bottom:3%;
     padding-top:3%;
@@ -118,13 +118,13 @@ ion-row{
     width:75%;
     border-radius: 10px ;
 }
-select{
+select{// se definen las caracteristicas de la caracteristica select
     border-radius: 5px ;
     background-color: #b8d5fd;
 }
 
 
-.Radio_sexo{
+.Radio_sexo{// se definen las caracteristicas los botones de genero
     //top: 69.7%;
     --background: #75a9f9;
     background-color:#75a9f9;
@@ -135,13 +135,13 @@ select{
     width:75%;
     //height: 5%;
 }
-.labels{
+.labels{// se definen las caracteristicas de los labels
     font-weight: 700;
 }
 .controls{
     padding-top:3%
 }
-.Boton_Reg{
+.Boton_Reg{// se definen las caracteristicas del boton de registro
     //position: absolute;
     //top: 80%;
     --background:#75a9f9;
@@ -154,7 +154,7 @@ select{
     font-weight: 700;
 }
 
-.Boton_ayuda{
+.Boton_ayuda{// se definen las caracteristicas del boton de ayuda
     //position: absolute;
     padding-left: 0%;
 }

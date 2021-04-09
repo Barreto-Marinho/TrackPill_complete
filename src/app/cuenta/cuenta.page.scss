@@ -1,46 +1,46 @@
-
+// se configuran todos los elementos presentes en cuenta.page.html
   
-ion-menu-button {
+ion-menu-button { // se definen las caracteristicas del boton del menu lateral
   color: #010202;
 }
 
-ion-title{
+ion-title{ // se definen las caracteristicas del elemento title
   color: #140b0a;
 }
-ion-toolbar {
+ion-toolbar { // se definen las caracteristicas del tollbar
   --background: #3d8af7;
   --ion-background-color:#3d8af7;
 }
 
-  ion-header {
+  ion-header { // se definen las caracteristicas del header 
     --ion-background-color:#3d8af7;
     --background: #3d8af7;
   }
-  ion-content {
+  ion-content { // se definen las caracteristicas de content
     --background: #3d8af7;
     --ion-background-color:#3d8af7;
   }
 
 
-  ion-col{
+  ion-col{ // se definen las caracteristicas del objeto columna
     position:absolute;
     top: 25%;
     left: 12.5%;
   }
 
-  ion-row{
+  ion-row{ // se definen las caracteristicas del objeto row
     width: 75%;
     padding-bottom: 1%;
   }
 
-  .espacio{
+  .espacio{ // se definen las caracteristicas de una fila vacia para que ocupe espacio
     padding-top: 40%;
   }
-  .espacio_2{
+  .espacio_2{ // se definen las caracteristicas de una fila vacia para que ocupe espacio
     padding-top: 2%;
   }
 
-  .Boton_olvidar {
+  .Boton_olvidar { // se definen las caracteristicas del boton olvidar
     --background:#3d8af7;
     --background-activated:#3d8af7;
     --color:#140b0a;
@@ -52,7 +52,7 @@ ion-toolbar {
     font-size: 70% ;
     font-weight: 700;
   }
-  .Boton_registrarse {
+  .Boton_registrarse {// se definen las caracteristicas del boton registrarse
     --background:#3d8af7;
     --background-activated:#3d8af7;
     --color:#140b0a;
@@ -65,7 +65,7 @@ ion-toolbar {
     font-weight: 700;
     --box-shadow:none;
   }
-  .Boton_Entrar {
+  .Boton_Entrar { // se definen las caracteristicas del boton entrar
     --background:#75a9f9;
     --background-activated:#9fc2f7;
     --color:#140b0a;
@@ -76,7 +76,7 @@ ion-toolbar {
     font-weight: 700;
   }
 
-.contra{
+.contra{ // se definen las caracteristicas del input de contraseña
   border-radius: 10px ;
   padding-left: 20px ;
   padding-right: 20px;
@@ -84,7 +84,7 @@ ion-toolbar {
   background: #75a9f9;
   height: 5%;
 }
-.user{
+.user{// se definen las caracteristicas del input de usuario
   border-radius: 10px ;
   padding-left: 30px ;
   padding-right: 30px;
@@ -93,21 +93,13 @@ ion-toolbar {
   height: 5%;
   //width: 60%;
 }
-.text_contra{
-  /*position: absolute;
-  bottom: 53%;
-  right:20%;*/
+.text_contra{// se definen las caracteristicas del texto de contraseña
   height: 5%;
-  //width: 60%;
   font-size:100% ;
   font-weight: 700;
 }
-.text_user{
-  /*position: absolute;
-  bottom: 63%;
-  right:20%;*/
+.text_user{// se definen las caracteristicas del input usuario
   height: 5%;
-  //width: 60%;
   font-size:100% ;
   font-weight: 700;
 }
