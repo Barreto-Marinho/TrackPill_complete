@@ -28,9 +28,24 @@ export class AuthService {
   }
 
 
+/*****************************************************************************************************  
+
+La funcion isEmailVerify recibe una variable user y retorna un booleano dependiendo si el resultado es 
+verdadero o no, dependiendo si el usuario esta verificado o no
+
+******************************************************************************************************/  
  isEmailVerify(user:User):boolean{
       return(user.emailVerified===true ?true:false);
   }
+
+
+/*****************************************************************************************************  
+
+La funcion resetPassword recibe la variable email de tipo string, esta funcion se encarga de utilizar
+una funcion que envia el corro para poder resetear la contraseña, en caso de que el correo no exista,
+se lanza una alerta en la pantalla indicando esto.
+
+******************************************************************************************************/  
 
   async resetPassword(email: string): Promise<void>{
     try{
@@ -58,6 +73,17 @@ export class AuthService {
     catch(error){console.log('Error->',error)}
   } */
 
+
+
+/*****************************************************************************************************  
+
+La funcion register recibe en string el email, password, nombre, apellido, dia, mes, anio, y genero
+para poder registrar el email con estos datos, se usa la funcion createUserWithEmailAndPassword, el cual 
+crea el usuario en firebase, y este le otorga el ID al usuario, adicionalmente a esto, se crea una nueva
+carpeta en la coleccion Datos_Usuario con el nombre del ID del usuario creado, y por ultimo se envia el 
+correo de verificacion, se retorna usuario para poder saber si este se creo correctamente.
+
+******************************************************************************************************/  
   async register(email:string, password: string,nombre:string, apellido:string,dia:string,mes:string,anio:string,genero:string): Promise<User>{
     try{
       const{user}=await this.afAuth.createUserWithEmailAndPassword(email, password);
@@ -78,7 +104,14 @@ export class AuthService {
       //this.Imprimir_error(error.message)
     }
   } 
- 
+
+
+ /*****************************************************************************************************  
+
+La funcion presentToast es una funcion que recibe una variable texto, y la muestra en la pantalla
+durante unos pocos segundos.
+
+******************************************************************************************************/
   async presentToast(texto) {
     const toast = await this.toastController.create({
       message: texto,
@@ -87,7 +120,12 @@ export class AuthService {
     toast.present();
   }
 
-  
+ /*****************************************************************************************************  
+
+La funcion Imprimir_error es una funcion que recibe una variable texto, y la muestra un objeto de tipo
+alert en la pantalla.
+
+******************************************************************************************************/
   async Imprimir_error(texto){
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
@@ -101,6 +139,13 @@ export class AuthService {
     await alert.present();
 }
 
+
+ /*****************************************************************************************************  
+
+La funcion login se encarga de iniciar la cuenta con firebase, al mismo tiempo extrae los datos de 
+la cuenta en las variables de usuario$ y datos_usuario$
+
+******************************************************************************************************/
   async login(email: string ,password:string): Promise<User>{
     try{
       const{user}=await this.afAuth.signInWithEmailAndPassword(email,password)
@@ -112,6 +157,12 @@ export class AuthService {
     catch(error){console.log('Error->',error)}
   } 
 
+
+ /*****************************************************************************************************  
+
+ Esta funcion envia el email de verificacion al correo
+
+******************************************************************************************************/
   async sendVerificationEmail(): Promise<void>{
     try{
       return(await this.afAuth.currentUser).sendEmailVerification();
@@ -120,6 +171,13 @@ export class AuthService {
     catch(error){console.log('Error->',error)}
   } 
 
+
+ /*****************************************************************************************************  
+
+ La funcion de logout realiza la accion de cerrado de sesion con firebase, y borra las variables de 
+ los usuarios anteriores
+
+******************************************************************************************************/
   async logout(): Promise<void>{
     try{
       await this.afAuth.signOut();
@@ -129,6 +187,13 @@ export class AuthService {
     catch(error){console.log('Error->',error)}
   } 
 
+ /*****************************************************************************************************  
+
+ La funcion de modificar_datos() actualiza los datos en firebase, la primera variable que recibe es de 
+ tipo usuario, y las otras son de tipo string como nombre, anio, mes, dia y  gener, que son las variables
+ que se actualizaran
+
+******************************************************************************************************/
   async modificar_datos(user:User,nombre:string, apellido:string, anio:string,mes:string,dia:string,gener:string):Promise<void>{
     try{
       const  datos:datos_usuario={
@@ -171,7 +236,12 @@ export class AuthService {
     }*/
 
 
+ /*****************************************************************************************************  
 
+ La funcion de actualizar_datos() actualiza los datos en la variable datos$ segun el usuario que se 
+ haya iniciado.
+
+******************************************************************************************************/
 async actualizar_datos(){
   try{
     const dataRef =await this.db.collection('Datos_Usuario').doc(this.usuario$.uid);
@@ -192,7 +262,11 @@ async actualizar_datos(){
   }
 
 
+ /*****************************************************************************************************  
 
+ La funcion de updateUserData() actualiza datos de user
+
+******************************************************************************************************/
   async updateUserData(user:User): Promise<void>{
     try{
       const userRef:AngularFirestoreDocument<User>= this.afs.doc(`users/${user.uid}`)
