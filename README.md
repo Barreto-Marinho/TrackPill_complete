@@ -85,7 +85,30 @@ Este archivo presenta la programación de las acciones de la aplicación, es el 
     }
   }
 ```
-## Archivos de interes:
-
+## Archivos mas relevantes del proyecto:
+-Libreria principal:
 [Libreria principal para control de base de datos](src/app/services/auth.service.ts)
 
+- Pagina principal:
+[Codigo HTML pagina pricipal](src/app/folder/folder.page.html)
+[Codigo SCSS pagina pricipal](src/app/folder/folder.page.scss)
+
+- Pagina login:
+[Codigo HTML pagina login](src/app/cuenta/cuenta.page.html)
+[Codigo SCSS pagina login](src/app/cuenta/cuenta.page.scss)
+[Codigo TS pagina login](src/app/cuenta/cuenta.page.ts)
+
+- Pagina Olvidar contraseña:
+[Codigo HTML pagina Olvidar contraseña](src/app/olvido-contra/olvido-contra.page.html)
+[Codigo SCSS pagina Olvidar contraseña](src/app/olvido-contra/olvido-contra.page.scss)
+[Codigo TS pagina Olvidar contraseña](src/app/olvido-contra/olvido-contra.page.ts)
+
+- Pagina Perfil:
+[Codigo HTML pagina perfil](src/app/perfil/perfil.page.html)
+[Codigo SCSS pagina perfil](src/app/perfil/perfil.page.scss)
+[Codigo TS pagina perfil](src/app/perfil/perfil.page.ts)
+
+- Pagina registrarse:
+[Codigo HTML pagina registrarse](src/app/registrarse/registrarse.page.html)
+[Codigo SCSS pagina registrarse](src/app/registrarse/registrarse.page.scss)
+[Codigo TS pagina registrarse](src/app/registrarse/registrarse.page.ts)
