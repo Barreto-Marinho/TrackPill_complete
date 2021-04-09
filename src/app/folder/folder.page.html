@@ -1,29 +1,28 @@
-
-
+<!--Se inicia el encabezado de la pagina-->  
 <ion-header class="ion-no-border">
-  <ion-toolbar >
+  <ion-toolbar > <!--Se configura la toolbar-->  
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button></ion-menu-button> 
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 
 
-<ion-content [fullscreen]="true">
-  <ion-img src="assets/icon/logo.png"></ion-img>
-  <ion-row class="row2">
+<ion-content [fullscreen]="true"> <!--Se usa la aplicacion en toda la pantalla-->  
+  <ion-img src="assets/icon/logo.png"></ion-img> <!--Se coloca una imagen alojada en la carpeta assets-->  
+  <ion-row class="row2"> <!--Se inicia la segunda columna-->  
     <ion-col class="col1" > 
       <ion-row class="row1"><ion-button [routerLink]="['/compart1']" class="Comp1">1</ion-button> </ion-row>
       <ion-row class="row1"><ion-button class="Comp3">3</ion-button> </ion-row>
       <ion-row class="row1">  <ion-button class="Comp5">5</ion-button> </ion-row>
     </ion-col>
-    <ion-col class="col2"> 
+    <ion-col class="col2">  <!--se inicia la columna 2-->  
       <ion-row class="row1"><ion-button class="Comp2">2</ion-button> </ion-row>
       <ion-row class="row1"><ion-button class="Comp4">4</ion-button> </ion-row>
       <ion-row class="row1"><ion-button class="Comp6">6</ion-button> </ion-row>
     </ion-col>
   </ion-row>
 
-  <ion-button [routerLink]="['/seguimiento']"  class="seg_boton">Seguimiento</ion-button>
+  <ion-button [routerLink]="['/seguimiento']"  class="seg_boton">Seguimiento</ion-button> <!--Al presionar el boton se redirige a otra pantalla -->  
 </ion-content>
