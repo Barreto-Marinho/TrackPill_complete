@@ -23,7 +23,7 @@ un framework para el desarrollo de las aplicaciones, una ventaja que tiene dicho
 para que funcione tanto en android como en !OS, en este caso se esta exportando a android y desde android studios se crea el apk necesario 
 para descargar la aplicacion el cual se encuentra en:
 
-[locacion de apk](android/app)
+[locacion de apk](android/app/build/outputs)
 
 ## Estado del proyecto:
 
