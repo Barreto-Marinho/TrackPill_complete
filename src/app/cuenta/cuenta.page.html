@@ -1,5 +1,5 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar class="ion-no-border">
+<ion-header class="ion-no-border"><!--Se inicia el encabezado de la pagina--> 
+  <ion-toolbar class="ion-no-border"><!--Se configura el toolbar sin borde--> 
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,13 +7,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  [fullscreen]="true">
-  <ion-col>
+<ion-content  [fullscreen]="true"><!--Se inicia el contenido de la pagina, todos los elementos se ponen dentro de este contenido--> 
+  <ion-col>                       <!--Se inicia una columna para organizacion de las inputs--> 
+    <!-- Declaraciones en filas de entradas, labels y botones--> 
     <ion-row><ion-label class="text_user" id=prueba >Usuario/email:</ion-label></ion-row>
-    <ion-row><ion-input class="user" placeholder="Usuario/email" #email></ion-input></ion-row>
+    <ion-row><ion-input class="user" placeholder="Usuario/email" #email></ion-input></ion-row><!-- Con # se declara variable de entrada en funcion login--> 
     <ion-row class="espacio_2"></ion-row>
     <ion-row><ion-label class="text_contra">Contraseña:</ion-label></ion-row>
-    <ion-row><ion-input class="contra" type= "password" placeholder="Contraseña" #password></ion-input></ion-row>
+    <ion-row><ion-input class="contra" type= "password" placeholder="Contraseña" #password></ion-input></ion-row><!-- Con # se declara variable de entrada en funcion login-->
     <ion-row class="espacio_2"></ion-row>
     <ion-row class="espacio_2"></ion-row>
     <ion-row class="espacio_2"></ion-row>

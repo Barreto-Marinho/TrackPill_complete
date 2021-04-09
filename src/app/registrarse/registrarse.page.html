@@ -1,16 +1,16 @@
-<ion-header class="ion-no-border">
+<ion-header class="ion-no-border"> <!--Se inicia el encabezado de la pagina-->
   <ion-title>Registrarse</ion-title>
 </ion-header>
 
-<ion-content>
+<ion-contenst><!--Se inicia el contenido de la pagina, todos los elementos se ponen dentro de este contenido-->
   <ion-button [routerLink]="['/cuenta']" class="Volver">
     <ion-icon name="arrow-back"></ion-icon>
   </ion-button>
-  <ion-col> 
+  <ion-col> <!--Se inicia una columna para organizacion de las inputs--> 
     <ion-row>
     <div class="item_nombre">
       <label class="labels" >Nombre:</label>
-      <ion-input  placeholder="Nombre" #nombre></ion-input></div>  </ion-row>
+      <ion-input  placeholder="Nombre" #nombre></ion-input></div>  </ion-row> <!--Se habilita una iput para colocar el nombre-->
       <ion-row><div class="item_apellido">
       <label class="labels"  >Apellido:</label>
       <ion-input  placeholder="Apellido" #apellido></ion-input></div> </ion-row>
@@ -26,8 +26,8 @@
       <ion-row><div class="control_group">
       <label  class="labels">Fecha de nacimiento:</label>
       <div class="controls">
-        <select name="dob-day" id="dob-day" #dia>
-          <option value="">Dia</option>
+        <select name="dob-day" id="dob-day" #dia> <!--Se genera un select para la fecha de nacimeinto--> 
+          <option value="">Dia</option> <!--se definen las diferentes opciones --> 
           <option value="">---</option>
           <option value="01">01</option>
           <option value="02">02</option>
@@ -59,10 +59,10 @@
           <option value="28">28</option>
           <option value="29">29</option>
           <option value="30">30</option>
-          <option value="31">31</option>
+          <option value="31">31</option><!--Termina la opcion de dias -->
         </select>
         <select name="dob-month" id="dob-month" #mes>
-          <option value="">Mes</option>
+          <option value="">Mes</option> <!--Se definen las opciones de meses--> 
           <option value="">-----</option>
           <option value="01">Enero</option>
           <option value="02">Febrero</option>
@@ -75,12 +75,12 @@
           <option value="09">Septiembre</option>
           <option value="10">Octubre</option>
           <option value="11">Noviembre</option>
-          <option value="12">Diciembre</option>
+          <option value="12">Diciembre</option>  <!--Terminan las opciones--> 
         </select>
         <select name="dob-year" id="dob-year" #anio>
           <option value="">Año</option>
           <option value="">----</option>
-          <option value="2020">2020</option>
+          <option value="2020">2020</option> <!--Se inicia las opciones de año -->
           <option value="2019">2019</option>
           <option value="2018">2018</option>
           <option value="2017">2017</option>
@@ -199,13 +199,13 @@
           <option value="1904">1904</option>
           <option value="1903">1903</option>
           <option value="1901">1901</option>
-          <option value="1900">1900</option>
-        </select>
+          <option value="1900">1900</option><!--Se termina la definicion de años--> 
+        </select> <!--Todas la opciones se guardan gracias a la almuadilla #-->
       </div>
     </div></ion-row>
     <ion-row><div class="Radio_sexo">
       <label class="labels">Genero:</label>
-      <form action="" #genero>
+      <form action="" #genero> <!--se guarda la respuesta en genero, gracias a la almuadilla #--> 
         <input type="radio" name="gender" value="masculino" (click)="male_boton()"> Masculino<br>
         <input type="radio" name="gender" value="femenino" (click)="female_boton()"> Femenino<br>
       </form>
