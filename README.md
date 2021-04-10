@@ -2,7 +2,7 @@
 
 ## Descripcion del proyecto:
 
-<p align="justify"> El presente repositorio es el codigo de desarrollo de una aplica para una solucion en IOT, el proyecto se llama Trackpill en el que
+<p align="justify"> El presente repositorio es el codigo de desarrollo de una aplicacion para una solucion en IOT, el proyecto se llama Trackpill en el que
 se propone realizar un pastillero inteligente, este pastillero
 interactuará con una aplicación móvil, en donde el usuario tendrá la posibilidad de “ingresar” a cada compartimiento del
 pastillero, allí se podrá configurar el tipo de pastilla, nombre, laboratorio creador, horario de ingesta y la cantidad total de
@@ -20,7 +20,7 @@ efectividad de estas o que se vuelvan sustancias nocivas para la integridad del 
 preocuparse por proporcionar los datos de cuidado mostrados en los empaques de cada pastilla, si la pastilla está en riesgo se
 le notificará al usuario para que tome las medidas correspondientes. La aplicacion para celular, se desarrolla un IONIC el cual es
 un framework para el desarrollo de las aplicaciones, una ventaja que tiene dicho framework es que la aplicacion se puede exportar
-para que funcione tanto en android como en !OS, en este caso se esta exportando a android y desde android studios se crea el apk necesario 
+para que funcione tanto en android como en IOS, en este caso se esta exportando a android y desde android studios se crea el apk necesario 
 para descargar la aplicacion el cual se encuentra en: </p>
 
 - [Locacion de apk](android/app/build/outputs/apk/debug)
