@@ -64,7 +64,8 @@ En este archivo se hace la estructura de las paginas de la aplicación mediante 
  </ion-header>
 ```
 2. _*page.scss*_
-En este archivo se hace la descripción de estilos de algunos elementos presentes en el archivo .HTML, ya que al utilizar el lenguaje Sass con sintaxis .scss se tiene mua mayor organización de la aplicación, , a continuación, se muestra un fragmento de código en este lenguaje:
+<p align="justify"> En este archivo se hace la descripción de estilos de algunos elementos presentes en el archivo .HTML, ya que al utilizar el lenguaje Sass con sintaxis .scss se tiene mua mayor organización de la aplicación, , a continuación, se muestra un fragmento de código en este lenguaje: </p>
+
 ```scss
   .Boton_Entrar {
     --background:#75a9f9;
@@ -77,8 +78,10 @@ En este archivo se hace la descripción de estilos de algunos elementos presente
     font-weight: 700;
   }
 ```
+
 3. _*page.ts*_
-Este archivo presenta la programación de las acciones de la aplicación, es el cerebro de cada página, este archivo se maneja en lenguaje typescript, y nos permite describir las acciones en lenguaje de programación a continuación, se muestra un fragmento de código en este lenguaje:
+<p align="justify">  Este archivo presenta la programación de las acciones de la aplicación, es el cerebro de cada página, este archivo se maneja en lenguaje typescript, y nos permite describir las acciones en lenguaje de programación a continuación, se muestra un fragmento de código en este lenguaje: </p>
+
 ```Typescript
   redigirir_usua(estaverificado: boolean){
     if(estaverificado){
