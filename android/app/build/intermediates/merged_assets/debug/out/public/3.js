@@ -12,8 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_avatar", function() { return Avatar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_badge", function() { return Badge; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_thumbnail", function() { return Thumbnail; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
 
 
@@ -25,10 +25,10 @@ const avatarMdCss = ":host{border-radius:var(--border-radius);display:block}::sl
 
 const Avatar = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
   render() {
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
   }
 };
 Avatar.style = {
@@ -42,13 +42,13 @@ const badgeMdCss = ":host{--background:var(--ion-color-primary, #3880ff);--color
 
 const Badge = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.color, {
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.color, {
         [mode]: true,
-      }) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
+      }) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
   }
 };
 Badge.style = {
@@ -60,10 +60,10 @@ const thumbnailCss = ":host{--size:48px;--border-radius:0;border-radius:var(--bo
 
 const Thumbnail = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
   render() {
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
   }
 };
 Thumbnail.style = thumbnailCss;

@@ -10,18 +10,18 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_alert", function() { return Alert; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
-/* harmony import */ var _animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animation-5782b3f0.js */ "QIf6");
-/* harmony import */ var _gesture_controller_31cb6bb9_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./gesture-controller-31cb6bb9.js */ "y08P");
-/* harmony import */ var _index_f49d994d_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-f49d994d.js */ "iWo5");
-/* harmony import */ var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index-9e3fe806.js */ "39oe");
-/* harmony import */ var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hardware-back-button-4a6b37fb.js */ "B4Jq");
-/* harmony import */ var _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./overlays-d1b815d6.js */ "FqQB");
-/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
-/* harmony import */ var _button_active_e272e3f1_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./button-active-e272e3f1.js */ "pX2f");
-/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _button_active_4927a4c1_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./button-active-4927a4c1.js */ "JbSX");
+/* harmony import */ var _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./overlays-28c23c35.js */ "7OTs");
+/* harmony import */ var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index-9e3fe806.js */ "39oe");
+/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
+/* harmony import */ var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./animation-096c6391.js */ "meiF");
+/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
+/* harmony import */ var _index_f49d994d_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./index-f49d994d.js */ "iWo5");
+/* harmony import */ var _gesture_controller_31cb6bb9_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gesture-controller-31cb6bb9.js */ "y08P");
+/* harmony import */ var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./hardware-back-button-4a6b37fb.js */ "B4Jq");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
 
 
 
@@ -39,9 +39,9 @@ __webpack_require__.r(__webpack_exports__);
  * iOS Alert Enter Animation
  */
 const iosEnterAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
@@ -66,9 +66,9 @@ const iosEnterAnimation = (baseEl) => {
  * iOS Alert Leave Animation
  */
 const iosLeaveAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 'var(--backdrop-opacity)', 0);
@@ -89,9 +89,9 @@ const iosLeaveAnimation = (baseEl) => {
  * Md Alert Enter Animation
  */
 const mdEnterAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
@@ -116,9 +116,9 @@ const mdEnterAnimation = (baseEl) => {
  * Md Alert Leave Animation
  */
 const mdLeaveAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 'var(--backdrop-opacity)', 0);
@@ -138,11 +138,11 @@ const alertMdCss = ".sc-ion-alert-md-h{--min-width:250px;--width:auto;--min-heig
 
 const Alert = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.didPresent = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertDidPresent", 7);
-    this.willPresent = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertWillPresent", 7);
-    this.willDismiss = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertWillDismiss", 7);
-    this.didDismiss = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertDidDismiss", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.didPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertDidPresent", 7);
+    this.willPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertWillPresent", 7);
+    this.willDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertWillDismiss", 7);
+    this.didDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionAlertDidDismiss", 7);
     this.processedInputs = [];
     this.processedButtons = [];
     this.presented = false;
@@ -173,11 +173,11 @@ const Alert = class {
      */
     this.animated = true;
     this.onBackdropTap = () => {
-      this.dismiss(undefined, _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["B"]);
+      this.dismiss(undefined, _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["B"]);
     };
     this.dispatchCancelHandler = (ev) => {
       const role = ev.detail.role;
-      if (Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["i"])(role)) {
+      if (Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["i"])(role)) {
         const cancelButton = this.processedButtons.find(b => b.role === 'cancel');
         this.callButtonHandler(cancelButton);
       }
@@ -266,7 +266,7 @@ const Alert = class {
     }));
   }
   connectedCallback() {
-    Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["e"])(this.el);
+    Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["e"])(this.el);
   }
   componentWillLoad() {
     this.inputsChanged();
@@ -285,17 +285,17 @@ const Alert = class {
      * 2. App is running in MD mode
      * 3. A wrapper ref does not exist
      */
-    if (this.gesture || Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'md' || !this.wrapperEl) {
+    if (this.gesture || Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'md' || !this.wrapperEl) {
       return;
     }
-    this.gesture = Object(_button_active_e272e3f1_js__WEBPACK_IMPORTED_MODULE_10__["c"])(this.wrapperEl, (refEl) => refEl.classList.contains('alert-button'));
+    this.gesture = Object(_button_active_4927a4c1_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.wrapperEl, (refEl) => refEl.classList.contains('alert-button'));
     this.gesture.enable(true);
   }
   /**
    * Present the alert overlay after it has been created.
    */
   present() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["d"])(this, 'alertEnter', iosEnterAnimation, mdEnterAnimation);
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["d"])(this, 'alertEnter', iosEnterAnimation, mdEnterAnimation);
   }
   /**
    * Dismiss the alert overlay after it has been presented.
@@ -307,19 +307,19 @@ const Alert = class {
    * Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
    */
   dismiss(data, role) {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["f"])(this, data, role, 'alertLeave', iosLeaveAnimation, mdLeaveAnimation);
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["f"])(this, data, role, 'alertLeave', iosLeaveAnimation, mdLeaveAnimation);
   }
   /**
    * Returns a promise that resolves when the alert did dismiss.
    */
   onDidDismiss() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["g"])(this.el, 'ionAlertDidDismiss');
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.el, 'ionAlertDidDismiss');
   }
   /**
    * Returns a promise that resolves when the alert will dismiss.
    */
   onWillDismiss() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["g"])(this.el, 'ionAlertWillDismiss');
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.el, 'ionAlertWillDismiss');
   }
   rbClick(selectedInput) {
     for (const input of this.processedInputs) {
@@ -327,18 +327,18 @@ const Alert = class {
       input.tabindex = input === selectedInput ? 0 : -1;
     }
     this.activeId = selectedInput.id;
-    Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["s"])(selectedInput.handler, selectedInput);
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+    Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["s"])(selectedInput.handler, selectedInput);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
   }
   cbClick(selectedInput) {
     selectedInput.checked = !selectedInput.checked;
-    Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["s"])(selectedInput.handler, selectedInput);
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+    Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["s"])(selectedInput.handler, selectedInput);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
   }
   buttonClick(button) {
     const role = button.role;
     const values = this.getValues();
-    if (Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["i"])(role)) {
+    if (Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["i"])(role)) {
       return this.dismiss({ values }, role);
     }
     const returnData = this.callButtonHandler(button, values);
@@ -351,7 +351,7 @@ const Alert = class {
     if (button && button.handler) {
       // a handler has been provided, execute it
       // pass the handler the values from the inputs
-      const returnData = Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_8__["s"])(button.handler, data);
+      const returnData = Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["s"])(button.handler, data);
       if (returnData === false) {
         // if the return value of the handler is false then do not dismiss
         return false;
@@ -395,28 +395,28 @@ const Alert = class {
   }
   renderCheckbox() {
     const inputs = this.processedInputs;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     if (inputs.length === 0) {
       return null;
     }
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-group" }, inputs.map(i => (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: () => this.cbClick(i), "aria-checked": `${i.checked}`, id: i.id, disabled: i.disabled, tabIndex: i.tabindex, role: "checkbox", class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__["g"])(i.cssClass)), { 'alert-tappable': true, 'alert-checkbox': true, 'alert-checkbox-button': true, 'ion-focusable': true, 'alert-checkbox-button-disabled': i.disabled || false }) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-button-inner" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-icon" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-inner" })), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-label" }, i.label)), mode === 'md' && Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", null))))));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-group" }, inputs.map(i => (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: () => this.cbClick(i), "aria-checked": `${i.checked}`, id: i.id, disabled: i.disabled, tabIndex: i.tabindex, role: "checkbox", class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["g"])(i.cssClass)), { 'alert-tappable': true, 'alert-checkbox': true, 'alert-checkbox-button': true, 'ion-focusable': true, 'alert-checkbox-button-disabled': i.disabled || false }) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-button-inner" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-icon" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-inner" })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-label" }, i.label)), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", null))))));
   }
   renderRadio() {
     const inputs = this.processedInputs;
     if (inputs.length === 0) {
       return null;
     }
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-group", role: "radiogroup", "aria-activedescendant": this.activeId }, inputs.map(i => (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: () => this.rbClick(i), "aria-checked": `${i.checked}`, disabled: i.disabled, id: i.id, tabIndex: i.tabindex, class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__["g"])(i.cssClass)), { 'alert-radio-button': true, 'alert-tappable': true, 'alert-radio': true, 'ion-focusable': true, 'alert-radio-button-disabled': i.disabled || false }), role: "radio" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-button-inner" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-icon" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-inner" })), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-label" }, i.label)))))));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-group", role: "radiogroup", "aria-activedescendant": this.activeId }, inputs.map(i => (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: () => this.rbClick(i), "aria-checked": `${i.checked}`, disabled: i.disabled, id: i.id, tabIndex: i.tabindex, class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["g"])(i.cssClass)), { 'alert-radio-button': true, 'alert-tappable': true, 'alert-radio': true, 'ion-focusable': true, 'alert-radio-button-disabled': i.disabled || false }), role: "radio" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-button-inner" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-icon" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-inner" })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-label" }, i.label)))))));
   }
   renderInput() {
     const inputs = this.processedInputs;
     if (inputs.length === 0) {
       return null;
     }
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-group" }, inputs.map(i => {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-group" }, inputs.map(i => {
       var _a, _b, _c, _d;
       if (i.type === 'textarea') {
-        return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-wrapper" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("textarea", Object.assign({ placeholder: i.placeholder, value: i.value, id: i.id, tabIndex: i.tabindex }, i.attributes, { disabled: (_b = (_a = i.attributes) === null || _a === void 0 ? void 0 : _a.disabled) !== null && _b !== void 0 ? _b : i.disabled, class: inputClass(i), onInput: e => {
+        return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-wrapper" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("textarea", Object.assign({ placeholder: i.placeholder, value: i.value, id: i.id, tabIndex: i.tabindex }, i.attributes, { disabled: (_b = (_a = i.attributes) === null || _a === void 0 ? void 0 : _a.disabled) !== null && _b !== void 0 ? _b : i.disabled, class: inputClass(i), onInput: e => {
             var _a;
             i.value = e.target.value;
             if ((_a = i.attributes) === null || _a === void 0 ? void 0 : _a.onInput) {
@@ -425,7 +425,7 @@ const Alert = class {
           } }))));
       }
       else {
-        return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-wrapper" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("input", Object.assign({ placeholder: i.placeholder, type: i.type, min: i.min, max: i.max, value: i.value, id: i.id, tabIndex: i.tabindex }, i.attributes, { disabled: (_d = (_c = i.attributes) === null || _c === void 0 ? void 0 : _c.disabled) !== null && _d !== void 0 ? _d : i.disabled, class: inputClass(i), onInput: e => {
+        return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-wrapper" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("input", Object.assign({ placeholder: i.placeholder, type: i.type, min: i.min, max: i.max, value: i.value, id: i.id, tabIndex: i.tabindex }, i.attributes, { disabled: (_d = (_c = i.attributes) === null || _c === void 0 ? void 0 : _c.disabled) !== null && _d !== void 0 ? _d : i.disabled, class: inputClass(i), onInput: e => {
             var _a;
             i.value = e.target.value;
             if ((_a = i.attributes) === null || _a === void 0 ? void 0 : _a.onInput) {
@@ -437,24 +437,24 @@ const Alert = class {
   }
   renderAlertButtons() {
     const buttons = this.processedButtons;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const alertButtonGroupClass = {
       'alert-button-group': true,
       'alert-button-group-vertical': buttons.length > 2
     };
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: alertButtonGroupClass }, buttons.map(button => Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", class: buttonClass(button), tabIndex: 0, onClick: () => this.buttonClick(button) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { class: "alert-button-inner" }, button.text), mode === 'md' && Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", null)))));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: alertButtonGroupClass }, buttons.map(button => Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", class: buttonClass(button), tabIndex: 0, onClick: () => this.buttonClick(button) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { class: "alert-button-inner" }, button.text), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", null)))));
   }
   render() {
     const { overlayIndex, header, subHeader } = this;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const hdrId = `alert-${overlayIndex}-hdr`;
     const subHdrId = `alert-${overlayIndex}-sub-hdr`;
     const msgId = `alert-${overlayIndex}-msg`;
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "dialog", "aria-modal": "true", tabindex: "-1", style: {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "dialog", "aria-modal": "true", tabindex: "-1", style: {
         zIndex: `${20000 + overlayIndex}`,
-      }, class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__["g"])(this.cssClass)), { [mode]: true, 'alert-translucent': this.translucent }), onIonAlertWillDismiss: this.dispatchCancelHandler, onIonBackdropTap: this.onBackdropTap }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { tappable: this.backdropDismiss }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-wrapper ion-overlay-wrapper", ref: el => this.wrapperEl = el }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-head" }, header && Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("h2", { id: hdrId, class: "alert-title" }, header), subHeader && Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("h2", { id: subHdrId, class: "alert-sub-title" }, subHeader)), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { id: msgId, class: "alert-message", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__["s"])(this.message) }), this.renderAlertInputs(), this.renderAlertButtons()), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" })));
+      }, class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["g"])(this.cssClass)), { [mode]: true, 'alert-translucent': this.translucent }), onIonAlertWillDismiss: this.dispatchCancelHandler, onIonBackdropTap: this.onBackdropTap }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { tappable: this.backdropDismiss }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-wrapper ion-overlay-wrapper", ref: el => this.wrapperEl = el }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-head" }, header && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("h2", { id: hdrId, class: "alert-title" }, header), subHeader && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("h2", { id: subHdrId, class: "alert-sub-title" }, subHeader)), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { id: msgId, class: "alert-message", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_4__["s"])(this.message) }), this.renderAlertInputs(), this.renderAlertButtons()), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" })));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "buttons": ["buttonsChanged"],
     "inputs": ["inputsChanged"]
@@ -462,10 +462,10 @@ const Alert = class {
 };
 const inputClass = (input) => {
   var _a, _b, _c;
-  return Object.assign(Object.assign({ 'alert-input': true, 'alert-input-disabled': ((_b = (_a = input.attributes) === null || _a === void 0 ? void 0 : _a.disabled) !== null && _b !== void 0 ? _b : input.disabled) || false }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__["g"])(input.cssClass)), Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__["g"])(input.attributes ? (_c = input.attributes.class) === null || _c === void 0 ? void 0 : _c.toString() : ''));
+  return Object.assign(Object.assign({ 'alert-input': true, 'alert-input-disabled': ((_b = (_a = input.attributes) === null || _a === void 0 ? void 0 : _a.disabled) !== null && _b !== void 0 ? _b : input.disabled) || false }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["g"])(input.cssClass)), Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["g"])(input.attributes ? (_c = input.attributes.class) === null || _c === void 0 ? void 0 : _c.toString() : ''));
 };
 const buttonClass = (button) => {
-  return Object.assign({ 'alert-button': true, 'ion-focusable': true, 'ion-activatable': true, [`alert-button-role-${button.role}`]: button.role !== undefined }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_11__["g"])(button.cssClass));
+  return Object.assign({ 'alert-button': true, 'ion-focusable': true, 'ion-activatable': true, [`alert-button-role-${button.role}`]: button.role !== undefined }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["g"])(button.cssClass));
 };
 Alert.style = {
   ios: alertIosCss,

@@ -17,13 +17,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_router_outlet", function() { return RouterOutlet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_title", function() { return ToolbarTitle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_toolbar", function() { return Toolbar; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
-/* harmony import */ var _index_5ad3bc52_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index-5ad3bc52.js */ "V2OV");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
 /* harmony import */ var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cubic-bezier-eea9a7a9.js */ "bC4P");
-/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
-/* harmony import */ var _framework_delegate_bda125fb_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./framework-delegate-bda125fb.js */ "A2gu");
+/* harmony import */ var _framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./framework-delegate-4392cd63.js */ "acej");
+/* harmony import */ var _index_c3ff7f2e_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index-c3ff7f2e.js */ "k4ps");
 
 
 
@@ -36,23 +36,23 @@ const appCss = "html.plt-mobile ion-app{-webkit-user-select:none;-moz-user-selec
 
 const App = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
   componentDidLoad() {
     {
       rIC(async () => {
-        const isHybrid = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'hybrid');
-        if (!_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing')) {
-          __webpack_require__.e(/*! import() | tap-click-2553704d-js */ "tap-click-2553704d-js").then(__webpack_require__.bind(null, /*! ./tap-click-2553704d.js */ "3cHZ")).then(module => module.startTapClick(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
+        const isHybrid = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'hybrid');
+        if (!_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing')) {
+          __webpack_require__.e(/*! import() | tap-click-cc1ae2b2-js */ "tap-click-cc1ae2b2-js").then(__webpack_require__.bind(null, /*! ./tap-click-cc1ae2b2.js */ "cg4z")).then(module => module.startTapClick(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
         }
-        if (_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('statusTap', isHybrid)) {
-          __webpack_require__.e(/*! import() | status-tap-dc6b4b49-js */ "status-tap-dc6b4b49-js").then(__webpack_require__.bind(null, /*! ./status-tap-dc6b4b49.js */ "oD4e")).then(module => module.startStatusTap());
+        if (_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('statusTap', isHybrid)) {
+          __webpack_require__.e(/*! import() | status-tap-bdecfebf-js */ "status-tap-bdecfebf-js").then(__webpack_require__.bind(null, /*! ./status-tap-bdecfebf.js */ "PaPO")).then(module => module.startStatusTap());
         }
-        if (_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('inputShims', needInputShims())) {
-          __webpack_require__.e(/*! import() | input-shims-1eb64a0f-js */ "input-shims-1eb64a0f-js").then(__webpack_require__.bind(null, /*! ./input-shims-1eb64a0f.js */ "/+MV")).then(module => module.startInputShims(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
+        if (_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('inputShims', needInputShims())) {
+          __webpack_require__.e(/*! import() | input-shims-73f15161-js */ "input-shims-73f15161-js").then(__webpack_require__.bind(null, /*! ./input-shims-73f15161.js */ "3Iwd")).then(module => module.startInputShims(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
         }
         const hardwareBackButtonModule = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./hardware-back-button-4a6b37fb.js */ "B4Jq"));
-        if (_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('hardwareBackButton', isHybrid)) {
+        if (_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('hardwareBackButton', isHybrid)) {
           hardwareBackButtonModule.startHardwareBackButton();
         }
         else {
@@ -66,17 +66,17 @@ const App = class {
     }
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
         [mode]: true,
         'ion-page': true,
-        'force-statusbar-padding': _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_forceStatusbarPadding'),
+        'force-statusbar-padding': _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_forceStatusbarPadding'),
       } }));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 const needInputShims = () => {
-  return Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'ios') && Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'mobile');
+  return Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'ios') && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'mobile');
 };
 const rIC = (callback) => {
   if ('requestIdleCallback' in window) {
@@ -94,7 +94,7 @@ const buttonsMdCss = ".sc-ion-buttons-md-h{display:-ms-flexbox;display:flex;-ms-
 
 const Buttons = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /**
      * If true, buttons will disappear when its
      * parent toolbar has fully collapsed if the toolbar
@@ -110,8 +110,8 @@ const Buttons = class {
     this.collapse = false;
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
         [mode]: true,
         ['buttons-collapse']: this.collapse
       } }));
@@ -126,10 +126,10 @@ const contentCss = ":host{--background:var(--ion-background-color, #fff);--color
 
 const Content = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionScrollStart = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionScrollStart", 7);
-    this.ionScroll = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionScroll", 7);
-    this.ionScrollEnd = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionScrollEnd", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionScrollStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionScrollStart", 7);
+    this.ionScroll = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionScroll", 7);
+    this.ionScrollEnd = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionScrollEnd", 7);
     this.isScrolling = false;
     this.lastScroll = 0;
     this.queued = false;
@@ -190,18 +190,18 @@ const Content = class {
   }
   shouldForceOverscroll() {
     const { forceOverscroll } = this;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     return forceOverscroll === undefined
-      ? mode === 'ios' && Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["a"])('ios')
+      ? mode === 'ios' && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])('ios')
       : forceOverscroll;
   }
   resize() {
     if (this.fullscreen) {
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => this.readDimensions());
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => this.readDimensions());
     }
     else if (this.cTop !== 0 || this.cBottom !== 0) {
       this.cTop = this.cBottom = 0;
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
     }
   }
   readDimensions() {
@@ -212,7 +212,7 @@ const Content = class {
     if (dirty) {
       this.cTop = top;
       this.cBottom = bottom;
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
     }
   }
   onScroll(ev) {
@@ -224,7 +224,7 @@ const Content = class {
     }
     if (!this.queued && this.scrollEvents) {
       this.queued = true;
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(ts => {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(ts => {
         this.queued = false;
         this.detail.event = ev;
         updateScrollDetail(this.detail, this.scrollEl, ts, shouldStart);
@@ -349,25 +349,25 @@ const Content = class {
   }
   render() {
     const { scrollX, scrollY } = this;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const forceOverscroll = this.shouldForceOverscroll();
-    const transitionShadow = (mode === 'ios' && _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('experimentalTransitionShadow', true));
+    const transitionShadow = (mode === 'ios' && _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('experimentalTransitionShadow', true));
     this.resize();
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["c"])(this.color, {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.color, {
         [mode]: true,
-        'content-sizing': Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["h"])('ion-popover', this.el),
+        'content-sizing': Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-popover', this.el),
         'overscroll': forceOverscroll,
       }), style: {
         '--offset-top': `${this.cTop}px`,
         '--offset-bottom': `${this.cBottom}px`,
-      } }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { id: "background-content", part: "background" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("main", { class: {
+      } }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { id: "background-content", part: "background" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("main", { class: {
         'inner-scroll': true,
         'scroll-x': scrollX,
         'scroll-y': scrollY,
         'overscroll': (scrollX || scrollY) && forceOverscroll
-      }, ref: el => this.scrollEl = el, onScroll: (this.scrollEvents) ? ev => this.onScroll(ev) : undefined, part: "scroll" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), transitionShadow ? (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "transition-effect" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "transition-cover" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "transition-shadow" }))) : null, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "fixed" })));
+      }, ref: el => this.scrollEl = el, onScroll: (this.scrollEvents) ? ev => this.onScroll(ev) : undefined, part: "scroll" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), transitionShadow ? (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "transition-effect" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "transition-cover" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "transition-shadow" }))) : null, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "fixed" })));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 const getParentElement = (el) => {
   if (el.parentElement) {
@@ -426,7 +426,7 @@ const footerMdCss = "ion-footer{display:block;position:relative;-ms-flex-order:1
 
 const Footer = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /**
      * If `true`, the footer will be translucent.
      * Only applies when the mode is `"ios"` and the device supports
@@ -438,16 +438,16 @@ const Footer = class {
     this.translucent = false;
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const translucent = this.translucent;
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "contentinfo", class: {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "contentinfo", class: {
         [mode]: true,
         // Used internally for styling
         [`footer-${mode}`]: true,
         [`footer-translucent`]: translucent,
         [`footer-translucent-${mode}`]: translucent,
       } }, mode === 'ios' && translucent &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "footer-background" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "footer-background" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
   }
 };
 Footer.style = {
@@ -487,13 +487,13 @@ const createHeaderIndex = (headerEl) => {
   };
 };
 const handleContentScroll = (scrollEl, scrollHeaderIndex, contentEl) => {
-  Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
+  Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
     const scrollTop = scrollEl.scrollTop;
-    const scale = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(1, 1 + (-scrollTop / 500), 1.1);
+    const scale = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(1, 1 + (-scrollTop / 500), 1.1);
     // Native refresher should not cause titles to scale
     const nativeRefresher = contentEl.querySelector('ion-refresher.refresher-native');
     if (nativeRefresher === null) {
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
         scaleLargeTitles(scrollHeaderIndex.toolbars, scale);
       });
     }
@@ -533,7 +533,7 @@ const handleToolbarBorderIntersection = (ev, mainHeaderIndex, scrollTop) => {
  * hide the primary toolbar content and show the scrollable toolbar content
  */
 const handleToolbarIntersection = (ev, mainHeaderIndex, scrollHeaderIndex, scrollEl) => {
-  Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+  Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
     const scrollTop = scrollEl.scrollTop;
     handleToolbarBorderIntersection(ev, mainHeaderIndex, scrollTop);
     const event = ev[0];
@@ -595,7 +595,7 @@ const headerMdCss = "ion-header{display:block;position:relative;-ms-flex-order:-
 
 const Header = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     this.collapsibleHeaderInitialized = false;
     /**
      * If `true`, the header will be translucent.
@@ -619,7 +619,7 @@ const Header = class {
   async checkCollapsibleHeader() {
     // Determine if the header can collapse
     const hasCollapse = this.collapse === 'condense';
-    const canCollapse = (hasCollapse && Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') ? hasCollapse : false;
+    const canCollapse = (hasCollapse && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') ? hasCollapse : false;
     if (!canCollapse && this.collapsibleHeaderInitialized) {
       this.destroyCollapsibleHeader();
     }
@@ -627,7 +627,7 @@ const Header = class {
       const pageEl = this.el.closest('ion-app,ion-page,.ion-page,page-inner');
       const contentEl = (pageEl) ? pageEl.querySelector('ion-content') : null;
       // Cloned elements are always needed in iOS transition
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
         const title = cloneElement('ion-title');
         title.size = 'large';
         cloneElement('ion-back-button');
@@ -688,7 +688,7 @@ const Header = class {
      */
     this.contentScrollCallback = () => { handleContentScroll(this.scrollEl, scrollHeaderIndex, contentEl); };
     this.scrollEl.addEventListener('scroll', this.contentScrollCallback);
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
       if (this.collapsibleMainHeader !== undefined) {
         this.collapsibleMainHeader.classList.add('header-collapse-main');
       }
@@ -697,9 +697,9 @@ const Header = class {
   }
   render() {
     const { translucent } = this;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const collapse = this.collapse || 'none';
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "banner", class: {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "banner", class: {
         [mode]: true,
         // Used internally for styling
         [`header-${mode}`]: true,
@@ -707,9 +707,9 @@ const Header = class {
         [`header-collapse-${collapse}`]: true,
         [`header-translucent-${mode}`]: this.translucent,
       } }, mode === 'ios' && translucent &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "header-background" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "header-background" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 Header.style = {
   ios: headerIosCss,
@@ -720,15 +720,15 @@ const routeOutletCss = ":host{left:0;right:0;top:0;bottom:0;position:absolute;co
 
 const RouterOutlet = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionNavWillLoad = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionNavWillLoad", 7);
-    this.ionNavWillChange = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionNavWillChange", 3);
-    this.ionNavDidChange = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionNavDidChange", 3);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionNavWillLoad = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionNavWillLoad", 7);
+    this.ionNavWillChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionNavWillChange", 3);
+    this.ionNavDidChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionNavDidChange", 3);
     this.animationEnabled = true;
     /**
      * The mode determines which platform styles to use.
      */
-    this.mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    this.mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     /**
      * If `true`, the router-outlet should animate the transition of components.
      */
@@ -740,7 +740,7 @@ const RouterOutlet = class {
     }
   }
   async connectedCallback() {
-    this.gesture = (await __webpack_require__.e(/*! import() | swipe-back-7f7c9a3b-js */ "swipe-back-7f7c9a3b-js").then(__webpack_require__.bind(null, /*! ./swipe-back-7f7c9a3b.js */ "qyRl"))).createSwipeBackGesture(this.el, () => !!this.swipeHandler && this.swipeHandler.canStart() && this.animationEnabled, () => this.swipeHandler && this.swipeHandler.onStart(), step => this.ani && this.ani.progressStep(step), (shouldComplete, step, dur) => {
+    this.gesture = (await __webpack_require__.e(/*! import() | swipe-back-ee838cf8-js */ "swipe-back-ee838cf8-js").then(__webpack_require__.bind(null, /*! ./swipe-back-ee838cf8.js */ "IYAk"))).createSwipeBackGesture(this.el, () => !!this.swipeHandler && this.swipeHandler.canStart() && this.animationEnabled, () => this.swipeHandler && this.swipeHandler.onStart(), step => this.ani && this.ani.progressStep(step), (shouldComplete, step, dur) => {
       if (this.ani) {
         this.animationEnabled = false;
         this.ani.onFinish(() => {
@@ -819,12 +819,12 @@ const RouterOutlet = class {
     }
     // attach entering view to DOM
     const leavingEl = this.activeEl;
-    const enteringEl = await Object(_framework_delegate_bda125fb_js__WEBPACK_IMPORTED_MODULE_6__["a"])(this.delegate, this.el, component, ['ion-page', 'ion-page-invisible'], params);
+    const enteringEl = await Object(_framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_5__["a"])(this.delegate, this.el, component, ['ion-page', 'ion-page-invisible'], params);
     this.activeComponent = component;
     this.activeEl = enteringEl;
     // commit animation
     await this.commit(enteringEl, leavingEl, opts);
-    await Object(_framework_delegate_bda125fb_js__WEBPACK_IMPORTED_MODULE_6__["d"])(this.delegate, leavingEl);
+    await Object(_framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_5__["d"])(this.delegate, leavingEl);
     return true;
   }
   async transition(enteringEl, leavingEl, opts = {}) {
@@ -834,9 +834,9 @@ const RouterOutlet = class {
     // emit nav will change event
     this.ionNavWillChange.emit();
     const { el, mode } = this;
-    const animated = this.animated && _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('animated', true);
-    const animationBuilder = this.animation || opts.animationBuilder || _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('navAnimation');
-    await Object(_index_5ad3bc52_js__WEBPACK_IMPORTED_MODULE_3__["t"])(Object.assign(Object.assign({ mode,
+    const animated = this.animated && _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('animated', true);
+    const animationBuilder = this.animation || opts.animationBuilder || _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('navAnimation');
+    await Object(_index_c3ff7f2e_js__WEBPACK_IMPORTED_MODULE_6__["t"])(Object.assign(Object.assign({ mode,
       animated,
       enteringEl,
       leavingEl, baseEl: el, progressCallback: (opts.progressAnimation
@@ -856,9 +856,9 @@ const RouterOutlet = class {
     return resolve;
   }
   render() {
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "swipeHandler": ["swipeHandlerChanged"]
   }; }
@@ -871,8 +871,8 @@ const titleMdCss = ":host{--color:initial;display:-ms-flexbox;display:flex;-ms-f
 
 const ToolbarTitle = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionStyle = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStyle", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionStyle = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStyle", 7);
   }
   sizeChanged() {
     this.emitStyle();
@@ -890,14 +890,14 @@ const ToolbarTitle = class {
     return (this.size !== undefined) ? this.size : 'default';
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const size = this.getSize();
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["c"])(this.color, {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.color, {
         [mode]: true,
         [`title-${size}`]: true,
-      }) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-title" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null))));
+      }) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-title" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null))));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "size": ["sizeChanged"]
   }; }
@@ -913,7 +913,7 @@ const toolbarMdCss = ":host{--border-width:0;--border-style:solid;--opacity:1;-m
 
 const Toolbar = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     this.childrenStyles = new Map();
   }
   componentWillLoad() {
@@ -951,21 +951,21 @@ const Toolbar = class {
     });
     if (hasStyleChange) {
       this.childrenStyles.set(tagName, newStyles);
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
     }
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const childStyles = {};
     this.childrenStyles.forEach(value => {
       Object.assign(childStyles, value);
     });
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object.assign(Object.assign({}, childStyles), Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["c"])(this.color, {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object.assign(Object.assign({}, childStyles), Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(this.color, {
         [mode]: true,
-        'in-toolbar': Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_5__["h"])('ion-toolbar', this.el),
-      })) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-background" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-container" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "start" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "secondary" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-content" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "primary" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "end" }))));
+        'in-toolbar': Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-toolbar', this.el),
+      })) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-background" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-container" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "start" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "secondary" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "toolbar-content" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "primary" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "end" }))));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 Toolbar.style = {
   ios: toolbarIosCss,

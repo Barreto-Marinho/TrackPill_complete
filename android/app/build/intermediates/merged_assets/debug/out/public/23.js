@@ -10,9 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_progress_bar", function() { return ProgressBar; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
 /* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
 
 
@@ -25,7 +25,7 @@ const progressBarMdCss = ":host{--background:rgba(var(--ion-color-primary-rgb, 5
 
 const ProgressBar = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /**
      * The state of the progress bar, based on if the time the process takes is known or not.
      * Default options are: `"determinate"` (no animation), `"indeterminate"` (animate from left to right).
@@ -49,9 +49,9 @@ const ProgressBar = class {
   }
   render() {
     const { color, type, reversed, value, buffer } = this;
-    const paused = _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing');
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "progressbar", "aria-valuenow": type === 'determinate' ? value : null, "aria-valuemin": "0", "aria-valuemax": "1", class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color, {
+    const paused = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing');
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "progressbar", "aria-valuenow": type === 'determinate' ? value : null, "aria-valuemin": "0", "aria-valuemax": "1", class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color, {
         [mode]: true,
         [`progress-bar-${type}`]: true,
         'progress-paused': paused,
@@ -62,13 +62,13 @@ const ProgressBar = class {
   }
 };
 const renderIndeterminate = () => {
-  return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "track", class: "progress-buffer-bar" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "indeterminate-bar-primary" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { part: "progress", class: "progress-indeterminate" })), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "indeterminate-bar-secondary" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { part: "progress", class: "progress-indeterminate" }))));
+  return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "track", class: "progress-buffer-bar" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "indeterminate-bar-primary" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { part: "progress", class: "progress-indeterminate" })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "indeterminate-bar-secondary" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { part: "progress", class: "progress-indeterminate" }))));
 };
 const renderProgress = (value, buffer) => {
-  const finalValue = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, value, 1);
-  const finalBuffer = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, buffer, 1);
+  const finalValue = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, value, 1);
+  const finalBuffer = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, buffer, 1);
   return [
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "progress", class: "progress", style: { transform: `scaleX(${finalValue})` } }),
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "progress", class: "progress", style: { transform: `scaleX(${finalValue})` } }),
     /**
      * Buffer circles with two container to move
      * the circles behind the buffer progress
@@ -76,8 +76,8 @@ const renderProgress = (value, buffer) => {
      * When finalBuffer === 1, we use display: none
      * instead of removing the element to avoid flickering.
      */
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: { 'buffer-circles-container': true, 'ion-hide': finalBuffer === 1 }, style: { transform: `translateX(${finalBuffer * 100}%)` } }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "buffer-circles-container", style: { transform: `translateX(-${finalBuffer * 100}%)` } }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "stream", class: "buffer-circles" }))),
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "track", class: "progress-buffer-bar", style: { transform: `scaleX(${finalBuffer})` } }),
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: { 'buffer-circles-container': true, 'ion-hide': finalBuffer === 1 }, style: { transform: `translateX(${finalBuffer * 100}%)` } }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "buffer-circles-container", style: { transform: `translateX(-${finalBuffer * 100}%)` } }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "stream", class: "buffer-circles" }))),
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { part: "track", class: "progress-buffer-bar", style: { transform: `scaleX(${finalBuffer})` } }),
   ];
 };
 ProgressBar.style = {

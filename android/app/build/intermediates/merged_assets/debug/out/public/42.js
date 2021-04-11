@@ -10,8 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_virtual_scroll", function() { return VirtualScroll; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
 
 
 
@@ -270,7 +270,7 @@ const virtualScrollCss = "ion-virtual-scroll{display:block;position:relative;wid
 
 const VirtualScroll = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     this.range = { offset: 0, length: 0 };
     this.viewportHeight = 0;
     this.cells = [];
@@ -395,8 +395,8 @@ const VirtualScroll = class {
       this.timerUpdate = undefined;
     }
     // schedule DOM operations into the stencil queue
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(this.readVS.bind(this));
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this.writeVS.bind(this));
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(this.readVS.bind(this));
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this.writeVS.bind(this));
   }
   readVS() {
     const { contentEl, scrollEl, el } = this;
@@ -438,7 +438,7 @@ const VirtualScroll = class {
       this.domRender(this.virtualDom);
     }
     else if (this.renderItem) {
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["j"])(this);
     }
   }
   updateCellHeight(cell, node) {
@@ -450,7 +450,7 @@ const VirtualScroll = class {
       }
     };
     if (node) {
-      Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_1__["c"])(node, update);
+      Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__["c"])(node, update);
     }
     else {
       update();
@@ -526,11 +526,11 @@ const VirtualScroll = class {
     }
   }
   render() {
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { style: {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { style: {
         height: `${this.totalHeight}px`
-      } }, this.renderItem && (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(VirtualProxy, { dom: this.virtualDom }, this.virtualDom.map(node => this.renderVirtualNode(node))))));
+      } }, this.renderItem && (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(VirtualProxy, { dom: this.virtualDom }, this.virtualDom.map(node => this.renderVirtualNode(node))))));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "itemHeight": ["itemsChanged"],
     "headerHeight": ["itemsChanged"],

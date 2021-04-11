@@ -11,8 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_infinite_scroll", function() { return InfiniteScroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_infinite_scroll_content", function() { return InfiniteScrollContent; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-9e3fe806.js */ "39oe");
 
 
@@ -22,8 +22,8 @@ const infiniteScrollCss = "ion-infinite-scroll{display:none;width:100%}.infinite
 
 const InfiniteScroll = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionInfinite = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionInfinite", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionInfinite = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionInfinite", 7);
     this.thrPx = 0;
     this.thrPc = 0;
     this.didFire = false;
@@ -114,7 +114,7 @@ const InfiniteScroll = class {
     this.thresholdChanged();
     this.disabledChanged();
     if (this.position === 'top') {
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
         if (this.scrollEl) {
           this.scrollEl.scrollTop = this.scrollEl.scrollHeight - this.scrollEl.clientHeight;
         }
@@ -167,14 +167,14 @@ const InfiniteScroll = class {
       const prev = scrollEl.scrollHeight - scrollEl.scrollTop;
       // ******** DOM READ ****************
       requestAnimationFrame(() => {
-        Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
           // UI has updated, save the new content dimensions
           const scrollHeight = scrollEl.scrollHeight;
           // New content was added on top, so the scroll position should be changed immediately to prevent it from jumping around
           const newScrollTop = scrollHeight - prev;
           // ******** DOM WRITE ****************
           requestAnimationFrame(() => {
-            Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+            Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
               scrollEl.scrollTop = newScrollTop;
               this.isBusy = false;
             });
@@ -200,15 +200,15 @@ const InfiniteScroll = class {
     }
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const disabled = this.disabled;
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
         [mode]: true,
         'infinite-scroll-loading': this.isLoading,
         'infinite-scroll-enabled': !disabled
       } }));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "threshold": ["thresholdChanged"],
     "disabled": ["disabledChanged"]
@@ -222,21 +222,21 @@ const infiniteScrollContentMdCss = "ion-infinite-scroll-content{display:-ms-flex
 
 const InfiniteScrollContent = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
   componentDidLoad() {
     if (this.loadingSpinner === undefined) {
-      const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-      this.loadingSpinner = _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('infiniteLoadingSpinner', _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', mode === 'ios' ? 'lines' : 'crescent'));
+      const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+      this.loadingSpinner = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('infiniteLoadingSpinner', _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', mode === 'ios' ? 'lines' : 'crescent'));
     }
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
         [mode]: true,
         // Used internally for styling
         [`infinite-scroll-content-${mode}`]: true
-      } }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "infinite-loading" }, this.loadingSpinner && (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "infinite-loading-spinner" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", { name: this.loadingSpinner }))), this.loadingText && (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "infinite-loading-text", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_2__["s"])(this.loadingText) })))));
+      } }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "infinite-loading" }, this.loadingSpinner && (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "infinite-loading-spinner" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", { name: this.loadingSpinner }))), this.loadingText && (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "infinite-loading-text", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_2__["s"])(this.loadingText) })))));
   }
 };
 InfiniteScrollContent.style = {

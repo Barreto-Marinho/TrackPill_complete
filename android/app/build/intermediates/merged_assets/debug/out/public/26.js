@@ -11,13 +11,13 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_refresher", function() { return Refresher; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_refresher_content", function() { return RefresherContent; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
-/* harmony import */ var _animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animation-5782b3f0.js */ "QIf6");
-/* harmony import */ var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cubic-bezier-eea9a7a9.js */ "bC4P");
-/* harmony import */ var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-9e3fe806.js */ "39oe");
-/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cubic-bezier-eea9a7a9.js */ "bC4P");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
+/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
+/* harmony import */ var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./animation-096c6391.js */ "meiF");
+/* harmony import */ var _index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index-9e3fe806.js */ "39oe");
 /* harmony import */ var _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./spinner-configs-cd7845af.js */ "h3R7");
 
 
@@ -42,10 +42,10 @@ const createBaseAnimation = (pullingRefresherIcon) => {
   const spinnerArrowContainer = pullingRefresherIcon.querySelector('.spinner-arrow-container');
   const arrowContainer = pullingRefresherIcon.querySelector('.arrow-container');
   const arrow = (arrowContainer) ? arrowContainer.querySelector('ion-icon') : null;
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .duration(1000)
     .easing('ease-out');
-  const spinnerArrowContainerAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  const spinnerArrowContainerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .addElement(spinnerArrowContainer)
     .keyframes([
     { offset: 0, opacity: '0.3' },
@@ -53,7 +53,7 @@ const createBaseAnimation = (pullingRefresherIcon) => {
     { offset: 0.55, opacity: '1' },
     { offset: 1, opacity: '1' }
   ]);
-  const circleInnerAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  const circleInnerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .addElement(circle)
     .keyframes([
     { offset: 0, strokeDasharray: '1px, 200px' },
@@ -61,7 +61,7 @@ const createBaseAnimation = (pullingRefresherIcon) => {
     { offset: 0.55, strokeDasharray: '100px, 200px' },
     { offset: 1, strokeDasharray: '100px, 200px' }
   ]);
-  const circleOuterAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  const circleOuterAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .addElement(spinner)
     .keyframes([
     { offset: 0, transform: 'rotate(-90deg)' },
@@ -73,7 +73,7 @@ const createBaseAnimation = (pullingRefresherIcon) => {
    * without errors being thrown
    */
   if (arrowContainer && arrow) {
-    const arrowContainerAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+    const arrowContainerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
       .addElement(arrowContainer)
       .keyframes([
       { offset: 0, transform: 'rotate(0deg)' },
@@ -81,7 +81,7 @@ const createBaseAnimation = (pullingRefresherIcon) => {
       { offset: 0.55, transform: 'rotate(280deg)' },
       { offset: 1, transform: 'rotate(400deg)' }
     ]);
-    const arrowAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+    const arrowAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
       .addElement(arrow)
       .keyframes([
       { offset: 0, transform: 'translateX(2px) scale(0)' },
@@ -95,7 +95,7 @@ const createBaseAnimation = (pullingRefresherIcon) => {
 };
 const createScaleAnimation = (pullingRefresherIcon) => {
   const height = pullingRefresherIcon.clientHeight;
-  const spinnerAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  const spinnerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .addElement(pullingRefresherIcon)
     .keyframes([
     { offset: 0, transform: `scale(0) translateY(-${height + 20}px)` },
@@ -105,7 +105,7 @@ const createScaleAnimation = (pullingRefresherIcon) => {
 };
 const createTranslateAnimation = (pullingRefresherIcon) => {
   const height = pullingRefresherIcon.clientHeight;
-  const spinnerAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  const spinnerAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .addElement(pullingRefresherIcon)
     .keyframes([
     { offset: 0, transform: `translateY(-${height + 20}px)` },
@@ -114,7 +114,7 @@ const createTranslateAnimation = (pullingRefresherIcon) => {
   return createBaseAnimation(pullingRefresherIcon).addAnimation([spinnerAnimation]);
 };
 const createSnapBackAnimation = (pullingRefresherIcon) => {
-  return Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])()
+  return Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])()
     .duration(125)
     .addElement(pullingRefresherIcon)
     .fromTo('transform', 'translateY(var(--ion-pulling-refresher-translate, 100px))', 'translateY(0px)');
@@ -125,13 +125,13 @@ const setSpinnerOpacity = (spinner, opacity) => {
   spinner.style.setProperty('opacity', opacity.toString());
 };
 const handleScrollWhilePulling = (spinner, ticks, opacity, currentTickToShow) => {
-  Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+  Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
     setSpinnerOpacity(spinner, opacity);
     ticks.forEach((el, i) => el.style.setProperty('opacity', (i <= currentTickToShow) ? '0.99' : '0'));
   });
 };
 const handleScrollWhileRefreshing = (spinner, lastVelocityY) => {
-  Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+  Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
     // If user pulls down quickly, the spinner should spin faster
     spinner.style.setProperty('--refreshing-rotation-duration', (lastVelocityY >= 1.0) ? '0.5s' : '2s');
     spinner.style.setProperty('opacity', '1');
@@ -142,7 +142,7 @@ const translateElement = (el, value) => {
     return Promise.resolve();
   }
   const trans = transitionEndAsync(el, 200);
-  Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+  Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
     el.style.setProperty('transition', '0.2s all ease-out');
     if (value === undefined) {
       el.style.removeProperty('transform');
@@ -160,12 +160,12 @@ const shouldUseNativeRefresher = async (referenceEl, mode) => {
   if (!refresherContent) {
     return Promise.resolve(false);
   }
-  await new Promise(resolve => Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["c"])(refresherContent, resolve));
+  await new Promise(resolve => Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["c"])(refresherContent, resolve));
   const pullingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-pulling ion-spinner');
   const refreshingSpinner = referenceEl.querySelector('ion-refresher-content .refresher-refreshing ion-spinner');
   return (pullingSpinner !== null &&
     refreshingSpinner !== null &&
-    ((mode === 'ios' && Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["a"])('mobile') && referenceEl.style.webkitOverflowScrolling !== undefined) ||
+    ((mode === 'ios' && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])('mobile') && referenceEl.style.webkitOverflowScrolling !== undefined) ||
       mode === 'md'));
 };
 const transitionEndAsync = (el, expectedDuration = 0) => {
@@ -211,10 +211,10 @@ const refresherMdCss = "ion-refresher{left:0;top:0;display:none;position:absolut
 
 const Refresher = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionRefresh = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRefresh", 7);
-    this.ionPull = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPull", 7);
-    this.ionStart = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStart", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionRefresh = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionRefresh", 7);
+    this.ionPull = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPull", 7);
+    this.ionStart = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStart", 7);
     this.appliedStyles = false;
     this.didStart = false;
     this.progress = 0;
@@ -288,7 +288,7 @@ const Refresher = class {
     }
   }
   async checkNativeRefresher() {
-    const useNativeRefresher = await shouldUseNativeRefresher(this.el, Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this));
+    const useNativeRefresher = await shouldUseNativeRefresher(this.el, Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this));
     if (useNativeRefresher && !this.nativeRefresher) {
       const contentEl = this.el.closest('ion-content');
       this.setupNativeRefresher(contentEl);
@@ -306,7 +306,7 @@ const Refresher = class {
   }
   async resetNativeRefresher(el, state) {
     this.state = state;
-    if (Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') {
+    if (Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') {
       await translateElement(el, undefined);
     }
     else {
@@ -325,13 +325,13 @@ const Refresher = class {
     const ticks = pullingSpinner.shadowRoot.querySelectorAll('svg');
     let MAX_PULL = this.scrollEl.clientHeight * 0.16;
     const NUM_TICKS = ticks.length;
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => ticks.forEach(el => el.style.setProperty('animation', 'none')));
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => ticks.forEach(el => el.style.setProperty('animation', 'none')));
     this.scrollListenerCallback = () => {
       // If pointer is not on screen or refresher is not active, ignore scroll
       if (!this.pointerDown && this.state === 1 /* Inactive */) {
         return;
       }
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => {
         // PTR should only be active when overflow scrolling at the top
         const scrollTop = this.scrollEl.scrollTop;
         const refresherHeight = this.el.clientHeight;
@@ -341,11 +341,11 @@ const Refresher = class {
            * progressively fade refresher out/in
            */
           if (this.state === 8 /* Refreshing */) {
-            const ratio = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, scrollTop / (refresherHeight * 0.5), 1);
-            Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => setSpinnerOpacity(refreshingSpinner, 1 - ratio));
+            const ratio = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, scrollTop / (refresherHeight * 0.5), 1);
+            Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => setSpinnerOpacity(refreshingSpinner, 1 - ratio));
             return;
           }
-          Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => setSpinnerOpacity(pullingSpinner, 0));
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => setSpinnerOpacity(pullingSpinner, 0));
           return;
         }
         if (this.pointerDown) {
@@ -359,9 +359,9 @@ const Refresher = class {
           }
         }
         // delay showing the next tick marks until user has pulled 30px
-        const opacity = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, Math.abs(scrollTop) / refresherHeight, 0.99);
-        const pullAmount = this.progress = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, (Math.abs(scrollTop) - 30) / MAX_PULL, 1);
-        const currentTickToShow = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, Math.floor(pullAmount * NUM_TICKS), NUM_TICKS - 1);
+        const opacity = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, Math.abs(scrollTop) / refresherHeight, 0.99);
+        const pullAmount = this.progress = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, (Math.abs(scrollTop) - 30) / MAX_PULL, 1);
+        const currentTickToShow = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, Math.floor(pullAmount * NUM_TICKS), NUM_TICKS - 1);
         const shouldShowRefreshingSpinner = this.state === 8 /* Refreshing */ || currentTickToShow === NUM_TICKS - 1;
         if (shouldShowRefreshingSpinner) {
           if (this.pointerDown) {
@@ -370,7 +370,7 @@ const Refresher = class {
           if (!this.didRefresh) {
             this.beginRefresh();
             this.didRefresh = true;
-            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_6__["d"])({ style: 'light' });
+            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_4__["d"])({ style: 'light' });
             /**
              * Translate the content element otherwise when pointer is removed
              * from screen the scroll content will bounce back over the refresher
@@ -421,18 +421,18 @@ const Refresher = class {
           this.needsCompletion = false;
         }
         else if (this.didRefresh) {
-          Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => translateElement(this.elementToTransform, `${this.el.clientHeight}px`));
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["f"])(() => translateElement(this.elementToTransform, `${this.el.clientHeight}px`));
         }
       },
     });
     this.disabledChanged();
   }
   async setupMDNativeRefresher(contentEl, pullingSpinner, refreshingSpinner) {
-    const circle = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["g"])(pullingSpinner).querySelector('circle');
+    const circle = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["g"])(pullingSpinner).querySelector('circle');
     const pullingRefresherIcon = this.el.querySelector('ion-refresher-content .refresher-pulling-icon');
-    const refreshingCircle = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["g"])(refreshingSpinner).querySelector('circle');
+    const refreshingCircle = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["g"])(refreshingSpinner).querySelector('circle');
     if (circle !== null && refreshingCircle !== null) {
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
         circle.style.setProperty('animation', 'none');
         // This lines up the animation on the refreshing spinner with the pulling spinner
         refreshingSpinner.style.setProperty('animation-delay', '-655ms');
@@ -448,6 +448,7 @@ const Refresher = class {
       canStart: () => this.state !== 8 /* Refreshing */ && this.state !== 32 /* Completing */ && this.scrollEl.scrollTop === 0,
       onStart: (ev) => {
         ev.data = { animation: undefined, didStart: false, cancelled: false };
+        this.state = 2 /* Pulling */;
       },
       onMove: (ev) => {
         if ((ev.velocityY < 0 && this.progress === 0 && !ev.data.didStart) || ev.data.cancelled) {
@@ -456,20 +457,17 @@ const Refresher = class {
         }
         if (!ev.data.didStart) {
           ev.data.didStart = true;
-          this.state = 2 /* Pulling */;
-          Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
-            const animationType = getRefresherAnimationType(contentEl);
-            const animation = createPullingAnimation(animationType, pullingRefresherIcon);
-            ev.data.animation = animation;
-            this.scrollEl.style.setProperty('--overflow', 'hidden');
-            animation.progressStart(false, 0);
-            this.ionStart.emit();
-            this.animations.push(animation);
-          });
+          Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => this.scrollEl.style.setProperty('--overflow', 'hidden'));
+          const animationType = getRefresherAnimationType(contentEl);
+          const animation = createPullingAnimation(animationType, pullingRefresherIcon);
+          ev.data.animation = animation;
+          animation.progressStart(false, 0);
+          this.ionStart.emit();
+          this.animations.push(animation);
           return;
         }
         // Since we are using an easing curve, slow the gesture tracking down a bit
-        this.progress = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(0, (ev.deltaY / 180) * 0.5, 1);
+        this.progress = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["j"])(0, (ev.deltaY / 180) * 0.5, 1);
         ev.data.animation.progressStep(this.progress);
         this.ionPull.emit();
       },
@@ -477,7 +475,7 @@ const Refresher = class {
         if (!ev.data.didStart) {
           return;
         }
-        Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => this.scrollEl.style.removeProperty('--overflow'));
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => this.scrollEl.style.removeProperty('--overflow'));
         if (this.progress <= 0.4) {
           this.gesture.enable(false);
           ev.data.animation
@@ -490,10 +488,10 @@ const Refresher = class {
           });
           return;
         }
-        const progress = Object(_cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_4__["g"])([0, 0], [0, 0], [1, 1], [1, 1], this.progress)[0];
+        const progress = Object(_cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_2__["g"])([0, 0], [0, 0], [1, 1], [1, 1], this.progress)[0];
         const snapBackAnimation = createSnapBackAnimation(pullingRefresherIcon);
         this.animations.push(snapBackAnimation);
-        Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(async () => {
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(async () => {
           pullingRefresherIcon.style.setProperty('--ion-pulling-refresher-translate', `${(progress * 100)}px`);
           ev.data.animation.progressEnd();
           await snapBackAnimation.play();
@@ -519,7 +517,7 @@ const Refresher = class {
     this.nativeRefresher = true;
     const pullingSpinner = this.el.querySelector('ion-refresher-content .refresher-pulling ion-spinner');
     const refreshingSpinner = this.el.querySelector('ion-refresher-content .refresher-refreshing ion-spinner');
-    if (Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') {
+    if (Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this) === 'ios') {
       this.setupiOSNativeRefresher(pullingSpinner, refreshingSpinner);
     }
     else {
@@ -539,10 +537,10 @@ const Refresher = class {
       console.error('<ion-refresher> must be used inside an <ion-content>');
       return;
     }
-    await new Promise(resolve => Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["c"])(contentEl, resolve));
+    await new Promise(resolve => Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["c"])(contentEl, resolve));
     this.scrollEl = await contentEl.getScrollElement();
-    this.backgroundContentEl = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["g"])(contentEl).querySelector('#background-content');
-    if (await shouldUseNativeRefresher(this.el, Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this))) {
+    this.backgroundContentEl = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["g"])(contentEl).querySelector('#background-content');
+    if (await shouldUseNativeRefresher(this.el, Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this))) {
       this.setupNativeRefresher(contentEl);
     }
     else {
@@ -583,7 +581,7 @@ const Refresher = class {
       this.needsCompletion = true;
       // Do not reset scroll el until user removes pointer from screen
       if (!this.pointerDown) {
-        Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["r"])(() => Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["r"])(() => this.resetNativeRefresher(this.elementToTransform, 32 /* Completing */)));
+        Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(() => Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(() => this.resetNativeRefresher(this.elementToTransform, 32 /* Completing */)));
       }
     }
     else {
@@ -597,7 +595,7 @@ const Refresher = class {
     if (this.nativeRefresher) {
       // Do not reset scroll el until user removes pointer from screen
       if (!this.pointerDown) {
-        Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["r"])(() => Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["r"])(() => this.resetNativeRefresher(this.elementToTransform, 16 /* Cancelling */)));
+        Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(() => Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__["r"])(() => this.resetNativeRefresher(this.elementToTransform, 16 /* Cancelling */)));
       }
     }
     else {
@@ -765,7 +763,7 @@ const Refresher = class {
       return;
     }
     this.appliedStyles = (y > 0);
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => {
       if (this.scrollEl && this.backgroundContentEl) {
         const scrollStyle = this.scrollEl.style;
         const backgroundStyle = this.backgroundContentEl.style;
@@ -777,8 +775,8 @@ const Refresher = class {
     });
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { slot: "fixed", class: {
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { slot: "fixed", class: {
         [mode]: true,
         // Used internally for styling
         [`refresher-${mode}`]: true,
@@ -791,7 +789,7 @@ const Refresher = class {
         'refresher-completing': this.state === 32 /* Completing */,
       } }));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "disabled": ["disabledChanged"]
   }; }
@@ -803,32 +801,32 @@ Refresher.style = {
 
 const RefresherContent = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
   componentWillLoad() {
     if (this.pullingIcon === undefined) {
-      const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+      const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
       const overflowRefresher = this.el.style.webkitOverflowScrolling !== undefined ? 'lines' : 'arrow-down';
-      this.pullingIcon = _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingIcon', mode === 'ios' && Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["a"])('mobile') ? _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', overflowRefresher) : 'circular');
+      this.pullingIcon = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingIcon', mode === 'ios' && Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])('mobile') ? _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', overflowRefresher) : 'circular');
     }
     if (this.refreshingSpinner === undefined) {
-      const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-      this.refreshingSpinner = _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingSpinner', _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', mode === 'ios' ? 'lines' : 'circular'));
+      const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+      this.refreshingSpinner = _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('refreshingSpinner', _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner', mode === 'ios' ? 'lines' : 'circular'));
     }
   }
   render() {
     const pullingIcon = this.pullingIcon;
     const hasSpinner = pullingIcon != null && _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_7__["S"][pullingIcon] !== undefined;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: mode }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling" }, this.pullingIcon && hasSpinner &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling-icon" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "spinner-arrow-container" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", { name: this.pullingIcon, paused: true }), mode === 'md' && this.pullingIcon === 'circular' &&
-        Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "arrow-container" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", { name: "caret-back-sharp" })))), this.pullingIcon && !hasSpinner &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling-icon" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", { icon: this.pullingIcon, lazy: false })), this.pullingText &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling-text", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_5__["s"])(this.pullingText) })), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-refreshing" }, this.refreshingSpinner &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-refreshing-icon" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", { name: this.refreshingSpinner })), this.refreshingText &&
-      Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-refreshing-text", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_5__["s"])(this.refreshingText) }))));
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: mode }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling" }, this.pullingIcon && hasSpinner &&
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling-icon" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "spinner-arrow-container" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", { name: this.pullingIcon, paused: true }), mode === 'md' && this.pullingIcon === 'circular' &&
+        Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "arrow-container" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", { name: "caret-back-sharp" })))), this.pullingIcon && !hasSpinner &&
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling-icon" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", { icon: this.pullingIcon, lazy: false })), this.pullingText &&
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-pulling-text", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__["s"])(this.pullingText) })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-refreshing" }, this.refreshingSpinner &&
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-refreshing-icon" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-spinner", { name: this.refreshingSpinner })), this.refreshingText &&
+      Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "refresher-refreshing-text", innerHTML: Object(_index_9e3fe806_js__WEBPACK_IMPORTED_MODULE_6__["s"])(this.refreshingText) }))));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 
 

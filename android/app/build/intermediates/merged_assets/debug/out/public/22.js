@@ -10,15 +10,15 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_popover", function() { return Popover; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
-/* harmony import */ var _animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animation-5782b3f0.js */ "QIf6");
-/* harmony import */ var _index_5ad3bc52_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index-5ad3bc52.js */ "V2OV");
-/* harmony import */ var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./hardware-back-button-4a6b37fb.js */ "B4Jq");
-/* harmony import */ var _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./overlays-d1b815d6.js */ "FqQB");
-/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
-/* harmony import */ var _framework_delegate_bda125fb_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./framework-delegate-bda125fb.js */ "A2gu");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./framework-delegate-4392cd63.js */ "acej");
+/* harmony import */ var _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./overlays-28c23c35.js */ "7OTs");
+/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
+/* harmony import */ var _index_c3ff7f2e_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-c3ff7f2e.js */ "k4ps");
+/* harmony import */ var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./animation-096c6391.js */ "meiF");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
+/* harmony import */ var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./hardware-back-button-4a6b37fb.js */ "B4Jq");
 
 
 
@@ -107,9 +107,9 @@ const iosEnterAnimation = (baseEl, ev) => {
     contentEl.style.left = `calc(${popoverCSS.left}px - var(--ion-safe-area-right, 0px))`;
   }
   contentEl.style.transformOrigin = originY + ' ' + originX;
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
@@ -132,9 +132,9 @@ const POPOVER_IOS_BODY_PADDING = 5;
  * iOS Popover Leave Animation
  */
 const iosLeaveAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 'var(--backdrop-opacity)', 0);
@@ -207,11 +207,11 @@ const mdEnterAnimation = (baseEl, ev) => {
   else if (targetTop + targetHeight + contentHeight > bodyHeight) {
     contentEl.style.bottom = POPOVER_MD_BODY_PADDING + 'px';
   }
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const contentAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const viewportAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const contentAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const viewportAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
@@ -244,9 +244,9 @@ const mdEnterAnimation = (baseEl, ev) => {
  * Md Popover Leave Animation
  */
 const mdLeaveAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_6__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 'var(--backdrop-opacity)', 0);
@@ -266,11 +266,11 @@ const popoverMdCss = ".sc-ion-popover-md-h{--background:var(--ion-background-col
 
 const Popover = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.didPresent = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverDidPresent", 7);
-    this.willPresent = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverWillPresent", 7);
-    this.willDismiss = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverWillDismiss", 7);
-    this.didDismiss = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverDidDismiss", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.didPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverDidPresent", 7);
+    this.willPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverWillPresent", 7);
+    this.willDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverWillDismiss", 7);
+    this.didDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPopoverDidDismiss", 7);
     this.presented = false;
     /**
      * If `true`, the keyboard will be automatically dismissed when the overlay is presented.
@@ -300,7 +300,7 @@ const Popover = class {
       this.dismiss();
     };
     this.onBackdropTap = () => {
-      this.dismiss(undefined, _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__["B"]);
+      this.dismiss(undefined, _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["B"]);
     };
     this.onLifecycle = (modalEvent) => {
       const el = this.usersElement;
@@ -316,7 +316,7 @@ const Popover = class {
     };
   }
   connectedCallback() {
-    Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__["e"])(this.el);
+    Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["e"])(this.el);
   }
   /**
    * Present the popover overlay after it has been created.
@@ -330,9 +330,9 @@ const Popover = class {
       throw new Error('container is undefined');
     }
     const data = Object.assign(Object.assign({}, this.componentProps), { popover: this.el });
-    this.usersElement = await Object(_framework_delegate_bda125fb_js__WEBPACK_IMPORTED_MODULE_8__["a"])(this.delegate, container, this.component, ['popover-viewport', this.el['s-sc']], data);
-    await Object(_index_5ad3bc52_js__WEBPACK_IMPORTED_MODULE_4__["e"])(this.usersElement);
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__["d"])(this, 'popoverEnter', iosEnterAnimation, mdEnterAnimation, this.event);
+    this.usersElement = await Object(_framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_2__["a"])(this.delegate, container, this.component, ['popover-viewport', this.el['s-sc']], data);
+    await Object(_index_c3ff7f2e_js__WEBPACK_IMPORTED_MODULE_5__["e"])(this.usersElement);
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["d"])(this, 'popoverEnter', iosEnterAnimation, mdEnterAnimation, this.event);
   }
   /**
    * Dismiss the popover overlay after it has been presented.
@@ -341,9 +341,9 @@ const Popover = class {
    * @param role The role of the element that is dismissing the popover. For example, 'cancel' or 'backdrop'.
    */
   async dismiss(data, role) {
-    const shouldDismiss = await Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__["f"])(this, data, role, 'popoverLeave', iosLeaveAnimation, mdLeaveAnimation, this.event);
+    const shouldDismiss = await Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["f"])(this, data, role, 'popoverLeave', iosLeaveAnimation, mdLeaveAnimation, this.event);
     if (shouldDismiss) {
-      await Object(_framework_delegate_bda125fb_js__WEBPACK_IMPORTED_MODULE_8__["d"])(this.delegate, this.usersElement);
+      await Object(_framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_2__["d"])(this.delegate, this.usersElement);
     }
     return shouldDismiss;
   }
@@ -351,22 +351,22 @@ const Popover = class {
    * Returns a promise that resolves when the popover did dismiss.
    */
   onDidDismiss() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__["g"])(this.el, 'ionPopoverDidDismiss');
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.el, 'ionPopoverDidDismiss');
   }
   /**
    * Returns a promise that resolves when the popover will dismiss.
    */
   onWillDismiss() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_6__["g"])(this.el, 'ionPopoverWillDismiss');
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.el, 'ionPopoverWillDismiss');
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const { onLifecycle } = this;
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { "aria-modal": "true", "no-router": true, tabindex: "-1", style: {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { "aria-modal": "true", "no-router": true, tabindex: "-1", style: {
         zIndex: `${20000 + this.overlayIndex}`,
-      }, class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["g"])(this.cssClass)), { [mode]: true, 'popover-translucent': this.translucent }), onIonPopoverDidPresent: onLifecycle, onIonPopoverWillPresent: onLifecycle, onIonPopoverWillDismiss: onLifecycle, onIonPopoverDidDismiss: onLifecycle, onIonDismiss: this.onDismiss, onIonBackdropTap: this.onBackdropTap }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { tappable: this.backdropDismiss, visible: this.showBackdrop }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "popover-wrapper ion-overlay-wrapper" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "popover-arrow" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "popover-content" })), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" })));
+      }, class: Object.assign(Object.assign({}, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["g"])(this.cssClass)), { [mode]: true, 'popover-translucent': this.translucent }), onIonPopoverDidPresent: onLifecycle, onIonPopoverWillPresent: onLifecycle, onIonPopoverWillDismiss: onLifecycle, onIonPopoverDidDismiss: onLifecycle, onIonDismiss: this.onDismiss, onIonBackdropTap: this.onBackdropTap }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { tappable: this.backdropDismiss, visible: this.showBackdrop }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "popover-wrapper ion-overlay-wrapper" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "popover-arrow" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "popover-content" })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" })));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 const LIFECYCLE_MAP = {
   'ionPopoverDidPresent': 'ionViewDidEnter',

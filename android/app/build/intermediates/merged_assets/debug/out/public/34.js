@@ -10,8 +10,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_spinner", function() { return Spinner; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
 /* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
 /* harmony import */ var _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./spinner-configs-cd7845af.js */ "h3R7");
 
@@ -23,15 +23,15 @@ const spinnerCss = ":host{display:inline-block;position:relative;width:28px;heig
 
 const Spinner = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /**
      * If `true`, the spinner's animation will be paused.
      */
     this.paused = false;
   }
   getName() {
-    const spinnerName = this.name || _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner');
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const spinnerName = this.name || _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].get('spinner');
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     if (spinnerName) {
       return spinnerName;
     }
@@ -39,7 +39,7 @@ const Spinner = class {
   }
   render() {
     const self = this;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(self);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(self);
     const spinnerName = self.getName();
     const spinner = _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_3__["S"][spinnerName] || _spinner_configs_cd7845af_js__WEBPACK_IMPORTED_MODULE_3__["S"]['lines'];
     const duration = (typeof self.duration === 'number' && self.duration > 10 ? self.duration : spinner.dur);
@@ -54,22 +54,22 @@ const Spinner = class {
         svgs.push(buildLine(spinner, duration, i, spinner.lines));
       }
     }
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(self.color, {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__["c"])(self.color, {
         [mode]: true,
         [`spinner-${spinnerName}`]: true,
-        'spinner-paused': !!self.paused || _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing')
+        'spinner-paused': !!self.paused || _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing')
       }), role: "progressbar", style: spinner.elmDuration ? { animationDuration: duration + 'ms' } : {} }, svgs));
   }
 };
 const buildCircle = (spinner, duration, index, total) => {
   const data = spinner.fn(duration, index, total);
   data.style['animation-duration'] = duration + 'ms';
-  return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("svg", { viewBox: data.viewBox || '0 0 64 64', style: data.style }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("circle", { transform: data.transform || 'translate(32,32)', cx: data.cx, cy: data.cy, r: data.r, style: spinner.elmDuration ? { animationDuration: duration + 'ms' } : {} })));
+  return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("svg", { viewBox: data.viewBox || '0 0 64 64', style: data.style }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("circle", { transform: data.transform || 'translate(32,32)', cx: data.cx, cy: data.cy, r: data.r, style: spinner.elmDuration ? { animationDuration: duration + 'ms' } : {} })));
 };
 const buildLine = (spinner, duration, index, total) => {
   const data = spinner.fn(duration, index, total);
   data.style['animation-duration'] = duration + 'ms';
-  return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("svg", { viewBox: data.viewBox || '0 0 64 64', style: data.style }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("line", { transform: "translate(32,32)", y1: data.y1, y2: data.y2 })));
+  return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("svg", { viewBox: data.viewBox || '0 0 64 64', style: data.style }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("line", { transform: "translate(32,32)", y1: data.y1, y2: data.y2 })));
 };
 Spinner.style = spinnerCss;
 

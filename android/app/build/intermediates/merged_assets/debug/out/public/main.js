@@ -570,9 +570,22 @@ let AuthService = class AuthService {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(null);
         }));
     }
+    /*****************************************************************************************************
+    
+    La funcion isEmailVerify recibe una variable user y retorna un booleano dependiendo si el resultado es
+    verdadero o no, dependiendo si el usuario esta verificado o no
+    
+    ******************************************************************************************************/
     isEmailVerify(user) {
         return (user.emailVerified === true ? true : false);
     }
+    /*****************************************************************************************************
+    
+    La funcion resetPassword recibe la variable email de tipo string, esta funcion se encarga de utilizar
+    una funcion que envia el corro para poder resetear la contraseña, en caso de que el correo no exista,
+    se lanza una alerta en la pantalla indicando esto.
+    
+    ******************************************************************************************************/
     resetPassword(email) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -602,6 +615,15 @@ let AuthService = class AuthService {
       }
       catch(error){console.log('Error->',error)}
     } */
+    /*****************************************************************************************************
+    
+    La funcion register recibe en string el email, password, nombre, apellido, dia, mes, anio, y genero
+    para poder registrar el email con estos datos, se usa la funcion createUserWithEmailAndPassword, el cual
+    crea el usuario en firebase, y este le otorga el ID al usuario, adicionalmente a esto, se crea una nueva
+    carpeta en la coleccion Datos_Usuario con el nombre del ID del usuario creado, y por ultimo se envia el
+    correo de verificacion, se retorna usuario para poder saber si este se creo correctamente.
+    
+    ******************************************************************************************************/
     register(email, password, nombre, apellido, dia, mes, anio, genero) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -624,6 +646,10 @@ let AuthService = class AuthService {
             }
         });
     }
+    /*****************************************************************************************************
+   La funcion presentToast es una funcion que recibe una variable texto, y la muestra en la pantalla
+   durante unos pocos segundos.
+   ******************************************************************************************************/
     presentToast(texto) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const toast = yield this.toastController.create({
@@ -633,6 +659,10 @@ let AuthService = class AuthService {
             toast.present();
         });
     }
+    /*****************************************************************************************************
+   La funcion Imprimir_error es una funcion que recibe una variable texto, y la muestra un objeto de tipo
+   alert en la pantalla.
+   ******************************************************************************************************/
     Imprimir_error(texto) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const alert = yield this.alertController.create({
@@ -645,6 +675,12 @@ let AuthService = class AuthService {
             yield alert.present();
         });
     }
+    /*****************************************************************************************************
+   
+   La funcion login se encarga de iniciar la cuenta con firebase, al mismo tiempo extrae los datos de
+   la cuenta en las variables de usuario$ y datos_usuario$
+   
+   ******************************************************************************************************/
     login(email, password) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -659,6 +695,11 @@ let AuthService = class AuthService {
             }
         });
     }
+    /*****************************************************************************************************
+   
+    Esta funcion envia el email de verificacion al correo
+   
+   ******************************************************************************************************/
     sendVerificationEmail() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -669,6 +710,12 @@ let AuthService = class AuthService {
             }
         });
     }
+    /*****************************************************************************************************
+   
+    La funcion de logout realiza la accion de cerrado de sesion con firebase, y borra las variables de
+    los usuarios anteriores
+   
+   ******************************************************************************************************/
     logout() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -681,6 +728,13 @@ let AuthService = class AuthService {
             }
         });
     }
+    /*****************************************************************************************************
+   
+    La funcion de modificar_datos() actualiza los datos en firebase, la primera variable que recibe es de
+    tipo usuario, y las otras son de tipo string como nombre, anio, mes, dia y  gener, que son las variables
+    que se actualizaran
+   
+   ******************************************************************************************************/
     modificar_datos(user, nombre, apellido, anio, mes, dia, gener) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -724,6 +778,12 @@ let AuthService = class AuthService {
           });
           console.log("Acabe actualizar")
      }*/
+    /*****************************************************************************************************
+   
+    La funcion de actualizar_datos() actualiza los datos en la variable datos$ segun el usuario que se
+    haya iniciado.
+   
+   ******************************************************************************************************/
     actualizar_datos() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -747,6 +807,11 @@ let AuthService = class AuthService {
             }
         });
     }
+    /*****************************************************************************************************
+   
+    La funcion de updateUserData() actualiza datos de user
+   
+   ******************************************************************************************************/
     updateUserData(user) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {

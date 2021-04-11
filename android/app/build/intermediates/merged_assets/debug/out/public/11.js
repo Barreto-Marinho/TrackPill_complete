@@ -12,14 +12,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_datetime", function() { return Datetime; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_picker", function() { return Picker; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_picker_column", function() { return PickerColumnCmp; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
-/* harmony import */ var _animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animation-5782b3f0.js */ "QIf6");
-/* harmony import */ var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hardware-back-button-4a6b37fb.js */ "B4Jq");
-/* harmony import */ var _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./overlays-d1b815d6.js */ "FqQB");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
+/* harmony import */ var _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./overlays-28c23c35.js */ "7OTs");
+/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
+/* harmony import */ var _animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./animation-096c6391.js */ "meiF");
 /* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
-/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
+/* harmony import */ var _hardware_back_button_4a6b37fb_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hardware-back-button-4a6b37fb.js */ "B4Jq");
 
 
 
@@ -590,12 +590,12 @@ const datetimeMdCss = ":host{padding-left:var(--padding-start);padding-right:var
 
 const Datetime = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionCancel = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionCancel", 7);
-    this.ionChange = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionChange", 7);
-    this.ionFocus = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionFocus", 7);
-    this.ionBlur = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionBlur", 7);
-    this.ionStyle = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStyle", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionCancel = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionCancel", 7);
+    this.ionChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionChange", 7);
+    this.ionFocus = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionFocus", 7);
+    this.ionBlur = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionBlur", 7);
+    this.ionStyle = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionStyle", 7);
     this.inputId = `ion-dt-${datetimeIds++}`;
     this.locale = {};
     this.datetimeMin = {};
@@ -676,13 +676,13 @@ const Datetime = class {
       return;
     }
     const pickerOptions = this.generatePickerOptions();
-    const picker = await _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["p"].create(pickerOptions);
+    const picker = await _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["p"].create(pickerOptions);
     this.isExpanded = true;
     picker.onDidDismiss().then(() => {
       this.isExpanded = false;
       this.setFocus();
     });
-    Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["a"])(picker, 'ionPickerColChange', async (event) => {
+    Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["a"])(picker, 'ionPickerColChange', async (event) => {
       const data = event.detail;
       const colSelectedIndex = data.selectedIndex;
       const colOptions = data.options;
@@ -713,7 +713,7 @@ const Datetime = class {
     updateDate(this.datetimeValue, value, this.displayTimezone);
   }
   generatePickerOptions() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     this.locale = {
       monthNames: convertToArrayOfStrings(this.monthNames, 'monthNames'),
       monthShortNames: convertToArrayOfStrings(this.monthShortNames, 'monthShortNames'),
@@ -917,7 +917,7 @@ const Datetime = class {
         indexMax = Math.max(indexMax, i);
       }
     }
-    const selectedIndex = column.selectedIndex = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(indexMin, column.selectedIndex, indexMax);
+    const selectedIndex = column.selectedIndex = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["j"])(indexMin, column.selectedIndex, indexMax);
     const opt = column.options[selectedIndex];
     if (opt) {
       return opt.value;
@@ -944,9 +944,9 @@ const Datetime = class {
   }
   render() {
     const { inputId, text, disabled, readonly, isExpanded, el, placeholder } = this;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const labelId = inputId + '-lbl';
-    const label = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["h"])(el);
+    const label = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["h"])(el);
     const addPlaceholderClass = (text === undefined && placeholder != null) ? true : false;
     // If selected text has been passed in, use that first
     // otherwise use the placeholder
@@ -959,16 +959,16 @@ const Datetime = class {
     if (label) {
       label.id = labelId;
     }
-    Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["e"])(true, el, this.name, this.value, this.disabled);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { onClick: this.onClick, "aria-disabled": disabled ? 'true' : null, "aria-expanded": `${isExpanded}`, "aria-haspopup": "true", "aria-labelledby": labelId, class: {
+    Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["e"])(true, el, this.name, this.value, this.disabled);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { onClick: this.onClick, "aria-disabled": disabled ? 'true' : null, "aria-expanded": `${isExpanded}`, "aria-haspopup": "true", "aria-labelledby": labelId, class: {
         [mode]: true,
         'datetime-disabled': disabled,
         'datetime-readonly': readonly,
         'datetime-placeholder': addPlaceholderClass,
-        'in-item': Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["h"])('ion-item', el)
-      } }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "datetime-text", part: datetimeTextPart }, datetimeText), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onFocus: this.onFocus, onBlur: this.onBlur, disabled: this.disabled, ref: btnEl => this.buttonEl = btnEl })));
+        'in-item': Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["h"])('ion-item', el)
+      } }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "datetime-text", part: datetimeTextPart }, datetimeText), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onFocus: this.onFocus, onBlur: this.onBlur, disabled: this.disabled, ref: btnEl => this.buttonEl = btnEl })));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "disabled": ["disabledChanged"],
     "value": ["valueChanged"]
@@ -1014,9 +1014,9 @@ Datetime.style = {
  * iOS Picker Enter Animation
  */
 const iosEnterAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 0.01, 'var(--backdrop-opacity)')
@@ -1038,9 +1038,9 @@ const iosEnterAnimation = (baseEl) => {
  * iOS Picker Leave Animation
  */
 const iosLeaveAnimation = (baseEl) => {
-  const baseAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const backdropAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
-  const wrapperAnimation = Object(_animation_5782b3f0_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+  const baseAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+  const backdropAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
+  const wrapperAnimation = Object(_animation_096c6391_js__WEBPACK_IMPORTED_MODULE_5__["c"])();
   backdropAnimation
     .addElement(baseEl.querySelector('ion-backdrop'))
     .fromTo('opacity', 'var(--backdrop-opacity)', 0.01);
@@ -1060,11 +1060,11 @@ const pickerMdCss = ".sc-ion-picker-md-h{--border-radius:0;--border-style:solid;
 
 const Picker = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.didPresent = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerDidPresent", 7);
-    this.willPresent = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerWillPresent", 7);
-    this.willDismiss = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerWillDismiss", 7);
-    this.didDismiss = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerDidDismiss", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.didPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerDidPresent", 7);
+    this.willPresent = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerWillPresent", 7);
+    this.willDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerWillDismiss", 7);
+    this.didDismiss = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerDidDismiss", 7);
     this.presented = false;
     /**
      * If `true`, the keyboard will be automatically dismissed when the overlay is presented.
@@ -1095,24 +1095,24 @@ const Picker = class {
      */
     this.animated = true;
     this.onBackdropTap = () => {
-      this.dismiss(undefined, _overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["B"]);
+      this.dismiss(undefined, _overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["B"]);
     };
     this.dispatchCancelHandler = (ev) => {
       const role = ev.detail.role;
-      if (Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["i"])(role)) {
+      if (Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["i"])(role)) {
         const cancelButton = this.buttons.find(b => b.role === 'cancel');
         this.callButtonHandler(cancelButton);
       }
     };
   }
   connectedCallback() {
-    Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["e"])(this.el);
+    Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["e"])(this.el);
   }
   /**
    * Present the picker overlay after it has been created.
    */
   async present() {
-    await Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["d"])(this, 'pickerEnter', iosEnterAnimation, iosEnterAnimation, undefined);
+    await Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["d"])(this, 'pickerEnter', iosEnterAnimation, iosEnterAnimation, undefined);
     if (this.duration > 0) {
       this.durationTimeout = setTimeout(() => this.dismiss(), this.duration);
     }
@@ -1130,19 +1130,19 @@ const Picker = class {
     if (this.durationTimeout) {
       clearTimeout(this.durationTimeout);
     }
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["f"])(this, data, role, 'pickerLeave', iosLeaveAnimation, iosLeaveAnimation);
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["f"])(this, data, role, 'pickerLeave', iosLeaveAnimation, iosLeaveAnimation);
   }
   /**
    * Returns a promise that resolves when the picker did dismiss.
    */
   onDidDismiss() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["g"])(this.el, 'ionPickerDidDismiss');
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.el, 'ionPickerDidDismiss');
   }
   /**
    * Returns a promise that resolves when the picker will dismiss.
    */
   onWillDismiss() {
-    return Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["g"])(this.el, 'ionPickerWillDismiss');
+    return Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.el, 'ionPickerWillDismiss');
   }
   /**
    * Get the column that matches the specified name.
@@ -1154,7 +1154,7 @@ const Picker = class {
   }
   async buttonClick(button) {
     const role = button.role;
-    if (Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["i"])(role)) {
+    if (Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["i"])(role)) {
       return this.dismiss(undefined, role);
     }
     const shouldDismiss = await this.callButtonHandler(button);
@@ -1167,7 +1167,7 @@ const Picker = class {
     if (button) {
       // a handler has been provided, execute it
       // pass the handler the values from the inputs
-      const rtn = await Object(_overlays_d1b815d6_js__WEBPACK_IMPORTED_MODULE_5__["s"])(button.handler, this.getSelected());
+      const rtn = await Object(_overlays_28c23c35_js__WEBPACK_IMPORTED_MODULE_3__["s"])(button.handler, this.getSelected());
       if (rtn === false) {
         // if the return value of the handler is false then do not dismiss
         return false;
@@ -1190,14 +1190,14 @@ const Picker = class {
     return selected;
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { "aria-modal": "true", tabindex: "-1", class: Object.assign({ [mode]: true,
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { "aria-modal": "true", tabindex: "-1", class: Object.assign({ [mode]: true,
         // Used internally for styling
-        [`picker-${mode}`]: true }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["g"])(this.cssClass)), style: {
+        [`picker-${mode}`]: true }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["g"])(this.cssClass)), style: {
         zIndex: `${20000 + this.overlayIndex}`
-      }, onIonBackdropTap: this.onBackdropTap, onIonPickerWillDismiss: this.dispatchCancelHandler }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { visible: this.showBackdrop, tappable: this.backdropDismiss }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-wrapper ion-overlay-wrapper", role: "dialog" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-toolbar" }, this.buttons.map(b => (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: buttonWrapperClass(b) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: () => this.buttonClick(b), class: buttonClass(b) }, b.text))))), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-columns" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-above-highlight" }), this.presented && this.columns.map(c => Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-picker-column", { col: c })), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-below-highlight" }))), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" })));
+      }, onIonBackdropTap: this.onBackdropTap, onIonPickerWillDismiss: this.dispatchCancelHandler }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { visible: this.showBackdrop, tappable: this.backdropDismiss }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-wrapper ion-overlay-wrapper", role: "dialog" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-toolbar" }, this.buttons.map(b => (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: buttonWrapperClass(b) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: () => this.buttonClick(b), class: buttonClass(b) }, b.text))))), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-columns" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-above-highlight" }), this.presented && this.columns.map(c => Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-picker-column", { col: c })), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-below-highlight" }))), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { tabindex: "0" })));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 const buttonWrapperClass = (button) => {
   return {
@@ -1206,7 +1206,7 @@ const buttonWrapperClass = (button) => {
   };
 };
 const buttonClass = (button) => {
-  return Object.assign({ 'picker-button': true, 'ion-activatable': true }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_7__["g"])(button.cssClass));
+  return Object.assign({ 'picker-button': true, 'ion-activatable': true }, Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_4__["g"])(button.cssClass));
 };
 Picker.style = {
   ios: pickerIosCss,
@@ -1219,8 +1219,8 @@ const pickerColumnMdCss = ".picker-col{display:-ms-flexbox;display:flex;position
 
 const PickerColumnCmp = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionPickerColChange = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerColChange", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionPickerColChange = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionPickerColChange", 7);
     this.optHeight = 0;
     this.rotateFactor = 0;
     this.scaleFactor = 1;
@@ -1234,7 +1234,7 @@ const PickerColumnCmp = class {
   async connectedCallback() {
     let pickerRotateFactor = 0;
     let pickerScaleFactor = 0.81;
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     if (mode === 'ios') {
       pickerRotateFactor = -0.46;
       pickerScaleFactor = 1;
@@ -1460,7 +1460,7 @@ const PickerColumnCmp = class {
       this.emitColChange();
       return;
     }
-    this.velocity = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(-MAX_PICKER_SPEED, detail.velocityY * 23, MAX_PICKER_SPEED);
+    this.velocity = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["j"])(-MAX_PICKER_SPEED, detail.velocityY * 23, MAX_PICKER_SPEED);
     if (this.velocity === 0 && detail.deltaY === 0) {
       const opt = detail.event.target.closest('.picker-opt');
       if (opt && opt.hasAttribute('opt-index')) {
@@ -1502,7 +1502,7 @@ const PickerColumnCmp = class {
     if (this.velocity !== 0) {
       return;
     }
-    const selectedIndex = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["j"])(min, this.col.selectedIndex || 0, max);
+    const selectedIndex = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["j"])(min, this.col.selectedIndex || 0, max);
     if (this.col.prevSelected !== selectedIndex || forceRefresh) {
       const y = (selectedIndex * this.optHeight) * -1;
       this.velocity = 0;
@@ -1512,17 +1512,17 @@ const PickerColumnCmp = class {
   render() {
     const col = this.col;
     const Button = 'button';
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { class: {
         [mode]: true,
         'picker-col': true,
         'picker-opts-left': this.col.align === 'left',
         'picker-opts-right': this.col.align === 'right'
       }, style: {
         'max-width': this.col.columnWidth
-      } }, col.prefix && (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-prefix", style: { width: col.prefixWidth } }, col.prefix)), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-opts", style: { maxWidth: col.optionsWidth }, ref: el => this.optsEl = el }, col.options.map((o, index) => Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Button, { type: "button", class: { 'picker-opt': true, 'picker-opt-disabled': !!o.disabled }, "opt-index": index }, o.text))), col.suffix && (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-suffix", style: { width: col.suffixWidth } }, col.suffix))));
+      } }, col.prefix && (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-prefix", style: { width: col.prefixWidth } }, col.prefix)), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-opts", style: { maxWidth: col.optionsWidth }, ref: el => this.optsEl = el }, col.options.map((o, index) => Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(Button, { type: "button", class: { 'picker-opt': true, 'picker-opt-disabled': !!o.disabled }, "opt-index": index }, o.text))), col.suffix && (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "picker-suffix", style: { width: col.suffixWidth } }, col.suffix))));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "col": ["colChanged"]
   }; }

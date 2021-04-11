@@ -56,9 +56,90 @@ const openURL = async (url, ev, direction, animation) => {
 
 /***/ }),
 
-/***/ "A2gu":
+/***/ "JbSX":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/button-active-4927a4c1.js ***!
+  \*********************************************************************/
+/*! exports provided: c */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createButtonActiveGesture; });
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
+/* harmony import */ var _index_f49d994d_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-f49d994d.js */ "iWo5");
+
+
+
+
+const createButtonActiveGesture = (el, isButton) => {
+  let currentTouchedButton;
+  let initialTouchedButton;
+  const activateButtonAtPoint = (x, y, hapticFeedbackFn) => {
+    if (typeof document === 'undefined') {
+      return;
+    }
+    const target = document.elementFromPoint(x, y);
+    if (!target || !isButton(target)) {
+      clearActiveButton();
+      return;
+    }
+    if (target !== currentTouchedButton) {
+      clearActiveButton();
+      setActiveButton(target, hapticFeedbackFn);
+    }
+  };
+  const setActiveButton = (button, hapticFeedbackFn) => {
+    currentTouchedButton = button;
+    if (!initialTouchedButton) {
+      initialTouchedButton = currentTouchedButton;
+    }
+    const buttonToModify = currentTouchedButton;
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => buttonToModify.classList.add('ion-activated'));
+    hapticFeedbackFn();
+  };
+  const clearActiveButton = (dispatchClick = false) => {
+    if (!currentTouchedButton) {
+      return;
+    }
+    const buttonToModify = currentTouchedButton;
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => buttonToModify.classList.remove('ion-activated'));
+    /**
+     * Clicking on one button, but releasing on another button
+     * does not dispatch a click event in browsers, so we
+     * need to do it manually here. Some browsers will
+     * dispatch a click if clicking on one button, dragging over
+     * another button, and releasing on the original button. In that
+     * case, we need to make sure we do not cause a double click there.
+     */
+    if (dispatchClick && initialTouchedButton !== currentTouchedButton) {
+      currentTouchedButton.click();
+    }
+    currentTouchedButton = undefined;
+  };
+  return Object(_index_f49d994d_js__WEBPACK_IMPORTED_MODULE_2__["createGesture"])({
+    el,
+    gestureName: 'buttonActiveDrag',
+    threshold: 0,
+    onStart: ev => activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["a"]),
+    onMove: ev => activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["b"]),
+    onEnd: () => {
+      clearActiveButton(true);
+      Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__["h"])();
+      initialTouchedButton = undefined;
+    }
+  });
+};
+
+
+
+
+/***/ }),
+
+/***/ "acej":
 /*!**************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-bda125fb.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js ***!
   \**************************************************************************/
 /*! exports provided: a, d */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -67,7 +148,7 @@ const openURL = async (url, ev, direction, animation) => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return attachComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return detachComponent; });
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
 
 
 const attachComponent = async (delegate, container, component, cssClasses, componentProps) => {
@@ -87,7 +168,7 @@ const attachComponent = async (delegate, container, component, cssClasses, compo
     Object.assign(el, componentProps);
   }
   container.appendChild(el);
-  await new Promise(resolve => Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_0__["c"])(el, resolve));
+  await new Promise(resolve => Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__["c"])(el, resolve));
   return el;
 };
 const detachComponent = (delegate, element) => {
@@ -224,87 +305,6 @@ const spinners = {
   }
 };
 const SPINNERS = spinners;
-
-
-
-
-/***/ }),
-
-/***/ "pX2f":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/button-active-e272e3f1.js ***!
-  \*********************************************************************/
-/*! exports provided: c */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createButtonActiveGesture; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _index_f49d994d_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index-f49d994d.js */ "iWo5");
-/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./haptic-27b3f981.js */ "qULd");
-
-
-
-
-const createButtonActiveGesture = (el, isButton) => {
-  let currentTouchedButton;
-  let initialTouchedButton;
-  const activateButtonAtPoint = (x, y, hapticFeedbackFn) => {
-    if (typeof document === 'undefined') {
-      return;
-    }
-    const target = document.elementFromPoint(x, y);
-    if (!target || !isButton(target)) {
-      clearActiveButton();
-      return;
-    }
-    if (target !== currentTouchedButton) {
-      clearActiveButton();
-      setActiveButton(target, hapticFeedbackFn);
-    }
-  };
-  const setActiveButton = (button, hapticFeedbackFn) => {
-    currentTouchedButton = button;
-    if (!initialTouchedButton) {
-      initialTouchedButton = currentTouchedButton;
-    }
-    const buttonToModify = currentTouchedButton;
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => buttonToModify.classList.add('ion-activated'));
-    hapticFeedbackFn();
-  };
-  const clearActiveButton = (dispatchClick = false) => {
-    if (!currentTouchedButton) {
-      return;
-    }
-    const buttonToModify = currentTouchedButton;
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["c"])(() => buttonToModify.classList.remove('ion-activated'));
-    /**
-     * Clicking on one button, but releasing on another button
-     * does not dispatch a click event in browsers, so we
-     * need to do it manually here. Some browsers will
-     * dispatch a click if clicking on one button, dragging over
-     * another button, and releasing on the original button. In that
-     * case, we need to make sure we do not cause a double click there.
-     */
-    if (dispatchClick && initialTouchedButton !== currentTouchedButton) {
-      currentTouchedButton.click();
-    }
-    currentTouchedButton = undefined;
-  };
-  return Object(_index_f49d994d_js__WEBPACK_IMPORTED_MODULE_1__["createGesture"])({
-    el,
-    gestureName: 'buttonActiveDrag',
-    threshold: 0,
-    onStart: ev => activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["a"]),
-    onMove: ev => activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["b"]),
-    onEnd: () => {
-      clearActiveButton(true);
-      Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["h"])();
-      initialTouchedButton = undefined;
-    }
-  });
-};
 
 
 

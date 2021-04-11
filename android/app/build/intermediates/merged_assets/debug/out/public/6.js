@@ -11,9 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_button", function() { return Button; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_icon", function() { return Icon; });
-/* harmony import */ var _index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-3ccd7557.js */ "2atR");
-/* harmony import */ var _ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-ddef3a45.js */ "GTku");
-/* harmony import */ var _helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-cf6e85ee.js */ "Ke8Y");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
 /* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
 
 
@@ -60,7 +60,7 @@ const getNamedUrl = (iconName) => {
   if (url) {
     return url;
   }
-  return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["k"])(`svg/${iconName}.svg`);
+  return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["k"])(`svg/${iconName}.svg`);
 };
 const getName = (iconName, icon, mode, ios, md) => {
   // default to "md" if somehow the mode wasn't set
@@ -110,9 +110,9 @@ const buttonMdCss = ":host{--overflow:hidden;--ripple-color:currentColor;--borde
 
 const Button = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-    this.ionFocus = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionFocus", 7);
-    this.ionBlur = Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionBlur", 7);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.ionFocus = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionFocus", 7);
+    this.ionBlur = Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this, "ionBlur", 7);
     this.inItem = false;
     this.inListHeader = false;
     this.inToolbar = false;
@@ -142,7 +142,7 @@ const Button = class {
       if (this.type === 'button') {
         Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["o"])(this.href, ev, this.routerDirection, this.routerAnimation);
       }
-      else if (Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["k"])(this.el)) {
+      else if (Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["k"])(this.el)) {
         // this button wants to specifically submit a form
         // climb up the dom to see if we're in a <form>
         // and if so, then use JS to submit it
@@ -169,7 +169,7 @@ const Button = class {
     this.inToolbar = !!this.el.closest('ion-buttons');
     this.inListHeader = !!this.el.closest('ion-list-header');
     this.inItem = !!this.el.closest('ion-item') || !!this.el.closest('ion-item-divider');
-    this.inheritedAttributes = Object(_helpers_cf6e85ee_js__WEBPACK_IMPORTED_MODULE_2__["i"])(this.el, ['aria-label']);
+    this.inheritedAttributes = Object(_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_2__["i"])(this.el, ['aria-label']);
   }
   get hasIconOnly() {
     return !!this.el.querySelector('[slot="icon-only"]');
@@ -184,7 +184,7 @@ const Button = class {
     return 'bounded';
   }
   render() {
-    const mode = Object(_ionic_global_ddef3a45_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+    const mode = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
     const { buttonType, type, disabled, rel, target, size, href, color, expand, hasIconOnly, shape, strong, inheritedAttributes } = this;
     const finalSize = size === undefined && this.inItem ? 'small' : size;
     const TagType = href === undefined ? 'button' : 'a';
@@ -200,7 +200,7 @@ const Button = class {
     if (fill === undefined) {
       fill = this.inToolbar || this.inListHeader ? 'clear' : 'solid';
     }
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { onClick: this.handleClick, "aria-disabled": disabled ? 'true' : null, class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color, {
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { onClick: this.handleClick, "aria-disabled": disabled ? 'true' : null, class: Object(_theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color, {
         [mode]: true,
         [buttonType]: true,
         [`${buttonType}-${expand}`]: expand !== undefined,
@@ -214,9 +214,9 @@ const Button = class {
         'button-disabled': disabled,
         'ion-activatable': true,
         'ion-focusable': true,
-      }) }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(TagType, Object.assign({}, attrs, { class: "button-native", part: "native", disabled: disabled, onFocus: this.onFocus, onBlur: this.onBlur }, inheritedAttributes), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { class: "button-inner" }, Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "icon-only" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "start" }), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null), Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "end" })), mode === 'md' && Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", { type: this.rippleType }))));
+      }) }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(TagType, Object.assign({}, attrs, { class: "button-native", part: "native", disabled: disabled, onFocus: this.onFocus, onBlur: this.onBlur }, inheritedAttributes), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { class: "button-inner" }, Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "icon-only" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "start" }), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null), Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", { name: "end" })), mode === 'md' && Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", { type: this.rippleType }))));
   }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
 };
 Button.style = {
   ios: buttonIosCss,
@@ -301,7 +301,8 @@ const iconCss = ":host{display:inline-block;width:1em;height:1em;contain:strict;
 
 const Icon = class {
   constructor(hostRef) {
-    Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+    this.iconName = null;
     this.isVisible = false;
     /**
      * The mode determines which platform styles to use.
@@ -336,7 +337,7 @@ const Icon = class {
     }
   }
   waitUntilVisible(el, rootMargin, cb) {
-    if ( this.lazy && typeof window !== 'undefined' && window.IntersectionObserver) {
+    if (this.lazy && typeof window !== 'undefined' && window.IntersectionObserver) {
       const io = (this.io = new window.IntersectionObserver((data) => {
         if (data[0].isIntersecting) {
           io.disconnect();
@@ -353,7 +354,7 @@ const Icon = class {
     }
   }
   loadIcon() {
-    if ( this.isVisible) {
+    if (this.isVisible) {
       const url = getUrl(this);
       if (url) {
         if (ioniconContent.has(url)) {
@@ -366,8 +367,8 @@ const Icon = class {
         }
       }
     }
+    const label = this.iconName = getName(this.name, this.icon, this.mode, this.ios, this.md);
     if (!this.ariaLabel && this.ariaHidden !== 'true') {
-      const label = getName(this.name, this.icon, this.mode, this.ios, this.md);
       // user did not provide a label
       // come up with the label based on the icon name
       if (label) {
@@ -376,22 +377,23 @@ const Icon = class {
     }
   }
   render() {
+    const { iconName } = this;
     const mode = this.mode || 'md';
     const flipRtl = this.flipRtl ||
-      (this.ariaLabel &&
-        (this.ariaLabel.indexOf('arrow') > -1 || this.ariaLabel.indexOf('chevron') > -1) &&
+      (iconName &&
+        (iconName.indexOf('arrow') > -1 || iconName.indexOf('chevron') > -1) &&
         this.flipRtl !== false);
-    return (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "img", class: Object.assign(Object.assign({ [mode]: true }, createColorClasses(this.color)), { [`icon-${this.size}`]: !!this.size, 'flip-rtl': !!flipRtl && this.el.ownerDocument.dir === 'rtl' }) },  this.svgContent ? (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "icon-inner", innerHTML: this.svgContent })) : (Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "icon-inner" }))));
+    return (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["H"], { role: "img", class: Object.assign(Object.assign({ [mode]: true }, createColorClasses(this.color)), { [`icon-${this.size}`]: !!this.size, 'flip-rtl': !!flipRtl && this.el.ownerDocument.dir === 'rtl' }) }, this.svgContent ? (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "icon-inner", innerHTML: this.svgContent })) : (Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "icon-inner" }))));
   }
   static get assetsDirs() { return ["svg"]; }
-  get el() { return Object(_index_3ccd7557_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
+  get el() { return Object(_index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__["i"])(this); }
   static get watchers() { return {
     "name": ["loadIcon"],
     "src": ["loadIcon"],
     "icon": ["loadIcon"]
   }; }
 };
-const getIonMode = () => ( typeof document !== 'undefined' && document.documentElement.getAttribute('mode')) || 'md';
+const getIonMode = () => (typeof document !== 'undefined' && document.documentElement.getAttribute('mode')) || 'md';
 const createColorClasses = (color) => {
   return color
     ? {
