@@ -121,3 +121,11 @@ En este archivo se hace la estructura de las paginas de la aplicación mediante 
 - [Codigo HTML pagina registrarse](src/app/registrarse/registrarse.page.html)
 - [Codigo SCSS pagina registrarse](src/app/registrarse/registrarse.page.scss)
 - [Codigo TS pagina registrarse](src/app/registrarse/registrarse.page.ts)
+
+## Variables de medición 
+
+
+### Codigo para Raspberry 
+
+
+### Codigo Thingkspeak
