@@ -129,3 +129,37 @@ En este archivo se hace la estructura de las paginas de la aplicación mediante 
 
 
 ### Codigo Thingkspeak
+
+<p align="justify"> Debido a la necesidad de guardar los datos en una base de datos se usa la herramienta perteneciente a MathWorks, Thingspeak, donde como se explico anteriormente los datos se transportan mediante MQTT. A continuación se muestra un ejemplo de como se reciven los datos desde un Script de Matlab alojado en Thingspeak: </p>
+
+```Matlab
+readChannelID = 1345667;
+readAPIKey = '9J8GYR4CBQ0JXYJK';
+data = thingSpeakRead(readChannelID,'Field', 1, 'NumPoints', 30, 'ReadKey', readAPIKey,'OutputFormat','table');
+```
+
+<p align="justify"> Como se muestra en el fragmento de codigo anterior, se deben definir el ID del canal en donde se alojan los datos, la llave referente a dicho canal, se usa el comando ThingSpeakRead para leer los datos, en este caso se hace referencia a los presentes en el Field 1 y se leen los ultimos 30 en llegar. Al contar con estos datos se proceden a analizarlos, y graficarlos, a continuación se muestra un gragmento de codigo en donde se realiza dicha acción: </p>
+
+```Matlab
+plot(tStamp,hume);
+grid on 
+xlabel('Tiempo')
+ylabel('Humedad(%)')
+ylim([min(hume)-1 max(hume)+1])
+title('Humedad')
+```
+
+En el anterior codigo se usa la estampa de tiempo enviada con los datos, dando como resultado una grafica como la siguiente: 
+
+<p align="center">
+   <img src=Codigo_Trackpill/yvj5iXIpV7wavEo-VnUNZg.png>
+</p>
+
+#### Scripts para cada variable en Matlab 
+
+- [Script Matlab Humedad ](Codigo_Trackpill/Codigo_humd.m)
+- [Script Matlab Temperatura](Codigo_Trackpill/codigo_temp.m)
+- [Script Matlab Infrarrojo 1](src/app/perfil/Codigo_infra_1.m)
+- [Script Matlab Infrarrojo 2](src/app/perfil/Codigo_infra_2.m)
+
+
