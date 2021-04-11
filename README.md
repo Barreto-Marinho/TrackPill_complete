@@ -124,25 +124,25 @@ En este archivo se hace la estructura de las paginas de la aplicación mediante 
 
 ## Variables de medición 
 
-Para la medicion de las variables se esta utilizando una Raspberry PI 4 en donde se estan leyendo 
+<p align="justify">Para la medicion de las variables se esta utilizando una Raspberry PI 4 en donde se estan leyendo 
 los datos de temperatura y humedad con el sensor DHT11, y de distancia con 2 sensores infrarojos, 
 estos datos son enviados por la Raspberry utilizando MQTT como protocolo de comunicacion de la 
 capa de aplicación, y recibidos por thingspeak, un servidor especializado en aplicaciones para IOT, 
 debido a que este servidor se esta trabajando de forma gratuita, se tienen limitaciones a la hora de 
 su uso, una de ellas es que los datos deben ser enviados a una data mayor a 15 segundos, de lo contrario
-se pierden esos datos.
+se pierden esos datos.</p>
 
 El servidor de thingspeak esta en la siguiente direccion:
 
 [Thingspeak canal](https://thingspeak.com/channels/1345667)
 
 ### Codigo para Raspberry 
-Como ya se menciono los datos se estan enviando cada 15 segundos, adicional a eso los mensajes enviados 
+<p align="justify">Como ya se menciono los datos se estan enviando cada 15 segundos, adicional a eso los mensajes enviados 
 no pueden ser enviados, por lo que para la medida de los sensores infrarrojos, se esta enviando al servidor
 un indicativo de que el valor cambio de 0 a 1. En el servidor se tienen 3 campos que reciben los datos mandados 
 por la Raspberry, el primer campo recibe la variable de temperatura y de humedad, el segundo los cambios del 
 primer sensor infrarrojo, y el tercero los cambios del segundo sensor infrarrojo, los mensajes se estan mandando 
-de la siguiente forma:
+de la siguiente forma:</p>
 
 - Sensor temperatura y humedad:
 Debido a que estos 2 datos tienen la misma estampa de tiempo, se leen en el mismo momento, se envian al mismo 
