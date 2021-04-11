@@ -124,9 +124,48 @@ En este archivo se hace la estructura de las paginas de la aplicación mediante 
 
 ## Variables de medición 
 
+Para la medicion de las variables se esta utilizando una Raspberry PI 4 en donde se estan leyendo 
+los datos de temperatura y humedad con el sensor DHT11, y de distancia con 2 sensores infrarojos, 
+estos datos son enviados por la Raspberry utilizando MQTT como protocolo de comunicacion de la 
+capa de aplicación, y recibidos por thingspeak, un servidor especializado en aplicaciones para IOT, 
+debido a que este servidor se esta trabajando de forma gratuita, se tienen limitaciones a la hora de 
+su uso, una de ellas es que los datos deben ser enviados a una data mayor a 15 segundos, de lo contrario
+se pierden esos datos.
+
+El servidor de thingspeak esta en la siguiente direccion:
+
+[Thingspeak canal](https://thingspeak.com/channels/1345667)
 
 ### Codigo para Raspberry 
+Como ya se menciono los datos se estan enviando cada 15 segundos, adicional a eso los mensajes enviados 
+no pueden ser enviados, por lo que para la medida de los sensores infrarrojos, se esta enviando al servidor
+un indicativo de que el valor cambio de 0 a 1. En el servidor se tienen 3 campos que reciben los datos mandados 
+por la Raspberry, el primer campo recibe la variable de temperatura y de humedad, el segundo los cambios del 
+primer sensor infrarrojo, y el tercero los cambios del segundo sensor infrarrojo, los mensajes se estan mandando 
+de la siguiente forma:
 
+- Sensor temperatura y humedad:
+Debido a que estos 2 datos tienen la misma estampa de tiempo, se leen en el mismo momento, se envian al mismo 
+campo, de la siguiente forma:
+
+            /Dia/Mes/Año/Hora/Minuto/Segundo/"T"/(Valor temperatura)/"H"/(Valor humedad)
+
+- Sensores infrarrojos: 
+En el caso de los infrarrojos estos son muestreados cada 100ms por lo que no es posible enviar todos los datos 
+leidos, lo que se manda es el cambio de 1 a 0, pero igualmente solo se pueden enviar de a 8 cambios por cada 
+20 segundos, por lo que si se supera este numero, los datos seran enviados 20 segundos despues de lo que estaba 
+presupuestado, para evitar su perdida. Los datos se organizan de la siguiente forma:
+
+           /Identificador/Dia/Mes/Año/Hora/Minuto/Segundo/Milisegundo/E1/Variable/ /Dia...
+
+- El identificador depende del sensor, en este caso se esta usando "1C1D1" para el primer infrarrojo, y "2C1D1"
+para el segundo infrarojo, el segundo numero cambiara dependiendo del compartimenro, y el tercero dependiendo del 
+dispositivo.
+- La variable es el estado al que cambia, por lo que si pasa de 0 a 1, variable sera 1, indicando que despues de ese 
+tiempo se tendra el estado en 1 hasta un nuevo cambio.
+
+#### Codigo
+[Codigo Raspberry](Codigo_Raspberry/Codigo.py)
 
 ### Codigo Thingkspeak
 
@@ -159,7 +198,7 @@ En el anterior codigo se usa la estampa de tiempo enviada con los datos, dando c
 
 - [Script Matlab Humedad ](Codigo_Trackpill/Codigo_humd.m)
 - [Script Matlab Temperatura](Codigo_Trackpill/codigo_temp.m)
-- [Script Matlab Infrarrojo 1](src/app/perfil/Codigo_infra_1.m)
-- [Script Matlab Infrarrojo 2](src/app/perfil/Codigo_infra_2.m)
+- [Script Matlab Infrarrojo 1](Codigo_Trackpill/Codigo_infra_1.m)
+- [Script Matlab Infrarrojo 2](Codigo_Trackpill/Codigo_infra_2.m)
 
 
