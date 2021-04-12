@@ -9,6 +9,40 @@
 
 
 <ion-content>
-  <ion-img src="assets/icon/Diagrama_iot.png"></ion-img>
-
+  <ion-text [hidden]="!flag_3">
+    <h1>{{titulo}}</h1>
+  </ion-text>
+  <H4 [hidden]="flag_1" align="justify">
+    La medicina moderna con el paso del tiempo
+    se ha vuelto parte fundamental de nuestras 
+    vidas, por ello dia a dia millones de personas 
+    consumen pastillas que las ayudan a cuidar 
+    de su salud, pero debido a lo tedioso que puede 
+    llegar a ser controlar su consumo, miles de personas 
+    no terminan su tratamiento, otras debido al poco 
+    conocimiento que tienen sobre el estados de sus 
+    medicamentos las consumen sin estar seguros sobre la
+     efectividad de estos,debido a esto nace Trackpill,
+      un producto para personas inteligentes con su salud.
+  </H4>
+  <H4 [hidden]="flag_2" align="justify">
+  Trackpill es un dispositivo capaz de medir la temperatura
+   y la humedad a la que están expuestas sus pastillas, para
+    verificar su estado, además mediante un arreglo de sensores,
+     el pastillero es capaz de contar los medicamentos que están
+      en su interior, Trackpill envía todas estas variables a la
+       nube en donde gracias a la aplicación del producto, se podrán 
+       identificar todas estos datos,  gracias a las características 
+       de la aplicación, podrá personalizar el compartimiento del
+        pastillero con ciertos variables, como la hora de la ingesta, 
+        la marca de las pastillas, y la cantidad necesaria para 
+        completar el tratamiento.
+  </H4>
+  <ion-img class="logo" [hidden]="flag_1" src="assets/icon/logo.png"></ion-img>
+  <ion-img  [hidden]="flag_3" src="assets/icon/Equipo_trackpill.png"></ion-img>
+  <ion-img  [hidden]="flag_2" src="assets/icon/Diagrama_iot.png"></ion-img>
+  <ion-list style="text-align:center">
+    <ion-button class=bot_atr [hidden]="!flag_3" (click)="Atrasar_pag()"><ion-icon  class="flechas" name="arrow-back"></ion-icon></ion-button>
+    <ion-button class=bot_ava [hidden]="!flag_2" (click)="Avanzar_pag()"><ion-icon class="flechas" name="arrow-forward"></ion-icon></ion-button>
+  </ion-list>
 </ion-content>

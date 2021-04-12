@@ -166,6 +166,9 @@ let AppComponent = class AppComponent {
     Conf_alarm() {
         this.router.navigate(['/alarma']);
     }
+    acerca() {
+        this.router.navigate(['/acercade']);
+    }
     Cuenta() {
         if (this.authSvc.usuario$ != undefined) {
             this.router.navigate(['/perfil']);
@@ -201,7 +204,7 @@ AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-app>\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\n      <ion-content>\n\n  \n          <ion-col> \n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-row>\n              <ion-button  (click)=\"pag_princ()\" >\n                <ion-icon  [ios]=\"'analytics' + '-outline'\" [md]=\"'analytics' + '-sharp'\"></ion-icon>\n                <ion-label>  Pagina Principal           </ion-label>\n              </ion-button>\n              </ion-row>\n              <ion-row>\n                <ion-button  (click)=\"Conf_alarm()\" >\n                  <ion-icon  [ios]=\"'construct' + '-outline'\" [md]=\"'construct' + '-sharp'\"></ion-icon>\n                  <ion-label>  Alarma estado  </ion-label>\n                </ion-button>\n                </ion-row>\n                <ion-row>\n                  <ion-button  (click)=\"Cuenta()\" >\n                    <ion-icon  [ios]=\"'person' + '-outline'\" [md]=\"'person' + '-sharp'\"></ion-icon>\n                    <ion-label>Cuenta</ion-label>\n                  </ion-button>\n                </ion-row>\n            </ion-menu-toggle>\n        </ion-col>\n\n        \n      </ion-content>\n    </ion-menu>\n  <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n</ion-split-pane>\n</ion-app>\n\n\n\n\n\n\n\n\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-app>\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\n      <ion-content>\n          <ion-col> \n            <ion-menu-toggle auto-hide=\"false\">\n              <ion-row>\n              <ion-button  (click)=\"pag_princ()\" >\n                <ion-icon  [ios]=\"'analytics' + '-outline'\" [md]=\"'analytics' + '-sharp'\"></ion-icon>\n                <ion-label>  Pagina Principal           </ion-label>\n              </ion-button>\n              </ion-row>\n              <ion-row>\n                <ion-button  (click)=\"Conf_alarm()\" >\n                  <ion-icon  [ios]=\"'construct' + '-outline'\" [md]=\"'construct' + '-sharp'\"></ion-icon>\n                  <ion-label>  Alarma estado  </ion-label>\n                </ion-button>\n                </ion-row>\n                <ion-row>\n                  <ion-button  (click)=\"Cuenta()\" >\n                    <ion-icon  [ios]=\"'person' + '-outline'\" [md]=\"'person' + '-sharp'\"></ion-icon>\n                    <ion-label>Cuenta</ion-label>\n                  </ion-button>\n                </ion-row>\n                <ion-row>\n                <ion-button  (click)=\"acerca()\" >\n                    <ion-icon  name=\"people-outline\"></ion-icon>\n                    <ion-label>Acerca de nosotros</ion-label>\n                  </ion-button>\n                </ion-row>\n            </ion-menu-toggle>\n        </ion-col>\n\n        \n      </ion-content>\n    </ion-menu>\n  <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n</ion-split-pane>\n</ion-app>\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 /***/ }),
 
@@ -926,6 +929,10 @@ const routes = [
         path: 'seguimiento',
         loadChildren: () => __webpack_require__.e(/*! import() | seguimiento-seguimiento-module */ "seguimiento-seguimiento-module").then(__webpack_require__.bind(null, /*! ./seguimiento/seguimiento.module */ "e8ug")).then(m => m.SeguimientoPageModule),
         canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+    },
+    {
+        path: 'acercade',
+        loadChildren: () => __webpack_require__.e(/*! import() | acercade-acercade-module */ "acercade-acercade-module").then(__webpack_require__.bind(null, /*! ./acercade/acercade.module */ "LFJr")).then(m => m.AcercadePageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
