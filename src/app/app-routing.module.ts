@@ -50,6 +50,10 @@ const routes: Routes = [
     path: 'seguimiento',
     loadChildren: () => import('./seguimiento/seguimiento.module').then( m => m.SeguimientoPageModule),
     canActivate:[AuthGuard]
+  },
+  {
+    path: 'acercade',
+    loadChildren: () => import('./acercade/acercade.module').then( m => m.AcercadePageModule)
   }
 ];
 

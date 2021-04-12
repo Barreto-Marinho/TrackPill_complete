@@ -1,0 +1,25 @@
+ion-menu-button { // se definen las caracteristicas del boton del menu lateral
+    color: #010202;
+  }
+  
+  ion-title{ // se definen las caracteristicas del elemento title
+    color: #140b0a;
+  }
+  ion-toolbar { // se definen las caracteristicas del tollbar
+    --background: #3d8af7;
+    --ion-background-color:#3d8af7;
+  }
+  
+ion-header { // se definen las caracteristicas del header 
+    --ion-background-color:#3d8af7;
+    --background: #3d8af7;
+}
+ion-content { // se definen las caracteristicas de content
+    --background: #3d8af7;
+    --ion-background-color:#3d8af7;
+}
+
+ion-img{
+    padding-left: 5%;
+    padding-right: 5%;
+}

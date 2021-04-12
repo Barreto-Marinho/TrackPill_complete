@@ -20,6 +20,10 @@ export class AppComponent {
     this.router.navigate(['/alarma']);
   }
 
+  acerca(){
+    this.router.navigate(['/acercade']);
+  }
+
   Cuenta(){
     if(this.authSvc.usuario$ != undefined){
       this.router.navigate(['/perfil']);
@@ -27,26 +31,4 @@ export class AppComponent {
       this.router.navigate(['/cuenta']);
       }
   }
-
- /* async casos(entrada){
-      if(entrada=="1"){
-        this.router.navigate(['/folder/  ']);
-      }else{
-          if(entrada=="2"){
-            this.router.navigate(['/alarma']);
-        }else{
-          this.afAuth.authState.subscribe(chequeo=>{
-            if(chequeo != null){
-              console.log("Aqui usuario bien")
-              this.router.navigate(['/perfil']);
-            }else{
-              console.log("Aqui usuario mal")
-              this.router.navigate(['/cuenta']);
-            }
-
-            console.log("respuesta-> ",chequeo)
-          })
-        }
-      }
-    }*/
 }
