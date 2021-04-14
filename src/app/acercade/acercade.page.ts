@@ -53,6 +53,12 @@ export class AcercadePage implements OnInit {
         this.flag_2  =false
         this.flag_3  =true
         break
+      case 4: 
+        this.titulo= "Solucion en IOT"
+        this.flag_1  =true
+        this.flag_2  =false
+        this.flag_3  =true
+        break
     }
   }
 
