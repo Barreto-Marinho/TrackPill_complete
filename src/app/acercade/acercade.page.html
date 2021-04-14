@@ -12,6 +12,7 @@
   <ion-text [hidden]="!flag_3">
     <h1>{{titulo}}</h1>
   </ion-text>
+
   <H4 [hidden]="flag_1" align="justify">
     La medicina moderna con el paso del tiempo
     se ha vuelto parte fundamental de nuestras 
@@ -25,6 +26,7 @@
      efectividad de estos,debido a esto nace Trackpill,
       un producto para personas inteligentes con su salud.
   </H4>
+
   <H4 [hidden]="flag_2" align="justify">
   Trackpill es un dispositivo capaz de medir la temperatura
    y la humedad a la que están expuestas sus pastillas, para
@@ -38,11 +40,27 @@
         la marca de las pastillas, y la cantidad necesaria para 
         completar el tratamiento.
   </H4>
+
+  <H4 [hidden]="flag_4" align="justify">
+    TrackPill al ser un sistema capaz de medir variables hace uso 
+    de sensores electronicos para llevar a cabo esta tarea, por esto
+    el producto cuenta con el Sensor DHT-11 encargado de medir temperatura y humedad, cuenta 
+    con dos sensores infrarrojos los cuales ayudaran a contar la entrada y salida de pastillas.
+
+    Los datos recopilados por dichos sensores son enviados a una RaspBerry, 
+    la cual sera la encarga de enciar dichos mediante el protocolo MQTT al servidor de
+    Thingspeak donde posteriormente seran analizados. Ademas de esto, Trackpill cuenta con una
+    aplicación en donde los usuarios tendran la oportunidad de registrarse y guardar datos personales, 
+    los datos e información de los usuarios se enviaran a la base de datos Firebase
+
+    </H4>
+
   <ion-img class="logo" [hidden]="flag_1" src="assets/icon/logo.png"></ion-img>
   <ion-img  [hidden]="flag_3" src="assets/icon/Equipo_trackpill.png"></ion-img>
   <ion-img  [hidden]="flag_2" src="assets/icon/Diagrama_iot.png"></ion-img>
+  <ion-img  [hidden]="flag_4" src="assets/SVG-diagrama-blk.svg"></ion-img>
   <ion-list style="text-align:center">
     <ion-button class=bot_atr [hidden]="!flag_3" (click)="Atrasar_pag()"><ion-icon  class="flechas" name="arrow-back"></ion-icon></ion-button>
-    <ion-button class=bot_ava [hidden]="!flag_2" (click)="Avanzar_pag()"><ion-icon class="flechas" name="arrow-forward"></ion-icon></ion-button>
+    <ion-button class=bot_ava [hidden]="!flag_4" (click)="Avanzar_pag()"><ion-icon class="flechas" name="arrow-forward"></ion-icon></ion-button>
   </ion-list>
 </ion-content>

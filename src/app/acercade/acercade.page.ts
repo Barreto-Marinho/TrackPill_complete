@@ -9,6 +9,7 @@ export class AcercadePage implements OnInit {
   public titulo = "¿Quienes somos?"
   public flag_1  =true
   public flag_2  =true
+  public flag_4  =true
   public flag_3  = false
   public pagina = 1
   constructor() {}
@@ -20,6 +21,7 @@ export class AcercadePage implements OnInit {
     this.titulo = "¿Quienes somos?"
     this.flag_1  =true
     this.flag_2  =true
+    this.flag_4  =true
     this.flag_3  =false
     this.pagina= 1
   }
@@ -39,11 +41,13 @@ export class AcercadePage implements OnInit {
         this.flag_1  =true
         this.flag_2  =true
         this.flag_3  =false
+        this.flag_4  =true
         break
       case 2:
         this.flag_1  =false
         this.flag_2  =true
         this.flag_3  =true
+        this.flag_4  =true
         this.titulo= "¿Quienes somos?"
         
         break
@@ -52,12 +56,14 @@ export class AcercadePage implements OnInit {
         this.flag_1  =true
         this.flag_2  =false
         this.flag_3  =true
+        this.flag_4  =true
         break
       case 4: 
-        this.titulo= "Solucion en IOT"
+        this.titulo= "Diagrama de Bloques tecnico"
         this.flag_1  =true
-        this.flag_2  =false
+        this.flag_2  =true
         this.flag_3  =true
+        this.flag_4  =false
         break
     }
   }
