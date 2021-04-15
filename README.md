@@ -188,10 +188,10 @@ ylim([min(hume)-1 max(hume)+1])
 title('Humedad')
 ```
 
-En el anterior codigo se usa la estampa de tiempo enviada con los datos, dando como resultado una grafica como la siguiente: 
+En el anterior codigo se usa la estampa de tiempo enviada con los datos, dando como resultado unas graficas como la siguiente: 
 
 <p align="center">
-   <img src=Codigo_Trackpill/yvj5iXIpV7wavEo-VnUNZg.png>
+   <img src=Codigo_Trackpill/todas.png>
 </p>
 
 #### Scripts para cada variable en Matlab 
