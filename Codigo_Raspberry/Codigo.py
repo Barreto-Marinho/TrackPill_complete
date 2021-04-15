@@ -106,7 +106,8 @@ while 1:
     ## if para leer infrarojo cada 100 milisegundos
     if ((milis >= cont_inf+100) or (milis<100 and cont_inf>900 and (milis >= cont_inf-900))):
        fecha()
-       infrarojo()   
+       infrarojo()  
+        cont_inf= milis
        ## if para guardar cambio en el archivo de textos e imprimir cuando se de un cambio en este
        if(inf1 != estado_1 ):
             estado_1=inf1
