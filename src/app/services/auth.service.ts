@@ -48,7 +48,7 @@ async envio_dato_thing_speak(mensaje: string) {
   const apikey= 'DLM8YKW9252LHG6Q';
   var texto = 'https://api.thingspeak.com/update?api_key='+ apikey+ '&field1='+ mensaje;
   await this.http.get(texto).toPromise();
-  console.log("Sen envio: ", texto)
+  console.log("Se envio: ", texto)
 }
 /*****************************************************************************************************  
 La funcion envio_dato_thing_speak 
