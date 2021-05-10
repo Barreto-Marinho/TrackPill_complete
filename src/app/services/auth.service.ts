@@ -6,6 +6,8 @@ import { Observable, of } from 'rxjs';
 import{switchMap} from "rxjs/Operators";
 import { AlertController,ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { MQTTService } from 'ionic-mqtt';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -16,7 +18,7 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
-  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,public router: Router,public toastController: ToastController ){
+  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,public router: Router,public toastController: ToastController, public http: HttpClient ){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
         if(user){
@@ -38,7 +40,33 @@ verdadero o no, dependiendo si el usuario esta verificado o no
       return(user.emailVerified===true ?true:false);
   }
 
+/*****************************************************************************************************  
+La funcion envio_dato_thing_speak 
+******************************************************************************************************/ 
 
+async envio_dato_thing_speak(mensaje: string) {
+  const apikey= 'DLM8YKW9252LHG6Q';
+  var texto = 'https://api.thingspeak.com/update?api_key='+ apikey+ '&field1='+ mensaje;
+  await this.http.get(texto).toPromise();
+  console.log("Sen envio: ", texto)
+}
+/*****************************************************************************************************  
+La funcion envio_dato_thing_speak 
+******************************************************************************************************/ 
+
+async leer_dato_thing_speak() {
+  await this.http.get('https://api.thingspeak.com/channels/1385876/fields/1.json?api_key=57U9PJRJT79HCI4Z&results=2')
+        .toPromise()
+        .then(res => {
+          const leido = res['feeds'];
+          const leido_2 = leido[0]['field1'] 
+          const leido_3 = leido[1]['field1'] 
+          console.log(leido_2)
+          console.log(leido_3)
+        }
+        );
+        //.then(res => console.log(res['feeds']));
+}
 /*****************************************************************************************************  
 
 La funcion resetPassword recibe la variable email de tipo string, esta funcion se encarga de utilizar
@@ -64,14 +92,7 @@ se lanza una alerta en la pantalla indicando esto.
       this.presentToast("El correo no se ha enviado correctamente ");}
    }
   } 
-  /*async loginGoogle(): Promise<User>{
-    try{
-        const {user}= await this.afAuth.signInWithPopup(new firebase.GoogleAuthProvider());
-        this.updateUserData(user);
-        return user;
-    }
-    catch(error){console.log('Error->',error)}
-  } */
+
 
 
 

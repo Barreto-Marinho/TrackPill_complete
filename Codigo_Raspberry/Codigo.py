@@ -25,7 +25,7 @@ def fecha():                            ##Funcion para obtener fecha actual
 #-------------------------------------------------------
 def imprimir():
     texto = "field1="+texto_imprimir[0]+"&field2="+texto_imprimir[1]+"&field3="+texto_imprimir[2]
-    client.publish("channels/%s/publish/%s" % (channelId,APIkey),texto)
+    client.publish("/channels%s/publish/%s" % (channelId,APIkey),texto)
     texto_imprimir[1]="1C1d1/"
     texto_imprimir[2]="2C1d1/"
     print(buffer[0])

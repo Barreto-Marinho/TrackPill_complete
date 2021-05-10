@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-compart1',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Compart1Page implements OnInit {
 
-  constructor() { }
+  constructor(private authSvc:AuthService) { }
 
   ngOnInit() {
+  }
+
+  funcion(){
+    this.authSvc.envio_dato_thing_speak('23');
+  }
+
+  funcion_2(){
+    this.authSvc.leer_dato_thing_speak();
   }
 
 }
