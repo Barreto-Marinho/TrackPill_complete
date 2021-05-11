@@ -7,7 +7,7 @@ import{switchMap} from "rxjs/Operators";
 import { AlertController,ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { MQTTService } from 'ionic-mqtt';
+//import { MQTTService } from 'ionic-mqtt';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -18,7 +18,17 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
-  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController,public router: Router,public toastController: ToastController, public http: HttpClient ){
+  public TOPIC: string[] = [];
+  public MQTT_CONFIG: {host: string, port: number,clientId: string} = {
+    host: "test.mosquitto.org", port: 8081, clientId: "mqtt"};
+
+  public mqttClient;
+
+
+  
+
+  constructor(public afAuth:AngularFireAuth, private afs:AngularFirestore, private db: AngularFirestore,private alertController: AlertController
+             ,public router: Router,public toastController: ToastController, public http: HttpClient){
     this.user$= this.afAuth.authState.pipe(
       switchMap((user)=> {
         if(user){
@@ -29,6 +39,28 @@ export class AuthService {
     )
   }
 
+
+
+/*
+  public _onConnectionLost(responseObject) {
+    // connection listener
+    // ...do actions when connection lost
+    console.log('_onConnectionLost', responseObject);
+  }
+
+  public _onMessageArrived(message) {
+    // message listener
+    // ...do actions with arriving message
+    console.log('message', message);
+  }
+
+  public publishMessage() {
+    this.mqttClient= this.mqttService.loadingMqtt(this._onConnectionLost, this._onMessageArrived, this.TOPIC, this.MQTT_CONFIG);
+    console.log('publishMessage')
+    this.mqttClient.publishMessage("Trackpill","ola");
+  }
+
+*/
 
 /*****************************************************************************************************  
 

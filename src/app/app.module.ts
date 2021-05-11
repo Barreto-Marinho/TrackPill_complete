@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 import { ComponentsModule } from './components/components.module';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
-import { IonicMqttModule, MQTTService } from 'ionic-mqtt';
+//import { IonicMqttModule, MQTTService } from 'ionic-mqtt';
 
 //import { environment } from 'src/environments/environment.prod';
 @NgModule({
@@ -20,9 +20,9 @@ import { IonicMqttModule, MQTTService } from 'ionic-mqtt';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebaseConfig),
-  AngularFireAuthModule,ComponentsModule,HttpClientModule,IonicMqttModule
+  AngularFireAuthModule,ComponentsModule,HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthService, MQTTService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -21,4 +21,8 @@ export class Compart1Page implements OnInit {
     this.authSvc.leer_dato_thing_speak();
   }
 
+  mqtt_envio(){
+    //this.authSvc.publishMessage();
+  }
+
 }
