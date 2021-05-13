@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Calendar } from '@ionic-native/calendar/ngx';
 
 @Component({
   selector: 'app-seguimiento',
@@ -9,7 +8,7 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 export class SeguimientoPage implements OnInit {
   public dias = "Lunes"
   public cont_dia= 1
-  constructor(private calendar: Calendar) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -60,8 +59,6 @@ export class SeguimientoPage implements OnInit {
     }   
    } 
   }
-
-
 
 
 }
