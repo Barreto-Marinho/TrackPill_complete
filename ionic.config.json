@@ -1,7 +1,8 @@
 {
   "name": "Trackpill",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
