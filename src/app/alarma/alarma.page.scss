@@ -14,3 +14,123 @@ ion-menu-button {
   ion-content {
     --ion-background-color:#3d8af7;
   }
+
+
+  .Temperatura{ 
+    font-style: oblique;
+    font-size: 25px !important; 
+    color:rgba(15, 2, 1, 0.884);
+  }
+
+  .Humedad{ 
+    font-style: oblique;
+    font-size: 25px !important; 
+    color:rgba(15, 2, 1, 0.884);
+  }
+
+
+  .temp{
+    font-size: 25px ; 
+    color:rgba(252, 252, 252, 0.884);
+  }
+
+  .hum{
+    font-size: 25px ; 
+    color:rgba(252, 252, 252, 0.884);
+  }
+
+  .row1{ // se configuran las caracteristicas de posicion del objeto
+    padding-top: 10%;
+    height: 70%;
+  }
+  
+  .col1{ // se configuran las caracteristicas de posicion del objeto
+    padding-left: 10%;
+    width: 37%;
+    padding-top: 15%;
+  }
+  
+  .col2{ // se configuran las caracteristicas de posicion del objeto
+    padding-right:10% ;
+    width: 37%;
+    padding-top: 15%;
+  }
+  
+  .Comp1 { // se configuran las caracteristicas de posicion, color y fuente del objeto
+    --background:#ff5d55;
+    --background-activated:#fd6e67;
+    --color:#140b0a;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-style: oblique;
+    font-size:100% ;
+  }
+  .Comp2 { // se configuran las caracteristicas de posicion, color y fuente del objeto
+    --background:#77dd77;
+    --background-activated:#9cda9c;
+    --color:#140b0a;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-style: oblique;
+    font-size:100% ;
+  }
+  .Comp3 { // se configuran las caracteristicas de posicion, color y fuente del objeto
+    --background:#ffc581;
+    --background-activated:#ffd3a1;
+    --color:#140b0a;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-style: oblique;
+    font-size:100% ;
+  }
+  .Comp4 { // se configuran las caracteristicas de posicion, color y fuente del objeto
+    --background:#fef67f;
+    --background-activated:#fcf6a6;
+    --color:#140b0a;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-style: oblique;
+    font-size:100% ;
+  
+  }
+  .Comp5 { // se configuran las caracteristicas de posicion, color y fuente del objeto
+    --background:#0c59cf;
+    --background-activated:#3874ce;
+    --color:#140b0a;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-style: oblique;
+    font-size:100% ;
+  }
+  .Comp6 { // se configuran las caracteristicas de posicion, color y fuente del objeto
+    --background:#e692f8;
+    --background-activated:#eab9f5;
+    --color:#140b0a;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-style: oblique;
+    font-size:100% ;
+  }
+
+
+  .rowtemp{ // se configuran las caracteristicas de posicion del objeto
+    padding-left: 10%; 
+    padding-top: 10%;
+  }
+
+  .rowhum{ // se configuran las caracteristicas de posicion del objeto
+    padding-left: 10%; 
+    padding-top: 0%;
+  }

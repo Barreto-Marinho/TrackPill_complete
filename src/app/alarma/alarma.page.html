@@ -1,6 +1,4 @@
 
-
-
 <ion-header class="ion-no-border">
   <ion-toolbar >
     <ion-buttons slot="start">
@@ -13,6 +11,38 @@
 
 
 <ion-content [fullscreen]="true">
+  <ion-row  class="rowtemp" >
+    <ion-col>
+     <ion-label class="Temperatura">Temperatura:</ion-label> 
+    </ion-col>
+    <ion-col  >
+     <ion-label class="temp">{{place_temperatura}}</ion-label>
+    </ion-col>
+   </ion-row>
+
+   <ion-row class="rowhum" >
+    <ion-col>
+     <ion-label class="Humedad">Humedad:</ion-label> 
+    </ion-col>
+    <ion-col>
+     <ion-label class="hum">{{place_humedad}}</ion-label>
+    </ion-col>
+   </ion-row>
+
+
+   <ion-row class="row2"> <!--Se inicia la segunda columna-->  
+    <ion-col class="col1" > 
+      <ion-row class="row1"><ion-button class="Comp1">Normal</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp3">Normal</ion-button> </ion-row>
+      <ion-row class="row1">  <ion-button class="Comp5">Normal</ion-button> </ion-row>
+    </ion-col>
+    <ion-col class="col2">  <!--se inicia la columna 2-->  
+      <ion-row class="row1"><ion-button class="Comp2">Peligro</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp4">Peligro</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp6">Peligro</ion-button> </ion-row>
+    </ion-col>
+  </ion-row>
+
 
 </ion-content>
 
