@@ -4,6 +4,7 @@
       <ion-icon name="arrow-back"></ion-icon>
     </ion-button>
     <ion-title>Compartimento 1</ion-title>
+    <ion-button  (click)="func_borrar()" class="borrar"><ion-icon style="zoom:0.5;" name="trash-outline"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -12,22 +13,22 @@
       <ion-row>
       <div class="item">
         <label class="labels" >Marca:</label>
-        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa marca" #marca></ion-input></div>  </ion-row>
+        <ion-input disabled="{{isDisabled}}" placeholder={{place_marca}} #marca></ion-input></div>  </ion-row>
         <ion-row><div class="item">
         <label class="labels"  >Medicamento:</label>
-        <ion-input disabled="{{isDisabled}}"  placeholder="Ingresa medicamento" #medicamento></ion-input></div> </ion-row>
+        <ion-input disabled="{{isDisabled}}"  placeholder={{place_medicamento}}  #medicamento></ion-input></div> </ion-row>
         <ion-row><div class="item">
         <label class="labels">N° Pastillas:</label>
-        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa numero de pastillas" #Npastilla></ion-input></div> </ion-row>
+        <ion-input disabled="{{isDisabled}}" placeholder={{place_N_pastillas}}  #Npastilla></ion-input></div> </ion-row>
         <ion-row><div class="item">
         <label class="labels">Patillas tratamiento:</label>
-        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa pastillas tratamiento" #Ntratamiento></ion-input></div></ion-row> 
+        <ion-input disabled="{{isDisabled}}" placeholder={{place_pastillas_tra}}  #Ntratamiento></ion-input></div></ion-row> 
         <ion-row><div class="item">
-        <label class="labels">Temperatura maxima:</label>
-        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa temperatura max" #temp_max></ion-input></div> </ion-row>
+        <label class="labels">Temperatura maxima (°C):</label>
+        <ion-input disabled="{{isDisabled}}" placeholder={{place_temperatura_max}}  #temp_max></ion-input></div> </ion-row>
         <ion-row><div class="item">
-        <label class="labels">Humedad maxima:</label>
-        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa humedad maxima" #hum_max></ion-input></div> </ion-row>
+        <label class="labels">Humedad maxima (%):</label>
+        <ion-input disabled="{{isDisabled}}" placeholder={{place_humedad_max}}  #hum_max></ion-input></div> </ion-row>
         <ion-row> <h4>Alarma   </h4>
           <ion-button *ngIf="habilitar==true" (click)="agregar_alarma()" class="Volver">
             <ion-icon name="add-outline"  ></ion-icon>

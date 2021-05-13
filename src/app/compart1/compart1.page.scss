@@ -24,13 +24,20 @@ ion-toolbar {
     --background:#3d8af7;
     --background-activated:#63a3fc;
     --color:#140b0a;
-    /*position: absolute;
-    top: 0%;
-    left: 0%;*/
     width: 18%;
     --box-shadow:none;
     height: 7%;
   }
+
+  .borrar {
+    --background:#75a9f9;
+    --background-activated:#63a3fc;
+    --color:#140b0a;
+    --box-shadow:none;
+    height: 7%;
+    padding-left: 60%;
+  }
+
 
 
 ion-col{

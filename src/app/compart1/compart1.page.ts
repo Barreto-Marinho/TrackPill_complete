@@ -13,6 +13,13 @@ export class Compart1Page implements OnInit {
   public nombre_boton:string;
   public habilitar=false
   public isDisabled= true
+  public place_marca= "Ingrese marca";
+  public place_medicamento= "Ingresa medicamento";
+  public place_N_pastillas= "Ingresa numero de pastillas";
+  public place_pastillas_tra= "Ingresa pastillas tratamiento";
+  public place_temperatura_max= "Ingresa temperatura max";
+  public place_humedad_max= "Ingresa humedad maxima";
+
   constructor(private authSvc:AuthService,
               private alertController: AlertController) { }
 
@@ -23,8 +30,51 @@ export class Compart1Page implements OnInit {
     this.nombre_boton= "Modificar";
     this.habilitar = false;
     this.isDisabled= true;
+    this.imprimir_labels();
     console.log(this.authSvc.compar1$)
-}
+  }
+
+  public imprimir_labels(){
+    if(this.authSvc.compar1$.Npastilla==" "){
+      this.place_marca= "Ingrese marca";
+      this.place_medicamento= "Ingresa medicamento";
+      this.place_N_pastillas= "Ingresa numero de pastillas";
+      this.place_pastillas_tra= "Ingresa pastillas tratamiento";
+      this.place_temperatura_max= "Ingresa temperatura max";
+      this.place_humedad_max= "Ingresa humedad maxima";
+      this.miVariableHora= [];
+    }else{
+      this.place_marca= this.authSvc.compar1$.marca; 
+      this.place_medicamento= this.authSvc.compar1$.medicamento;
+      this.place_N_pastillas=this.authSvc.compar1$.Npastilla;
+      this.place_pastillas_tra= this.authSvc.compar1$.Ntratamiento;
+      this.place_temperatura_max= this.authSvc.compar1$.temp_max;
+      this.place_humedad_max= this.authSvc.compar1$.hum_max;
+      const var_string = this.authSvc.compar1$.hora.split('/');
+      this.miVariableHora= [];
+      var i = 0;
+      for (i = 0; i<(var_string.length);i++){
+        if(var_string[i] != ""){
+          var new_fecha= {fecha_ini: var_string[i]}
+          this.miVariableHora.push(new_fecha)
+        }
+      }
+      console.log(var_string);
+    }
+  }
+
+  public func_borrar(){
+    this.authSvc.modificar_compartimento(this.authSvc.usuario$," "," "," "," "," "," "," ");
+    this.authSvc.compar1$.marca= " ";
+    this.authSvc.compar1$.medicamento= " ";
+    this.authSvc.compar1$.Npastilla= " ";
+    this.authSvc.compar1$.Ntratamiento= " ";
+    this.authSvc.compar1$.temp_max= " ";
+    this.authSvc.compar1$.hum_max= " ";
+    this.authSvc.compar1$.hora= " ";
+    this.imprimir_labels();
+    this.miVariableHora= [];
+  }
 
   agregar_alarma(){
     const new_fecha= {fecha_ini: "2012-12-15T06:00:20.789"}

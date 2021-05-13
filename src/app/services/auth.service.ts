@@ -158,7 +158,7 @@ correo de verificacion, se retorna usuario para poder saber si este se creo corr
         Ntratamiento: " ",
         temp_max: " ",
         hum_max: " ",
-        hora: "",
+        hora: " ",
       });
       await this.sendVerificationEmail();
       return user;
