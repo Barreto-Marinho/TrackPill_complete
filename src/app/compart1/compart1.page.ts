@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController,ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class Compart1Page implements OnInit {
   public nombre_boton:string;
   public habilitar=false
   public isDisabled= true
-  constructor(private authSvc:AuthService) { }
+  constructor(private authSvc:AuthService,
+              private alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -47,8 +49,27 @@ export class Compart1Page implements OnInit {
         this.habilitar = false;
         this.isDisabled= true;
       }
+      else{this.Imprimir_error("Los campos no estan completos")}
     }
   }
+
+/*****************************************************************************************************  
+La funcion Imprimir_error() recibe un string de texto, y lo imprime en una ventana de alert en el 
+celular
+******************************************************************************************************/
+async Imprimir_error(texto){
+  const alert = await this.alertController.create({
+    cssClass: 'my-custom-class',
+    header: 'Alert',
+
+    subHeader: texto,
+    //message: texto,
+    buttons: ['OK']
+  });
+
+  await alert.present();
+}
+
 
   cancelar(){
     this.nombre_boton= "Modificar";
