@@ -12,25 +12,38 @@
       <ion-row>
       <div class="item">
         <label class="labels" >Marca:</label>
-        <ion-input  placeholder="Ingresa marca" ></ion-input></div>  </ion-row>
+        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa marca" #marca></ion-input></div>  </ion-row>
         <ion-row><div class="item">
         <label class="labels"  >Medicamento:</label>
-        <ion-input  placeholder="Ingresa medicamento" ></ion-input></div> </ion-row>
+        <ion-input disabled="{{isDisabled}}"  placeholder="Ingresa medicamento" #medicamento></ion-input></div> </ion-row>
         <ion-row><div class="item">
         <label class="labels">N° Pastillas:</label>
-        <ion-input  placeholder="Ingresa numero de pastillas"></ion-input></div> </ion-row>
+        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa numero de pastillas" #Npastilla></ion-input></div> </ion-row>
         <ion-row><div class="item">
         <label class="labels">Patillas tratamiento:</label>
-        <ion-input placeholder="Ingresa pastillas tratamiento"></ion-input></div></ion-row> 
+        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa pastillas tratamiento" #Ntratamiento></ion-input></div></ion-row> 
         <ion-row><div class="item">
         <label class="labels">Temperatura maxima:</label>
-        <ion-input placeholder="Ingresa temperatura max" ></ion-input></div> </ion-row>
+        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa temperatura max" #temp_max></ion-input></div> </ion-row>
         <ion-row><div class="item">
         <label class="labels">Humedad maxima:</label>
-        <ion-input placeholder="Ingresa humedad maxima" ></ion-input></div> </ion-row>
-        <ion-row><ion-button  (click)="funcion()">Subir</ion-button>
-                 <ion-button  (click)="funcion_2()">Bajar</ion-button>
+        <ion-input disabled="{{isDisabled}}" placeholder="Ingresa humedad maxima" #hum_max></ion-input></div> </ion-row>
+        <ion-row> <h4>Alarma   </h4>
+          <ion-button *ngIf="habilitar==true" (click)="agregar_alarma()" class="Volver">
+            <ion-icon name="add-outline"  ></ion-icon>
+          </ion-button>
         </ion-row>
-        <ion-row><ion-button  (click)="mqtt_envio()">MQTT</ion-button></ion-row>
+        <!--  <ion-row><ion-button  (click)="mqtt_envio()">MQTT</ion-button></ion-row>-->
+        <ion-row *ngFor="let p of miVariableHora">
+          <div class="item">
+            <ion-datetime displayFormat="h:mm a" [(ngModel)]="p.fecha_ini"></ion-datetime>
+          </div>
+        </ion-row>
+
+        <ion-row>
+          <ion-button (click)="Boton_guardar(marca,medicamento,Npastilla,Ntratamiento,temp_max,hum_max)">{{nombre_boton}}  </ion-button>
+          <ion-button *ngIf="habilitar==true" (click)="cancelar()">Cancelar </ion-button>
+        </ion-row>
+
     </ion-col>
 </ion-content>

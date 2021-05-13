@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { datos_usuario, User } from '../shared/user_interface';
+import { compartimento,datos_usuario, User } from '../shared/user_interface';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore,AngularFirestoreDocument } from '@angular/fire/firestore'
 import { Observable, of } from 'rxjs';
@@ -18,6 +18,7 @@ export class AuthService {
   public user$: Observable<User>;
   public usuario$: User;
   public datos$: datos_usuario; 
+  public compar1$: compartimento; 
   public TOPIC: string[] = [];
   public MQTT_CONFIG: {host: string, port: number,clientId: string} = {
     host: "test.mosquitto.org", port: 8081, clientId: "mqtt"};
@@ -149,6 +150,16 @@ correo de verificacion, se retorna usuario para poder saber si este se creo corr
         anio:anio,
         genero:genero,
       });
+      const DatosRef_2 = this.db.collection('Compartimento1');
+      await DatosRef_2.doc(user.uid).set({
+        marca: " ",
+        medicamento:" ",
+        Npastilla: " ",
+        Ntratamiento: " ",
+        temp_max: " ",
+        hum_max: " ",
+        hora: "",
+      });
       await this.sendVerificationEmail();
       return user;
     }
@@ -232,6 +243,7 @@ la cuenta en las variables de usuario$ y datos_usuario$
       await this.afAuth.signOut();
       this.usuario$= undefined;
       this.datos$=undefined;
+      this.compar1$= undefined;
     }
     catch(error){console.log('Error->',error)}
   } 
@@ -266,6 +278,39 @@ la cuenta en las variables de usuario$ y datos_usuario$
     }
     catch(error){console.log('Error->',error)}
   }
+
+   /*****************************************************************************************************  
+
+ La funcion de modificar_compartimento() actualiza los datos en firebase, la primera variable que recibe es de 
+ tipo usuario, y las otras son de tipo string como nombre, anio, mes, dia y  gener, que son las variables
+ que se actualizaran
+
+******************************************************************************************************/
+ modificar_compartimento(user:User,marca:string,medicamento:string,Npastilla:string,Ntratamiento:string,temp_max:string,hum_max:string, hora:string){
+  try{
+    const  compar1:compartimento={
+      marca: marca,
+      medicamento:medicamento,
+      Npastilla: Npastilla,
+      Ntratamiento: Ntratamiento,
+      temp_max: temp_max,
+      hum_max: hum_max,
+      hora: hora
+    }
+    this.compar1$= compar1;
+    const dataRef = this.db.collection('Compartimento1').doc(user.uid);
+    dataRef.set({
+      marca: marca,
+      medicamento:medicamento,
+      Npastilla: Npastilla,
+      Ntratamiento: Ntratamiento,
+      temp_max: temp_max,
+      hum_max: hum_max,
+      hora: hora,
+    },{merge:true});
+  }
+  catch(error){console.log('Error->',error)}
+}
 
    /*actualizar_datos(){
       const dataRef = this.db.collection('Datos_Usuario').doc(this.usuario$.uid);
@@ -306,6 +351,22 @@ async actualizar_datos(){
         console.log("Actualizando...")
         this.datos$= datos;
         });
+
+      const data_ref_2 =await this.db.collection('Compartimento1').doc(this.usuario$.uid);
+      data_ref_2.get().subscribe( (Snapshot) => {
+        const  datos_2:compartimento={
+          marca: Snapshot.data()["marca"],
+          medicamento: Snapshot.data()["medicamento"],
+          Npastilla: Snapshot.data()["Npastilla"],
+          Ntratamiento: Snapshot.data()["Ntratamiento"],
+          temp_max: Snapshot.data()["temp_max"],
+          hum_max: Snapshot.data()["hum_max"],
+          hora: Snapshot.data()["hora"],
+        }
+          console.log("Actualizando...")
+          this.compar1$= datos_2;
+          console.log(this.compar1$)
+          });   
         console.log("Acabe actualizar")
       }catch(error){console.log('Error->',error)}
   }

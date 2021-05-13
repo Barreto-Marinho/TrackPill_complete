@@ -13,3 +13,14 @@ export interface datos_usuario{
     dia:string;
     genero:string;
 }
+
+export interface compartimento{
+    marca: string;
+    medicamento:string;
+    Npastilla:string;
+    Ntratamiento:string;
+    temp_max:string;
+    hum_max:string;
+    hora:string;
+
+}
