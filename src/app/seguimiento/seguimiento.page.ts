@@ -73,7 +73,10 @@ export class SeguimientoPage implements OnInit {
 }
 
   public Imprimir_Hora(){
-    const var_string = this.authSvc.compar1$.hora.split('/');
+    var var_string
+    if(this.authSvc.compar1$.hora.length>2){
+    var_string = this.authSvc.compar1$.hora.split('/');}
+    else{var_string = "";}
     this.AlarmaHora= [];
     var i = 0;
     for (i = 0; i<(var_string.length);i++){
@@ -81,13 +84,9 @@ export class SeguimientoPage implements OnInit {
         var new_fecha= {fecha_ini: var_string[i]}
         this.AlarmaHora.push(new_fecha);
         this.habilitar = true; 
-        console.log(this.AlarmaHora); 
       }
     }
-    if(this.AlarmaHora != []){
-    this.estado ="Cumplido";
-    console.log(this.dias); }
-    else{this.habilitar = false;} 
+    console.log(this.AlarmaHora);
    // if(this.dias=="Martes"){
    //  this.habilitar = true;   // Este habilitar seria para imprimir algo si el vector es mayor que 0
    //  this.AlarmaHora.push("hola")}
