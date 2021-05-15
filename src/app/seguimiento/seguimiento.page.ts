@@ -84,7 +84,7 @@ export class SeguimientoPage implements OnInit {
         console.log(this.AlarmaHora); 
       }
     }
-    if(this.AlarmaHora[2] != ""){
+    if(this.AlarmaHora != []){
     this.estado ="Cumplido";
     console.log(this.dias); }
     else{this.habilitar = false;} 
