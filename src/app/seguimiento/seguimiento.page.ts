@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-seguimiento',
@@ -6,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seguimiento.page.scss'],
 })
 export class SeguimientoPage implements OnInit {
+  public HoraAlarma:string;
   public dias = "Lunes"
   public cont_dia= 1
-  constructor() { }
+  public estado  = "Cumplido"
+  public AlarmaHora=[]
+  public habilitar=false
+  constructor(private authSvc:AuthService) { }
 
   ngOnInit() {
   }
+
   Adelante(){
     this.cont_dia= this.cont_dia+1;
     if(this.cont_dia>6){
@@ -61,5 +67,28 @@ export class SeguimientoPage implements OnInit {
   }
 
 
+
+  ionViewWillEnter(){
+    this.Imprimir_Hora();
 }
 
+  public Imprimir_Hora(){
+    const var_string = this.authSvc.compar1$.hora.split('/');
+    this.AlarmaHora= [];
+    var i = 0;
+    for (i = 0; i<(var_string.length);i++){
+      if(var_string[i] != ""){
+        var new_fecha= {fecha_ini: var_string[i]}
+        this.AlarmaHora.push(new_fecha);
+        this.habilitar = true; 
+        console.log(this.AlarmaHora); 
+      }
+    }
+    this.estado ="Cumplido";
+    console.log(this.dias);   
+   // if(this.dias=="Martes"){
+   //  this.habilitar = true;   // Este habilitar seria para imprimir algo si el vector es mayor que 0
+   //  this.AlarmaHora.push("hola")}
+}
+
+}

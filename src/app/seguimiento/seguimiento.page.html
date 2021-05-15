@@ -9,12 +9,25 @@
 
 <ion-content  [fullscreen]="true">
   <ion-row  style="background-color: #3d8af7;"> 
-    <ion-button (click)="atras()" class="atra">
+    <ion-button (click)="atras()" (click)="Imprimir_Hora()" class="atra">
       <ion-icon  class="flechas" name="arrow-back"></ion-icon>
     </ion-button>
     <ion-label class="dia">{{dias}} </ion-label>
-    <ion-button (click)="Adelante()" class="adel">
+    <ion-button (click)="Adelante()" (click)="Imprimir_Hora()" class="adel">
       <ion-icon class="flechas" name="arrow-forward"></ion-icon>
     </ion-button>
   </ion-row>
+
+<ion-col *ngFor="let p of AlarmaHora" >
+  <ion-card *ngIf="habilitar==true" color="secondary">
+    <ion-item color="dark">
+      <ion-icon name="hourglass-outline" slot="start"></ion-icon>
+      <ion-label>{{estado}}</ion-label>
+    </ion-item>
+    <ion-card-content>
+      {{p.AlarmaHora}}
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+   
 </ion-content>
