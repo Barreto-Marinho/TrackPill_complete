@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController,ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
+import { Push, PushObject, PushOptions } from '@ionic-native/push/ngx';
 
 @Component({
   selector: 'app-compart1',
@@ -21,7 +22,8 @@ export class Compart1Page implements OnInit {
   public place_humedad_max= "Ingresa humedad maxima";
 
   constructor(private authSvc:AuthService,
-              private alertController: AlertController) { }
+              private alertController: AlertController,
+              private push: Push) { }
 
   ngOnInit() {
   }
@@ -112,7 +114,7 @@ export class Compart1Page implements OnInit {
         this.nombre_boton= "Modificar";
         this.habilitar = false;
         this.isDisabled= true;
-        this.authSvc.envio_info_usuario_thing_speak(this.authSvc.usuario$.uid,Npastilla.value, hora, hum_max.value, marca_v,medicamento_v, temp_max.value)
+        this.authSvc.envio_info_usuario_thing_speak(this.authSvc.usuario$.uid,Npastilla.value, hora, hum_max.value, marca_v,medicamento_v, temp_max.value,Ntratamiento.value)
       }
       else{this.Imprimir_error("Los campos no estan completos")}
     }
@@ -141,5 +143,8 @@ async Imprimir_error(texto){
     this.habilitar = false;
     this.isDisabled= true;
   }
+
+
+
 
 }
