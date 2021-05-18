@@ -88,7 +88,7 @@ La funcion envio_dato_thing_speak
 ******************************************************************************************************/ 
 
 async envio_info_usuario_thing_speak(Id: string, Npastillas: string, hora: string, hum_max: string, marca: string, medicamento: string, temp_max: string){
-  const apikey= 'EUZF1K3JQNR0SPTF';
+  const apikey= 'DLM8YKW9252LHG6Q';
   const envio:string = apikey+ '&field1='+ Id+'&field2='+ Npastillas+'&field3='+ hora+'&field4='+ hum_max+'&field5='+ marca+'&field6='+ medicamento+'&field7='+ temp_max
   var texto = 'https://api.thingspeak.com/update?api_key='+ envio;
   await this.http.get(texto).toPromise();
