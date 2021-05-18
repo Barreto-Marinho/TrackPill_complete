@@ -87,17 +87,6 @@ async envio_dato_thing_speak(mensaje: string) {
 La funcion envio_dato_thing_speak 
 ******************************************************************************************************/ 
 
-async envio_info_usuario_thing_speak(Id: string, Npastillas: string, hora: string, hum_max: string, marca: string, medicamento: string, temp_max: string, Ntratamiento:string){
-  const apikey= 'DLM8YKW9252LHG6Q';
-  const envio:string = apikey+ '&field1='+ Id+'&field2='+ Npastillas+'&field3='+ hora+'&field4='+ hum_max+'&field5='+ marca+'&field6='+ medicamento+'&field7='+ temp_max+'&field8='+ Ntratamiento
-  var texto = 'https://api.thingspeak.com/update?api_key='+ envio;
-  await this.http.get(texto).toPromise();
-  console.log("Se envio: ", texto)
-}
-/*****************************************************************************************************  
-La funcion envio_dato_thing_speak 
-******************************************************************************************************/ 
-
 async leer_dato_thing_speak() {
   await this.http.get('https://api.thingspeak.com/channels/1385876/fields/1.json?api_key=57U9PJRJT79HCI4Z&results=2')
         .toPromise()

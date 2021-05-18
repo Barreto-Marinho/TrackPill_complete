@@ -83,36 +83,21 @@ export class Compart1Page implements OnInit {
   }
 
   Boton_guardar(marca,medicamento,Npastilla,Ntratamiento,temp_max,hum_max){
-    var marca_v:string= marca.value;
-    var medicamento_v:string= medicamento.value;
     if(this.nombre_boton== "Modificar"){
       this.nombre_boton= "Guardar";
       this.habilitar = true;
       this.isDisabled= false;
     }else{
-      if(this.authSvc.compar1$.hum_max!=" " ||((marca_v!="") && (medicamento_v!="")&&(Npastilla.value!="")&&(Ntratamiento.value!="")&&(temp_max.value!="")&&(hum_max.value!="")&&(this.miVariableHora.length>0))){
+      if((marca.value!="") && (medicamento.value!="")&&(Npastilla.value!="")&&(Ntratamiento.value!="")&&(temp_max.value!="")&&(hum_max.value!="")&&(this.miVariableHora.length>0)){
         var hora:string="/";
         var i;
         for(i = 0;i<(this.miVariableHora.length);i++){
           hora= hora + this.miVariableHora[i]["fecha_ini"]+"/"
         }
-        if((marca_v=="")){
-          marca_v=this.authSvc.compar1$.marca;
-          marca.value=this.authSvc.compar1$.marca; 
-          medicamento_v=this.authSvc.compar1$.medicamento; 
-          medicamento.value=this.authSvc.compar1$.medicamento; 
-          Npastilla.value=this.authSvc.compar1$.Npastilla; 
-          Ntratamiento.value=this.authSvc.compar1$.Ntratamiento; 
-          temp_max.value=this.authSvc.compar1$.temp_max; 
-          hum_max.value=this.authSvc.compar1$.hum_max; 
-        }
-        marca_v=marca_v.replace(" " ,"_");
-        medicamento_v=medicamento_v.replace(" " ,"_");
         this.authSvc.modificar_compartimento(this.authSvc.usuario$,marca.value,medicamento.value,Npastilla.value,Ntratamiento.value,temp_max.value,hum_max.value,hora);
         this.nombre_boton= "Modificar";
         this.habilitar = false;
         this.isDisabled= true;
-        this.authSvc.envio_info_usuario_thing_speak(this.authSvc.usuario$.uid,Npastilla.value, hora, hum_max.value, marca_v,medicamento_v, temp_max.value,Ntratamiento.value)
       }
       else{this.Imprimir_error("Los campos no estan completos")}
     }

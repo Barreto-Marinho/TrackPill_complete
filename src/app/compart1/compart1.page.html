@@ -37,7 +37,7 @@
         <!--  <ion-row><ion-button  (click)="mqtt_envio()">MQTT</ion-button></ion-row>-->
         <ion-row *ngFor="let p of miVariableHora">
           <div class="item">
-            <ion-datetime displayFormat="h:mm a" [(ngModel)]="p.fecha_ini"  [disabled]="isDisabled"></ion-datetime>
+            <ion-datetime displayFormat="h:mm a" [(ngModel)]="p.fecha_ini"></ion-datetime>
           </div>
         </ion-row>
 
