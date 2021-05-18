@@ -112,7 +112,7 @@ export class Compart1Page implements OnInit {
         this.nombre_boton= "Modificar";
         this.habilitar = false;
         this.isDisabled= true;
-        this.authSvc.envio_info_usuario_thing_speak(this.authSvc.usuario$.uid,Npastilla.value, hora, hum_max.value, marca_v,medicamento_v, temp_max.value)
+        this.authSvc.envio_info_usuario_thing_speak(this.authSvc.usuario$.uid,Npastilla.value, hora, hum_max.value, marca_v,medicamento_v, temp_max.value,Ntratamiento.value)
       }
       else{this.Imprimir_error("Los campos no estan completos")}
     }
