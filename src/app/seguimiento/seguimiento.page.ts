@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,7 +8,12 @@ import { AuthService } from '../services/auth.service';
 })
 export class SeguimientoPage implements OnInit {
   public HoraAlarma:string
-  public dias = "Lunes"
+  public dias = ""
+  public mes = ""
+  public anio= ""
+  public dia_mes=""
+  public de= " de "
+  public del= " del "
   public dos_puntos = ": "
   public cont_dia= 1
   public estado = []
@@ -17,65 +22,115 @@ export class SeguimientoPage implements OnInit {
   public espacio = "               " 
   public min_str = " minutos"
   public cond:string = "No cumplido"
+  public cond_3:string = "Cumplido"
+  public cond_2:string = "Sobremedicado"
   public habilitar=false
   public medicamento_v :string
   public posicion;
+  public fecha_datos;
   constructor(private authSvc:AuthService) { }
 
   ngOnInit() {
   }
 
   Adelante(){
-    this.posicion +=1;
-    this.modificar(this.posicion)
-    this.cont_dia= this.cont_dia+1;
-    if(this.cont_dia>6){
-      this.cont_dia=1;
+    if(this.posicion<30){
+      this.posicion +=1;
     }
-    this.impri_dia()
+    this.modificar(this.posicion)
+    this.fecha_datos= this.func_fecha(this.posicion)
+    this.impri_fecha();
   }
 
   atras(){
-    this.posicion -=1;
-    this.modificar(this.posicion)
-    this.cont_dia= this.cont_dia-1;
-    if(this.cont_dia<1){
-      this.cont_dia=7;
+    if(this.posicion>1){
+      this.posicion -=1;
     }
-    this.impri_dia()
+    this.modificar(this.posicion)
+    this.fecha_datos= this.func_fecha(this.posicion)
+    this.impri_fecha();
   }
 
-  impri_dia(){
-    switch(this.cont_dia) { 
-      case 1: { 
+  impri_fecha(){
+    const fecha_vec= (String(this.fecha_datos)).split(" ")
+    console.log("Fecha_vec: " ,fecha_vec)
+    this.anio = fecha_vec[3];
+    this.dia_mes = fecha_vec[2];
+    switch(fecha_vec[0]) { 
+      case "Mon": { 
            this.dias="Lunes"
          break; 
       } 
-      case 2: { 
+      case "Tue": { 
           this.dias="Martes"
          break; 
       } 
-      case 3: { 
+      case "Wed": { 
         this.dias="Miercoles"
         break; 
       } 
-      case 4: { 
+      case "Thu": { 
         this.dias="Jueves" 
         break; 
       }
-      case 5: { 
+      case "Fri": { 
         this.dias="Viernes" 
         break; 
       }  
-      case 6: { 
+      case "Sat": { 
         this.dias="Sabado" 
         break; 
-      }case 7: { 
+      }case "Sun": { 
         this.dias="Domingo"
         break; 
     }   
    } 
-  }
+   switch(fecha_vec[1]) { 
+    case "Jan": { 
+         this.mes="Enero"
+       break; 
+    } 
+    case "Feb": { 
+        this.mes="Febrero"
+       break; 
+    } 
+    case "Mar": { 
+      this.mes="Marzo"
+      break; 
+    } 
+    case "Apr": { 
+      this.mes="Abril" 
+      break; 
+    }
+    case "May": { 
+      this.mes="Mayo" 
+      break; 
+    }  
+    case "Jun": { 
+      this.mes="Junio" 
+      break; 
+    }case "Jul": { 
+      this.mes="Julio"
+      break; 
+    } 
+    case "Sep": { 
+      this.mes="Septiembre"
+      break; 
+    } 
+    case "Oct": { 
+      this.mes="Octubre"
+      break; 
+    } 
+    case "Nov": { 
+      this.mes="Noviembre"
+      break; 
+    } 
+    case "Dec": { 
+      this.mes="Diciembre"
+      break; 
+    }   
+  } 
+}
 
 
 
@@ -83,8 +138,20 @@ export class SeguimientoPage implements OnInit {
     await this.authSvc.leer_dato_thing_speak()
     console.log("Ey Hola",this.authSvc.datos_seg)
     this.posicion = 30
+    this.fecha_datos= this.func_fecha(this.posicion)
     this.modificar(this.posicion)
-    //this.Imprimir_Hora()
+    this.impri_fecha();
+}
+
+
+public sumarDias(fecha, dias){
+  fecha.setDate(fecha.getDate() + dias);
+  return fecha;
+}
+
+public func_fecha(pos){
+  var d = new Date();
+  return(this.sumarDias(d, -(30-pos)));
 }
 
   public Imprimir_Hora(){
@@ -130,6 +197,7 @@ export class SeguimientoPage implements OnInit {
     var resta
     var desviacion = []
     var medicacion= []
+    var medicacion_2= []
     i=0
     for (i = 0; i<(estado_num.length);i++){
       if(estado_num[i] != ""){
@@ -139,29 +207,32 @@ export class SeguimientoPage implements OnInit {
           this.estado.push(new_estado)
           resta= String(Npastillas- Number(conteo_horario[i]))
           medicacion.push("Faltaron "+ resta)
+          medicacion_2.push("Faltan  "+ resta)
         }
         if(estado_num[i]=="1"){
           var new_estado="Cumplido"
           this.estado.push(new_estado)
           medicacion.push("")
+          medicacion_2.push("")
         }
         if(estado_num[i]=="2"){
           var new_estado="Sobremedicado"
           this.estado.push(new_estado)
           resta= String(Number(conteo_horario[i])-Npastillas)
           medicacion.push("Excedio "+ resta)
+          medicacion_2.push("")
         }
       }
     }   
     console.log(medicacion)  
     for (i = 0; i<(this.estado.length);i++){
-      var new_fecha_2= {fecha_ini: hora[i],estados: this.estado[i], desvi: desviacion[i],medicamento: vec['field5'],medicaciones: medicacion[i] }
+      var new_fecha_2= {fecha_ini: hora[i],estados: this.estado[i], desvi: desviacion[i],medicamento: vec['field5'],medicaciones: medicacion[i],medica:medicacion_2[i] }
       this.AlarmaHora.push(new_fecha_2)
     }
     console.log(this.AlarmaHora)
     console.log(this.estado)
     console.log(estado_num)
-    console.log(medicacion)
+    console.log(medicacion_2)
   }
 
 }

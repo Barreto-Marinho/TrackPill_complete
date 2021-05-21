@@ -12,14 +12,14 @@
     <ion-button (click)="atras()" class="atra">
       <ion-icon  class="flechas" name="arrow-back"></ion-icon>
     </ion-button>
-    <ion-label class="dia">{{dias}} </ion-label>
+    <ion-label class="dia">{{dias}} {{dia_mes}}{{de}}{{mes}}{{del}}{{anio}} </ion-label>
     <ion-button (click)="Adelante()" class="adel">
       <ion-icon class="flechas" name="arrow-forward"></ion-icon>
     </ion-button>
   </ion-row>
 
 <ion-col *ngFor="let p of AlarmaHora" >
-  <ion-card  color="secondary">
+  <ion-card *ngIf="p.estados == cond"  color="secondary">
     <ion-item color="dark">
       <ion-icon name="hourglass-outline" slot="start"></ion-icon>
       <ion-label>{{p.medicamento}}{{dos_puntos}}  {{p.estados}} </ion-label>
@@ -28,10 +28,38 @@
       <ion-row>   
         <ion-col> {{p.fecha_ini}} </ion-col>
         <ion-col *ngIf="p.estados != cond"  > {{p.desvi}}{{min_str}}  </ion-col>
-        <ion-col>{{p.medicaciones}}</ion-col>
+        <ion-col *ngIf="posicion != 30">{{p.medicaciones}}</ion-col>
+        <ion-col *ngIf="posicion == 30">{{p.medica}}</ion-col>
       </ion-row>
     </ion-card-content>
-
+  </ion-card>
+  <ion-card *ngIf="p.estados == cond_2" color="danger">
+    <ion-item color="dark">
+      <ion-icon name="hourglass-outline" slot="start"></ion-icon>
+      <ion-label>{{p.medicamento}}{{dos_puntos}}  {{p.estados}} </ion-label>
+    </ion-item>
+    <ion-card-content>
+      <ion-row>   
+        <ion-col> {{p.fecha_ini}} </ion-col>
+        <ion-col *ngIf="p.estados != cond"  > {{p.desvi}}{{min_str}}  </ion-col>
+        <ion-col *ngIf="posicion != 30">{{p.medicaciones}}</ion-col>
+        <ion-col *ngIf="posicion == 30">{{p.medica}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="p.estados == cond_3" color="success">
+    <ion-item color="dark">
+      <ion-icon name="hourglass-outline" slot="start"></ion-icon>
+      <ion-label>{{p.medicamento}}{{dos_puntos}}  {{p.estados}} </ion-label>
+    </ion-item>
+    <ion-card-content>
+      <ion-row>   
+        <ion-col> {{p.fecha_ini}} </ion-col>
+        <ion-col *ngIf="p.estados != cond"  > {{p.desvi}}{{min_str}}  </ion-col>
+        <ion-col *ngIf="posicion != 30">{{p.medicaciones}}</ion-col>
+        <ion-col *ngIf="posicion == 30">{{p.medica}}</ion-col>
+      </ion-row>
+    </ion-card-content>
   </ion-card>
 </ion-col>
    
