@@ -9,19 +9,25 @@ import { AuthService } from '../services/auth.service';
 export class SeguimientoPage implements OnInit {
   public HoraAlarma:string
   public dias = "Lunes"
+  public dos_puntos = ": "
   public cont_dia= 1
   public estado = []
   public AlarmaHora=[]
   public datos 
-  public espacio = "               +" + "45 minutos"
+  public espacio = "               " 
+  public min_str = " minutos"
+  public cond:string = "No cumplido"
   public habilitar=false
   public medicamento_v :string
+  public posicion;
   constructor(private authSvc:AuthService) { }
 
   ngOnInit() {
   }
 
   Adelante(){
+    this.posicion +=1;
+    this.modificar(this.posicion)
     this.cont_dia= this.cont_dia+1;
     if(this.cont_dia>6){
       this.cont_dia=1;
@@ -30,6 +36,8 @@ export class SeguimientoPage implements OnInit {
   }
 
   atras(){
+    this.posicion -=1;
+    this.modificar(this.posicion)
     this.cont_dia= this.cont_dia-1;
     if(this.cont_dia<1){
       this.cont_dia=7;
@@ -74,7 +82,8 @@ export class SeguimientoPage implements OnInit {
   async ionViewWillEnter(){
     await this.authSvc.leer_dato_thing_speak()
     console.log("Ey Hola",this.authSvc.datos_seg)
-    this.modificar(29)
+    this.posicion = 30
+    this.modificar(this.posicion)
     //this.Imprimir_Hora()
 }
 
@@ -106,38 +115,53 @@ export class SeguimientoPage implements OnInit {
     console.log("aqui dato",vec);
     const var_string = vec['field3'].split('/');
     this.AlarmaHora= [];
-      var i = 0;
-      for (i = 0; i<(var_string.length);i++){
-        if(var_string[i] != ""){
-          var new_fecha= var_string[i].charAt(11)+var_string[i].charAt(12)+var_string[i].charAt(13)+var_string[i].charAt(14)+var_string[i].charAt(15)
-          hora.push(new_fecha)
-        }
+    var i = 0;
+    for (i = 0; i<(var_string.length);i++){
+      if(var_string[i] != ""){
+        var new_fecha= var_string[i].charAt(11)+var_string[i].charAt(12)+var_string[i].charAt(13)+var_string[i].charAt(14)+var_string[i].charAt(15)
+        hora.push(new_fecha)
       }
+    }
     const estado_num= vec['field1'].split('/');
     this.estado=[]
+    const desviacion_str= vec['field4'].split('/');
+    const conteo_horario = vec['field2'].split('/');
+    const Npastillas =  Number(vec['field6'])
+    var resta
+    var desviacion = []
+    var medicacion= []
     i=0
     for (i = 0; i<(estado_num.length);i++){
-    if(estado_num[i] != ""){
-      if(estado_num[i]=="0"){
-        var new_estado= "No cumplido"
-        this.estado.push(new_estado)}
+      if(estado_num[i] != ""){
+        desviacion.push(desviacion_str[i])
+        if(estado_num[i]=="0"){
+          var new_estado= "No cumplido"
+          this.estado.push(new_estado)
+          resta= String(Npastillas- Number(conteo_horario[i]))
+          medicacion.push("Faltaron "+ resta)
+        }
         if(estado_num[i]=="1"){
           var new_estado="Cumplido"
           this.estado.push(new_estado)
+          medicacion.push("")
         }
         if(estado_num[i]=="2"){
-          var new_estado="Tas Drogo bro"
+          var new_estado="Sobremedicado"
           this.estado.push(new_estado)
+          resta= String(Number(conteo_horario[i])-Npastillas)
+          medicacion.push("Excedio "+ resta)
         }
       }
-    }     
+    }   
+    console.log(medicacion)  
     for (i = 0; i<(this.estado.length);i++){
-      var new_fecha_2= {fecha_ini: hora[i],estados: this.estado[i] }
+      var new_fecha_2= {fecha_ini: hora[i],estados: this.estado[i], desvi: desviacion[i],medicamento: vec['field5'],medicaciones: medicacion[i] }
       this.AlarmaHora.push(new_fecha_2)
     }
     console.log(this.AlarmaHora)
     console.log(this.estado)
     console.log(estado_num)
+    console.log(medicacion)
   }
 
 }
