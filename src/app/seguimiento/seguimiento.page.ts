@@ -90,6 +90,7 @@ export class SeguimientoPage implements OnInit {
       }
     }
     console.log(this.AlarmaHora);
+    this.authSvc.leer_dato_thing_speak();
    // if(this.dias=="Martes"){
    //  this.habilitar = true;   // Este habilitar seria para imprimir algo si el vector es mayor que 0
    //  this.AlarmaHora.push("hola")}

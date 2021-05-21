@@ -99,14 +99,11 @@ La funcion envio_dato_thing_speak
 ******************************************************************************************************/ 
 
 async leer_dato_thing_speak() {
-  await this.http.get('https://api.thingspeak.com/channels/1385876/fields/1.json?api_key=57U9PJRJT79HCI4Z&results=2')
+  await this.http.get('https://api.thingspeak.com/channels/1391142/feeds.json?api_key=A9D21R0TO344379P&results=29')
         .toPromise()
         .then(res => {
-          const leido = res['feeds'];
-          const leido_2 = leido[0]['field1'] 
-          const leido_3 = leido[1]['field1'] 
-          console.log(leido_2)
-          console.log(leido_3)
+          const leido    = res['feeds'];
+          console.log(leido)
         }
         );
         //.then(res => console.log(res['feeds']));
