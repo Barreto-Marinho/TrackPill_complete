@@ -10,7 +10,7 @@ export class SeguimientoPage implements OnInit {
   public HoraAlarma:string
   public dias = "Lunes"
   public cont_dia= 1
-  public estado  = "Cumplido"
+  public estado = []
   public AlarmaHora=[]
   public datos 
   public espacio = "               +" + "45 minutos"
@@ -75,7 +75,7 @@ export class SeguimientoPage implements OnInit {
     await this.authSvc.leer_dato_thing_speak()
     console.log("Ey Hola",this.authSvc.datos_seg)
     this.modificar(29)
-    this.Imprimir_Hora()
+    //this.Imprimir_Hora()
 }
 
   public Imprimir_Hora(){
@@ -101,9 +101,43 @@ export class SeguimientoPage implements OnInit {
 
 
   public modificar(posi){
-    const vec = this.datos[posi];
+    var hora=[]
+    const vec = this.authSvc.datos_seg[posi-1]
     console.log("aqui dato",vec);
-
+    const var_string = vec['field3'].split('/');
+    this.AlarmaHora= [];
+      var i = 0;
+      for (i = 0; i<(var_string.length);i++){
+        if(var_string[i] != ""){
+          var new_fecha= var_string[i].charAt(11)+var_string[i].charAt(12)+var_string[i].charAt(13)+var_string[i].charAt(14)+var_string[i].charAt(15)
+          hora.push(new_fecha)
+        }
+      }
+    const estado_num= vec['field1'].split('/');
+    this.estado=[]
+    i=0
+    for (i = 0; i<(estado_num.length);i++){
+    if(estado_num[i] != ""){
+      if(estado_num[i]=="0"){
+        var new_estado= "No cumplido"
+        this.estado.push(new_estado)}
+        if(estado_num[i]=="1"){
+          var new_estado="Cumplido"
+          this.estado.push(new_estado)
+        }
+        if(estado_num[i]=="2"){
+          var new_estado="Tas Drogo bro"
+          this.estado.push(new_estado)
+        }
+      }
+    }     
+    for (i = 0; i<(this.estado.length);i++){
+      var new_fecha_2= {fecha_ini: hora[i],estados: this.estado[i] }
+      this.AlarmaHora.push(new_fecha_2)
+    }
+    console.log(this.AlarmaHora)
+    console.log(this.estado)
+    console.log(estado_num)
   }
 
 }
