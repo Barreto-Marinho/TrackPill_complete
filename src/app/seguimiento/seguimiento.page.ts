@@ -12,6 +12,7 @@ export class SeguimientoPage implements OnInit {
   public cont_dia= 1
   public estado  = "Cumplido"
   public AlarmaHora=[]
+  public datos 
   public espacio = "               +" + "45 minutos"
   public habilitar=false
   public medicamento_v :string
@@ -71,7 +72,10 @@ export class SeguimientoPage implements OnInit {
 
 
   ionViewWillEnter(){
-    this.Imprimir_Hora();
+    this.datos=this.authSvc.leer_dato_thing_speak()
+    console.log("Ey Hola",this.datos)
+    this.modificar(29)
+    this.Imprimir_Hora()
 }
 
   public Imprimir_Hora(){
@@ -90,10 +94,16 @@ export class SeguimientoPage implements OnInit {
       }
     }
     console.log(this.AlarmaHora);
-    this.authSvc.leer_dato_thing_speak();
    // if(this.dias=="Martes"){
    //  this.habilitar = true;   // Este habilitar seria para imprimir algo si el vector es mayor que 0
    //  this.AlarmaHora.push("hola")}
 }
+
+
+  public modificar(posi){
+    const vec = this.datos[posi];
+    console.log("aqui dato",vec);
+
+  }
 
 }

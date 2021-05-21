@@ -103,7 +103,7 @@ async leer_dato_thing_speak() {
         .toPromise()
         .then(res => {
           const leido    = res['feeds'];
-          console.log(leido)
+          return leido
         }
         );
         //.then(res => console.log(res['feeds']));
