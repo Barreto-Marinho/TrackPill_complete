@@ -105,8 +105,17 @@ async leer_dato_thing_speak() : Promise<void>{
     .toPromise()
     .then(res => {
       const leido    = res['feeds'];
-      console.log(leido)
       this.datos_seg= leido;
+    }
+    );
+    await this.http.get('https://api.thingspeak.com/channels/1393024/feeds.json?api_key=SHQT9SFZTFGKBJEE&results=1')
+    .toPromise()
+    .then(res => {
+      const leido  = res['feeds'][0];
+      console.log("Datos hoy:",leido)
+      const adicion ={created_at: leido["created_at"],entry_id:leido["entry_id"] ,field1: leido["field4"],field2: leido["field3"],field3: this.compar1$["hora"],field4:leido["field5"] ,field5:this.compar1$["medicamento"] ,field6:this.compar1$["Npastilla"] }
+      this.datos_seg.push(adicion);
+      console.log( this.datos_seg)
     }
     );
    }
