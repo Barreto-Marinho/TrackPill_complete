@@ -12,6 +12,7 @@ export class SeguimientoPage implements OnInit {
   public cont_dia= 1
   public estado  = "Cumplido"
   public AlarmaHora=[]
+  public espacio = "               +" + "45 minutos"
   public habilitar=false
   public medicamento_v :string
   constructor(private authSvc:AuthService) { }
