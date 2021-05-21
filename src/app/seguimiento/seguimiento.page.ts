@@ -71,9 +71,9 @@ export class SeguimientoPage implements OnInit {
 
 
 
-  ionViewWillEnter(){
-    this.datos=this.authSvc.leer_dato_thing_speak()
-    console.log("Ey Hola",this.datos)
+  async ionViewWillEnter(){
+    await this.authSvc.leer_dato_thing_speak()
+    console.log("Ey Hola",this.authSvc.datos_seg)
     this.modificar(29)
     this.Imprimir_Hora()
 }

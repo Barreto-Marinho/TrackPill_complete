@@ -19,6 +19,7 @@ export class AuthService {
   public usuario$: User;
   public datos$: datos_usuario; 
   public compar1$: compartimento; 
+  public datos_seg ;
   public TOPIC: string[] = [];
   public MQTT_CONFIG: {host: string, port: number,clientId: string} = {
     host: "test.mosquitto.org", port: 8081, clientId: "mqtt"};
@@ -98,14 +99,21 @@ async envio_info_usuario_thing_speak(Id: string, Npastillas: string, hora: strin
 La funcion envio_dato_thing_speak 
 ******************************************************************************************************/ 
 
-async leer_dato_thing_speak() {
-  await this.http.get('https://api.thingspeak.com/channels/1391142/feeds.json?api_key=A9D21R0TO344379P&results=29')
-        .toPromise()
-        .then(res => {
-          const leido    = res['feeds'];
-          return leido
-        }
-        );
+async leer_dato_thing_speak() : Promise<void>{
+  try{
+    await this.http.get('https://api.thingspeak.com/channels/1391142/feeds.json?api_key=A9D21R0TO344379P&results=29')
+    .toPromise()
+    .then(res => {
+      const leido    = res['feeds'];
+      console.log(leido)
+      this.datos_seg= leido;
+    }
+    );
+   }
+   catch(error){
+     console.log('Error->',error)
+  }
+
         //.then(res => console.log(res['feeds']));
 }
 /*****************************************************************************************************  
