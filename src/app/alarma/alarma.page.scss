@@ -28,6 +28,21 @@ ion-menu-button {
     color:rgba(15, 2, 1, 0.884);
   }
 
+  .graf{
+    width: 95%;
+    background: #75a9f9;
+    border-radius: 3%;
+  }
+
+  .Boton_graf{
+    --background:#75a9f9;
+    --background-activated:#75a9f9;
+  }
+
+  .graf_v{
+    padding-left: 5%;
+    padding-top:10%;
+  }
 
   .temp{
     font-size: 25px ; 

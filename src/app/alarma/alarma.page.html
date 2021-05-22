@@ -11,6 +11,8 @@
 
 
 <ion-content [fullscreen]="true">
+  <ion-row class="graf_v" > <ion-row  class = "graf"> <canvas id="temp" #lineCanvas ></canvas> </ion-row> </ion-row>
+  <ion-row><ion-col></ion-col><ion-col class="Boton_graf"><ion-button class="Boton_graf" (click)="Boton()">{{nombre_boton}}  </ion-button></ion-col> <ion-col></ion-col>   </ion-row>
   <ion-row  class="rowtemp" >
     <ion-col>
      <ion-label class="Temperatura">Temperatura:</ion-label> 
@@ -32,14 +34,14 @@
 
    <ion-row class="row2"> <!--Se inicia la segunda columna-->  
     <ion-col class="col1" > 
-      <ion-row class="row1"><ion-button class="Comp1">Normal</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp1">{{estado}}</ion-button> </ion-row>
       <ion-row class="row1"><ion-button class="Comp3">Normal</ion-button> </ion-row>
       <ion-row class="row1">  <ion-button class="Comp5">Normal</ion-button> </ion-row>
     </ion-col>
     <ion-col class="col2">  <!--se inicia la columna 2-->  
-      <ion-row class="row1"><ion-button class="Comp2">Peligro</ion-button> </ion-row>
-      <ion-row class="row1"><ion-button class="Comp4">Peligro</ion-button> </ion-row>
-      <ion-row class="row1"><ion-button class="Comp6">Peligro</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp2">Normal</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp4">Normal</ion-button> </ion-row>
+      <ion-row class="row1"><ion-button class="Comp6">Normal</ion-button> </ion-row>
     </ion-col>
   </ion-row>
 

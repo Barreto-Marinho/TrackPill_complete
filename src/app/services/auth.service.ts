@@ -20,6 +20,7 @@ export class AuthService {
   public datos$: datos_usuario; 
   public compar1$: compartimento; 
   public datos_seg ;
+  public datos_t_h ;
   public TOPIC: string[] = [];
   public MQTT_CONFIG: {host: string, port: number,clientId: string} = {
     host: "test.mosquitto.org", port: 8081, clientId: "mqtt"};
@@ -113,9 +114,30 @@ async leer_dato_thing_speak() : Promise<void>{
     .then(res => {
       const leido  = res['feeds'][0];
       console.log("Datos hoy:",leido)
-      const adicion ={created_at: leido["created_at"],entry_id:leido["entry_id"] ,field1: leido["field4"],field2: leido["field3"],field3: this.compar1$["hora"],field4:leido["field5"] ,field5:this.compar1$["medicamento"] ,field6:this.compar1$["Npastilla"] }
+      const adicion ={created_at: leido["created_at"],entry_id:leido["entry_id"] ,field1: leido["field4"],field2: leido["field3"],field3: this.compar1$["hora"],field4:leido["field5"] ,field5:this.compar1$["medicamento"] ,field6:this.compar1$["Npastilla"]
+                      , field7:leido["field7"] ,field8: leido["field8"] }
       this.datos_seg.push(adicion);
       console.log( this.datos_seg)
+    }
+    );
+   }
+   catch(error){
+     console.log('Error->',error)
+  }
+
+        //.then(res => console.log(res['feeds']));
+}
+/*****************************************************************************************************  
+La funcion envio_dato_thing_speak 
+******************************************************************************************************/ 
+
+async leer_temp_hum_thinkspeak() : Promise<void>{
+  try{
+    await this.http.get('https://api.thingspeak.com/channels/1345667/feeds.json?results=1')
+    .toPromise()
+    .then(res => {
+      const leido  = res['feeds'][0]["field1"];
+      this.datos_t_h= leido;
     }
     );
    }
