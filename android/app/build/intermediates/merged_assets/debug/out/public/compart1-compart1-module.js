@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\r\n  <ion-toolbar class=\"ion-no-border\">\r\n    <ion-button [routerLink]=\"['/folder/ ']\" class=\"Volver\">\r\n      <ion-icon name=\"arrow-back\"></ion-icon>\r\n    </ion-button>\r\n    <ion-title>Compartimento 1</ion-title>\r\n    <ion-button  (click)=\"func_borrar()\" class=\"borrar\"><ion-icon style=\"zoom:0.5;\" name=\"trash-outline\"></ion-icon></ion-button>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content  [fullscreen]=\"true\">\r\n    <ion-col> \r\n      <ion-row>\r\n      <div class=\"item\">\r\n        <label class=\"labels\" >Marca:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_marca}} #marca></ion-input></div>  </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\"  >Medicamento:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\"  placeholder={{place_medicamento}}  #medicamento></ion-input></div> </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">N° Pastillas:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_N_pastillas}}  #Npastilla></ion-input></div> </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">Patillas tratamiento:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_pastillas_tra}}  #Ntratamiento></ion-input></div></ion-row> \r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">Temperatura maxima (°C):</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_temperatura_max}}  #temp_max></ion-input></div> </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">Humedad maxima (%):</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_humedad_max}}  #hum_max></ion-input></div> </ion-row>\r\n        <ion-row> <h4>Alarma   </h4>\r\n          <ion-button *ngIf=\"habilitar==true\" (click)=\"agregar_alarma()\" class=\"Volver\">\r\n            <ion-icon name=\"add-outline\"  ></ion-icon>\r\n          </ion-button>\r\n        </ion-row>\r\n        <!--  <ion-row><ion-button  (click)=\"mqtt_envio()\">MQTT</ion-button></ion-row>-->\r\n        <ion-row *ngFor=\"let p of miVariableHora\">\r\n          <div class=\"item\">\r\n            <ion-datetime displayFormat=\"h:mm a\" [(ngModel)]=\"p.fecha_ini\"  [disabled]=\"isDisabled\"></ion-datetime>\r\n          </div>\r\n        </ion-row>\r\n\r\n        <ion-row>\r\n          <ion-button (click)=\"Boton_guardar(marca,medicamento,Npastilla,Ntratamiento,temp_max,hum_max)\">{{nombre_boton}}  </ion-button>\r\n          <ion-button (click)=\"leerqr()\">Leer QR code</ion-button>\r\n          <ion-button *ngIf=\"habilitar==true\" (click)=\"cancelar()\">Cancelar </ion-button>\r\n        </ion-row>\r\n\r\n\r\n    </ion-col>\r\n</ion-content>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header class=\"ion-no-border\">\r\n  <ion-toolbar class=\"ion-no-border\">\r\n    <ion-button [routerLink]=\"['/folder/ ']\" class=\"Volver\">\r\n      <ion-icon name=\"arrow-back\"></ion-icon>\r\n    </ion-button>\r\n    <ion-title>Compartimento 1</ion-title>\r\n    <ion-button  (click)=\"func_borrar()\" class=\"borrar\"><ion-icon style=\"zoom:0.5;\" name=\"trash-outline\"></ion-icon></ion-button>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content  [fullscreen]=\"true\">\r\n    <ion-col *ngIf=\"enable==1\" > \r\n      <ion-row>\r\n      <div class=\"item\">\r\n        <label class=\"labels\" >Marca:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_marca}} #marca></ion-input></div>  </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\"  >Medicamento:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\"  placeholder={{place_medicamento}}  #medicamento></ion-input></div> </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">N° Pastillas:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_N_pastillas}}  #Npastilla></ion-input></div> </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">Patillas tratamiento:</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_pastillas_tra}}  #Ntratamiento></ion-input></div></ion-row> \r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">Temperatura maxima (°C):</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_temperatura_max}}  #temp_max></ion-input></div> </ion-row>\r\n        <ion-row><div class=\"item\">\r\n        <label class=\"labels\">Humedad maxima (%):</label>\r\n        <ion-input disabled=\"{{isDisabled}}\" placeholder={{place_humedad_max}}  #hum_max></ion-input></div> </ion-row>\r\n        <ion-row> <h4>Alarma   </h4>\r\n          <ion-button *ngIf=\"habilitar==true\" (click)=\"agregar_alarma()\" class=\"Volver\">\r\n            <ion-icon name=\"add-outline\"  ></ion-icon>\r\n          </ion-button>\r\n        </ion-row>\r\n        <!--  <ion-row><ion-button  (click)=\"mqtt_envio()\">MQTT</ion-button></ion-row>-->\r\n        <ion-row *ngFor=\"let p of miVariableHora\">\r\n          <div class=\"item\">\r\n            <ion-datetime displayFormat=\"h:mm a\" [(ngModel)]=\"p.fecha_ini\"  [disabled]=\"isDisabled\"></ion-datetime>\r\n          </div>\r\n        </ion-row>\r\n\r\n        <ion-row>\r\n          <ion-button (click)=\"Boton_guardar(marca,medicamento,Npastilla,Ntratamiento,temp_max,hum_max)\">{{nombre_boton}}  </ion-button>\r\n          <ion-button (click)=\"leerqr()\">Leer QR code</ion-button>\r\n          <ion-button *ngIf=\"habilitar==true\" (click)=\"cancelar()\">Cancelar </ion-button>\r\n        </ion-row>\r\n\r\n\r\n    </ion-col>\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -140,6 +140,7 @@ let Compart1Page = class Compart1Page {
         this.place_pastillas_tra = "Ingresa pastillas tratamiento";
         this.place_temperatura_max = "Ingresa temperatura max";
         this.place_humedad_max = "Ingresa humedad maxima";
+        this.enable = 1;
         this.platform.backButton.subscribeWithPriority(0, () => {
             document.getElementsByTagName("body")[0].style.opacity = "1";
             this.scanSubscription.unsubscribe();
@@ -150,11 +151,15 @@ let Compart1Page = class Compart1Page {
     ngOnInit() {
     }
     ionViewWillEnter() {
+        this.enable = 1;
         this.nombre_boton = "Modificar";
         this.habilitar = false;
         this.isDisabled = true;
         this.imprimir_labels();
         console.log(this.authSvc.compar1$);
+    }
+    ionViewWillLeave() {
+        this.stopScanning();
     }
     imprimir_labels() {
         if (this.authSvc.compar1$.Npastilla == " ") {
@@ -263,7 +268,16 @@ let Compart1Page = class Compart1Page {
     }
     // Optionally request the permission early
     leerqr() {
+        this.enable = 0;
         this.Openscan();
+    }
+    finalizarscan(texto) {
+        console.log('QR Code Secan', texto, 'Working');
+        this.enable = 1;
+        console.log('Enable es:', this.enable);
+        window.document.querySelector('ion-app').classList.remove('cameraView');
+        this.scanSubscription.unsubscribe();
+        this.qrScanner.hide();
     }
     Openscan() {
         window.document.querySelector('ion-app').classList.add('cameraView');
@@ -273,13 +287,10 @@ let Compart1Page = class Compart1Page {
             if (status.authorized) {
                 //document.getElementsByTagName("body")[0].style.opacity = "0";
                 this.scanSubscription = this.qrScanner.scan().subscribe((text) => {
+                    this.finalizarscan(text);
                     //document.getElementsByTagName("body")[0].style.opacity = "1";
-                    console.log('QR Code Secan', text, 'Working');
-                    // (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
-                    // window.document.body.style.backgroundColor = '#FFF';
-                    // this.scanSubscription.unsubscribe();
-                    //  this.qrScanner.hide(); // hide camera preview
-                    // this.qrScanner.destroy();
+                    // hide camera preview
+                    //this.qrScanner.destroy();
                 });
                 this.qrScanner.enableLight();
                 this.qrScanner.useBackCamera();
@@ -297,11 +308,18 @@ let Compart1Page = class Compart1Page {
         })
             .catch((e) => console.log('Error is', e));
     }
+    showAlert(header, sub, msg) {
+        this.AlertController.create({
+            header: header,
+            subHeader: sub,
+            message: msg,
+            buttons: ['Ok']
+        }).then(alert => alert.present());
+    }
     stopScanning() {
         (this.scanSubscription) ? this.scanSubscription.unsubscribe() : null;
         this.scanSubscription = null;
         window.document.querySelector('ion-app').classList.remove('cameraView');
-        window.document.body.style.backgroundColor = '#FFF';
         this.qrScanner.hide();
         this.qrScanner.destroy();
     }

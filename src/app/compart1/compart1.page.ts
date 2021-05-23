@@ -21,7 +21,9 @@ export class Compart1Page implements OnInit {
   public place_temperatura_max= "Ingresa temperatura max";
   public place_humedad_max= "Ingresa humedad maxima";
 
+  public enable = 1;
   scanSubscription:any;
+  AlertController: any;
 
   constructor(private authSvc:AuthService,
               private alertController: AlertController,
@@ -38,11 +40,16 @@ export class Compart1Page implements OnInit {
   }
 
   ionViewWillEnter(){
+    this.enable = 1;
     this.nombre_boton= "Modificar";
     this.habilitar = false;
     this.isDisabled= true;
     this.imprimir_labels();
     console.log(this.authSvc.compar1$)
+  }
+
+  ionViewWillLeave(){
+    this.stopScanning();
   }
 
   public imprimir_labels(){
@@ -156,10 +163,23 @@ async Imprimir_error(texto){
 // Optionally request the permission early
 
 public leerqr(){
+  this.enable = 0;
   this.Openscan()
 }
 
-  Openscan(){
+public finalizarscan(texto){
+  console.log('QR Code Secan', texto, 'Working');
+  this.enable = 1;
+  console.log('Enable es:',  this.enable);
+   (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
+  this.scanSubscription.unsubscribe();
+  this.qrScanner.hide();
+}
+
+
+
+
+  public Openscan(){
     (window.document.querySelector('ion-app') as HTMLElement).classList.add('cameraView');
     window.document.body.style.backgroundColor = 'transparent';
 
@@ -169,16 +189,11 @@ public leerqr(){
       
         //document.getElementsByTagName("body")[0].style.opacity = "0";
         this.scanSubscription = this.qrScanner.scan().subscribe((text: string) => {
-      
+          this.finalizarscan(text)
+          
           //document.getElementsByTagName("body")[0].style.opacity = "1";
-          console.log('QR Code Secan', text, 'Working');
-
-          // (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
-          // window.document.body.style.backgroundColor = '#FFF';
-
-        // this.scanSubscription.unsubscribe();
-        //  this.qrScanner.hide(); // hide camera preview
-        // this.qrScanner.destroy();
+           // hide camera preview
+          //this.qrScanner.destroy();
         
         });
         this.qrScanner.enableLight();
@@ -197,12 +212,22 @@ public leerqr(){
     .catch((e: any) => console.log('Error is', e));
   }
 
+  showAlert(header, sub, msg){
+    this.AlertController.create({
+    header : header,
+    subHeader : sub,
+    message : msg,
+    buttons : ['Ok']
+    }).then(alert => alert.present());
+    }
+    
+
+
   stopScanning(){
     (this.scanSubscription) ? this.scanSubscription.unsubscribe() : null;
     this.scanSubscription=null;
 
     (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
-    window.document.body.style.backgroundColor = '#FFF';
 
     this.qrScanner.hide();
     this.qrScanner.destroy();
