@@ -12,12 +12,12 @@
         "source": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_splash.png.flat",
-        "source": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\splash.png"
-    },
-    {
         "merged": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi_splash.png.flat",
         "source": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\src\\main\\res\\drawable-land-ldpi\\splash.png"
+    },
+    {
+        "merged": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_splash.png.flat",
+        "source": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\splash.png"
     },
     {
         "merged": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxxhdpi_splash.png.flat",

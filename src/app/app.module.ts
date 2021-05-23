@@ -12,6 +12,9 @@ import { environment } from 'src/environments/environment';
 import { ComponentsModule } from './components/components.module';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 //import { IonicMqttModule, MQTTService } from 'ionic-mqtt';
 
 //import { environment } from 'src/environments/environment.prod';
@@ -22,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
   AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireAuthModule,ComponentsModule,HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },AuthService,QRScanner,StatusBar,
+    SplashScreen,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController,ToastController } from '@ionic/angular';
+import { AlertController,Platform,ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 
@@ -21,9 +21,18 @@ export class Compart1Page implements OnInit {
   public place_temperatura_max= "Ingresa temperatura max";
   public place_humedad_max= "Ingresa humedad maxima";
 
+  scanSubscription:any;
+
   constructor(private authSvc:AuthService,
               private alertController: AlertController,
-              private qrScanner: QRScanner) { }
+              private qrScanner: QRScanner, private platform: Platform) { this.platform.backButton.subscribeWithPriority(0,()=>{
+                document.getElementsByTagName("body")[0].style.opacity = "1";
+                this.scanSubscription.unsubscribe();
+              });
+              // this.platform.ready().then(() => {
+                
+              //  });
+            }
 
   ngOnInit() {
   }
@@ -147,29 +156,57 @@ async Imprimir_error(texto){
 // Optionally request the permission early
 
 public leerqr(){
-this.qrScanner.prepare()
-  .then((status: QRScannerStatus) => {
-     if (status.authorized) {
-       // camera permission was granted
+  this.Openscan()
+}
 
+  Openscan(){
+    (window.document.querySelector('ion-app') as HTMLElement).classList.add('cameraView');
+    window.document.body.style.backgroundColor = 'transparent';
 
-       // start scanning
-       let scanSub = this.qrScanner.scan().subscribe((text: string) => {
-         console.log('Scanned something', text);
+    // Optionally request the permission early
+    this.qrScanner.prepare().then((status: QRScannerStatus) => {
+      if (status.authorized) {
+      
+        //document.getElementsByTagName("body")[0].style.opacity = "0";
+        this.scanSubscription = this.qrScanner.scan().subscribe((text: string) => {
+      
+          //document.getElementsByTagName("body")[0].style.opacity = "1";
+          console.log('QR Code Secan', text, 'Working');
 
-         this.qrScanner.hide(); // hide camera preview
-         scanSub.unsubscribe(); // stop scanning
-       });
+          // (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
+          // window.document.body.style.backgroundColor = '#FFF';
 
-     } else if (status.denied) {
-       // camera permission was permanently denied
-       // you must use QRScanner.openSettings() method to guide the user to the settings page
-       // then they can grant the permission from there
-     } else {
-       // permission was denied, but not permanently. You can ask for permission again at a later time.
-     }
-  })
-  .catch((e: any) => console.log('Error is', e));}
+        // this.scanSubscription.unsubscribe();
+        //  this.qrScanner.hide(); // hide camera preview
+        // this.qrScanner.destroy();
+        
+        });
+        this.qrScanner.enableLight();
+        this.qrScanner.useBackCamera();
+        this.qrScanner.show();
+
+      } else if (status.denied) {
+        this.qrScanner.openSettings();
+        // camera permission was permanently denied
+        // you must use QRScanner.openSettings() method to guide the user to the settings page
+        // then they can grant the permission from there
+      } else {
+        // permission was denied, but not permanently. You can ask for permission again at a later time.
+      }
+    })
+    .catch((e: any) => console.log('Error is', e));
+  }
+
+  stopScanning(){
+    (this.scanSubscription) ? this.scanSubscription.unsubscribe() : null;
+    this.scanSubscription=null;
+
+    (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView');
+    window.document.body.style.backgroundColor = '#FFF';
+
+    this.qrScanner.hide();
+    this.qrScanner.destroy();
+  }
 
 
 }

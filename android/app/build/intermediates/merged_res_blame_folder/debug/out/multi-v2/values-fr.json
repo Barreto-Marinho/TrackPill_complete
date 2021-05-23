@@ -4,6 +4,23 @@
             "outputFile": "C:\\Users\\xboxk\\OneDrive\\Documentos\\7tmo_semestre\\IOT\\Aplicacion\\Trackpill\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr\\values-fr.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\xboxk\\.gradle\\caches\\transforms-2\\files-2.1\\5ed13f4184482e99bc3a109d8c3da334\\jetified-zxing-android-embedded-3.3.0\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,161,327",
+                        "endColumns": "58,46,165,108",
+                        "endOffsets": "109,156,322,431"
+                    },
+                    "to": {
+                        "startLines": "54,55,56,57",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "6462,6521,6568,6734",
+                        "endColumns": "58,46,165,108",
+                        "endOffsets": "6516,6563,6729,6838"
+                    }
+                },
+                {
                     "source": "C:\\Users\\xboxk\\.gradle\\caches\\transforms-2\\files-2.1\\c6fe0f05486c9f14086b1b659ca69db6\\jetified-firebase-messaging-20.1.2\\res\\values-fr\\values.xml",
                     "from": {
                         "startLines": "4",

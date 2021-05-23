@@ -15,13 +15,18 @@ ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Track
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:2:1-63:12
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:2:1-63:12
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:2:1-63:12
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-57:12
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:17:1-55:12
 MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-50:12
 MERGED from [com.google.android.material:material:1.1.0-rc02] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\102b3c44740e06a0c65ab0c577ce7e61\material-1.1.0-rc02\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d38bcf900577a63e0da310b3fe272179\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61e488a7b48ffc8255adc230dafa50f0\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\283499019944b954344c21ecf1019372\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a897121207f57358e1821939525cde70\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v13:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\503295ea8e6e15fdbe9b7f132adc2408\legacy-support-v13-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:2:1-52:12
 MERGED from [com.google.firebase:firebase-messaging:20.1.2] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6fe0f05486c9f14086b1b659ca69db6\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\98c05a55956fe05e1fce3686a9decc63\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\4b1f3c0fedd59f7df4b9847f0beb96b9\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61e488a7b48ffc8255adc230dafa50f0\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\febea47f8deaefcdcab072224acc8dc4\jetified-play-services-location-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\3df16c329eb72525b235a791e531d7a8\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:17:1-47:12
@@ -35,38 +40,42 @@ MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a81ab35d04e4880ea187ddd23a52234a\jetified-play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\038edd49363f603fbef80e09a9f407b2\jetified-play-services-stats-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a52bfb92d2b276c79d11db281b8aa668\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\283499019944b954344c21ecf1019372\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d552d54d79891b2a9c69132582332e2f\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\31016d94c9a98a1d54cfe375d67f4559\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\9d28e40defdf6a4e3602d97c075e17f2\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.browser:browser:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f4cbb3a779e32db78e3b6c8e4b5173a1\browser-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d41f6a590796eccba86906146b86c0e8\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\e2bc87b524914ccb7253f7ff7a6c57b0\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\652ae343ce7045a2f751e9940f7d865d\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d41f6a590796eccba86906146b86c0e8\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\967ac9d00d0570a1e1fe1c7644cdc60a\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\fcea55302b5d2e843f6bf32f4bea1587\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\ef6bbd80072226febbd8b1eb2582757c\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\bf86200cdd995924b2760bb57cd14010\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\b8f6da53f8601c0b0ad135bf04e1fd79\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\119c6f5c31bea5d5de5b2f54b15b8174\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5b59b01475618829fe79ad446c5facaf\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\8d4666f682775c60e9e0f1d669843aa7\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c939c9d1cce5aa2f18956c8b9d20ad18\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61fb7aa0ad547ae01110cedf6a6a694e\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\efac5f51521fba998b5124b53eb9b183\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\583d0de7df83d6366d0f0380146cace4\core-1.2.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5c5e5af1473cda4f9f188f4b37076293\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a897121207f57358e1821939525cde70\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f549a48962f97668ee442149d558a50d\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1955be693eb56c1139576e45ec90d484\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\411b57b9b14e2dce30437831b520790e\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\80740ea671f9509e07d6a34e2b93f75c\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\65c9f7529c4981d43c925fa693badfa2\jetified-transport-runtime-2.2.0\AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5e826c1b109742f8bca7b17a6327c1d0\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f9d65e81b499a1a3336efc50b9a88ef3\jetified-firebase-encoders-json-16.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1955be693eb56c1139576e45ec90d484\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\411b57b9b14e2dce30437831b520790e\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a37cc7d38ecba109ecfb72735d489975\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6f5bca5887ecb4409ba6069f8d7382e\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\cae9d7df45129530ff877ef3c8a4c88d\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\8688f7244dd4ab0541bbbfd60a830f17\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\e31b71f57c5cf8e3a670371795980592\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\dfe8cc82fa279aa5c223402d6e9d41f9\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [org.apache.cordova:framework:7.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c1ca5d0a1b33de69d3f35337e7942eb8\jetified-framework-7.0.0\AndroidManifest.xml:20:1-27:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\2915d1d7082de4bb0fb820d3fa381a33\jetified-transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:2:1-63:12
@@ -88,12 +97,14 @@ INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Tr
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:5:5-43:19
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:5-55:19
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:5-55:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:45:5-53:19
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:45:5-53:19
 MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:5-48:19
 MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:5-48:19
 MERGED from [com.google.android.material:material:1.1.0-rc02] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\102b3c44740e06a0c65ab0c577ce7e61\material-1.1.0-rc02\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0-rc02] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\102b3c44740e06a0c65ab0c577ce7e61\material-1.1.0-rc02\AndroidManifest.xml:22:5-20
-MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-13:19
-MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-13:19
 MERGED from [com.google.firebase:firebase-messaging:20.1.2] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6fe0f05486c9f14086b1b659ca69db6\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:22:5-42:19
 MERGED from [com.google.firebase:firebase-messaging:20.1.2] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6fe0f05486c9f14086b1b659ca69db6\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:22:5-42:19
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\febea47f8deaefcdcab072224acc8dc4\jetified-play-services-location-17.0.0\AndroidManifest.xml:7:5-20
@@ -184,6 +195,8 @@ ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Track
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:29:23-65
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:47:5-67
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:5-67
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-installations:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1fc34a2957977e5d72908a2cfd4e5c7c\jetified-firebase-installations-16.0.0\AndroidManifest.xml:11:5-67
@@ -198,6 +211,8 @@ ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Track
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:49:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:50:5-81
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:5-81
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:5-81
 	android:name
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:50:22-78
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -214,6 +229,8 @@ ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Track
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:54:19-63
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:56:5-79
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:5-79
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:5-79
 MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-installations:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1fc34a2957977e5d72908a2cfd4e5c7c\jetified-firebase-installations-16.0.0\AndroidManifest.xml:10:5-79
@@ -226,10 +243,16 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:56:22-76
 uses-permission#android.permission.CAMERA
 ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:59:5-65
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:5-65
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:21:5-65
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:21:5-65
 	android:name
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:59:22-62
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:61:5-71
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-71
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-71
 	android:name
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:61:22-68
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
@@ -240,20 +263,30 @@ uses-sdk
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
+MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:19:5-43
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:19:5-43
 MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.1.0-rc02] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\102b3c44740e06a0c65ab0c577ce7e61\material-1.1.0-rc02\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.1.0-rc02] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\102b3c44740e06a0c65ab0c577ce7e61\material-1.1.0-rc02\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d38bcf900577a63e0da310b3fe272179\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d38bcf900577a63e0da310b3fe272179\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
-MERGED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-10:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61e488a7b48ffc8255adc230dafa50f0\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61e488a7b48ffc8255adc230dafa50f0\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\283499019944b954344c21ecf1019372\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\283499019944b954344c21ecf1019372\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a897121207f57358e1821939525cde70\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a897121207f57358e1821939525cde70\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v13:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\503295ea8e6e15fdbe9b7f132adc2408\legacy-support-v13-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v13:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\503295ea8e6e15fdbe9b7f132adc2408\legacy-support-v13-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:7:5-9:41
+MERGED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-messaging:20.1.2] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6fe0f05486c9f14086b1b659ca69db6\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:20.1.2] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6fe0f05486c9f14086b1b659ca69db6\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\98c05a55956fe05e1fce3686a9decc63\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\98c05a55956fe05e1fce3686a9decc63\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\4b1f3c0fedd59f7df4b9847f0beb96b9\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\4b1f3c0fedd59f7df4b9847f0beb96b9\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61e488a7b48ffc8255adc230dafa50f0\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61e488a7b48ffc8255adc230dafa50f0\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\febea47f8deaefcdcab072224acc8dc4\jetified-play-services-location-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\febea47f8deaefcdcab072224acc8dc4\jetified-play-services-location-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-datatransport:17.0.3] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\3df16c329eb72525b235a791e531d7a8\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:19:5-21:41
@@ -280,6 +313,8 @@ MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\xboxk\.
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\038edd49363f603fbef80e09a9f407b2\jetified-play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a52bfb92d2b276c79d11db281b8aa668\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a52bfb92d2b276c79d11db281b8aa668\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\283499019944b954344c21ecf1019372\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\283499019944b954344c21ecf1019372\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d552d54d79891b2a9c69132582332e2f\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d552d54d79891b2a9c69132582332e2f\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\31016d94c9a98a1d54cfe375d67f4559\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -288,10 +323,12 @@ MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\xboxk\.gradle\ca
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\9d28e40defdf6a4e3602d97c075e17f2\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f4cbb3a779e32db78e3b6c8e4b5173a1\browser-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f4cbb3a779e32db78e3b6c8e4b5173a1\browser-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d41f6a590796eccba86906146b86c0e8\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d41f6a590796eccba86906146b86c0e8\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\e2bc87b524914ccb7253f7ff7a6c57b0\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\e2bc87b524914ccb7253f7ff7a6c57b0\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\652ae343ce7045a2f751e9940f7d865d\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\652ae343ce7045a2f751e9940f7d865d\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d41f6a590796eccba86906146b86c0e8\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\d41f6a590796eccba86906146b86c0e8\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\967ac9d00d0570a1e1fe1c7644cdc60a\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\967ac9d00d0570a1e1fe1c7644cdc60a\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\fcea55302b5d2e843f6bf32f4bea1587\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -302,24 +339,24 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\xboxk\.gradl
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\bf86200cdd995924b2760bb57cd14010\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\b8f6da53f8601c0b0ad135bf04e1fd79\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\b8f6da53f8601c0b0ad135bf04e1fd79\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\119c6f5c31bea5d5de5b2f54b15b8174\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\119c6f5c31bea5d5de5b2f54b15b8174\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5b59b01475618829fe79ad446c5facaf\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5b59b01475618829fe79ad446c5facaf\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\8d4666f682775c60e9e0f1d669843aa7\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\8d4666f682775c60e9e0f1d669843aa7\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c939c9d1cce5aa2f18956c8b9d20ad18\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c939c9d1cce5aa2f18956c8b9d20ad18\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61fb7aa0ad547ae01110cedf6a6a694e\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\61fb7aa0ad547ae01110cedf6a6a694e\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\efac5f51521fba998b5124b53eb9b183\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\efac5f51521fba998b5124b53eb9b183\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\583d0de7df83d6366d0f0380146cace4\core-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\583d0de7df83d6366d0f0380146cace4\core-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5c5e5af1473cda4f9f188f4b37076293\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5c5e5af1473cda4f9f188f4b37076293\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a897121207f57358e1821939525cde70\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a897121207f57358e1821939525cde70\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f549a48962f97668ee442149d558a50d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f549a48962f97668ee442149d558a50d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1955be693eb56c1139576e45ec90d484\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1955be693eb56c1139576e45ec90d484\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\411b57b9b14e2dce30437831b520790e\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\411b57b9b14e2dce30437831b520790e\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\80740ea671f9509e07d6a34e2b93f75c\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\80740ea671f9509e07d6a34e2b93f75c\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\65c9f7529c4981d43c925fa693badfa2\jetified-transport-runtime-2.2.0\AndroidManifest.xml:18:5-20:41
@@ -328,6 +365,14 @@ MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\xboxk\.gra
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5e826c1b109742f8bca7b17a6327c1d0\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f9d65e81b499a1a3336efc50b9a88ef3\jetified-firebase-encoders-json-16.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:16.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\f9d65e81b499a1a3336efc50b9a88ef3\jetified-firebase-encoders-json-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1955be693eb56c1139576e45ec90d484\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\1955be693eb56c1139576e45ec90d484\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\411b57b9b14e2dce30437831b520790e\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\411b57b9b14e2dce30437831b520790e\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a37cc7d38ecba109ecfb72735d489975\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\a37cc7d38ecba109ecfb72735d489975\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6f5bca5887ecb4409ba6069f8d7382e\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
@@ -340,10 +385,6 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\xboxk\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\e31b71f57c5cf8e3a670371795980592\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\dfe8cc82fa279aa5c223402d6e9d41f9\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\dfe8cc82fa279aa5c223402d6e9d41f9\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\86aa7fcb6f12855a4b953477a2672233\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\6320adba18b4d4720bd8695f5fffc52f\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [org.apache.cordova:framework:7.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c1ca5d0a1b33de69d3f35337e7942eb8\jetified-framework-7.0.0\AndroidManifest.xml:25:5-44
 MERGED from [org.apache.cordova:framework:7.0.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c1ca5d0a1b33de69d3f35337e7942eb8\jetified-framework-7.0.0\AndroidManifest.xml:25:5-44
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\2915d1d7082de4bb0fb820d3fa381a33\jetified-transport-api-2.2.0\AndroidManifest.xml:18:5-20:41
@@ -365,21 +406,123 @@ ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Track
 	android:name
 		ADDED from C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\app\src\main\AndroidManifest.xml:40:17-67
 uses-feature#android.hardware.camera
-ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-13:36
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-14:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:24:5-26:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:24:5-26:36
+MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-13:36
+MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-13:36
 	android:required
-		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-33
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-33
 	android:name
-		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-47
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-47
+uses-feature#android.hardware.camera.autofocus
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-17:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:32:5-34:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:9-33
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-57
+uses-feature#android.hardware.camera.front
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:5-25:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:27:5-29:36
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:27:5-29:36
+	android:required
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-33
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-53
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:5-68
+MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-68
+MERGED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-68
+MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:22-65
+uses-permission#android.permission.VIBRATE
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:5-66
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:22-63
+activity#com.cordovaplugincamerapreview.CameraActivity
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:9-36:57
+	android:screenOrientation
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-49
+	android:theme
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-54
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-73
+activity#com.adobe.phonegap.push.PushHandlerActivity
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:9-40:84
+	android:exported
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-81
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-71
+receiver#com.adobe.phonegap.push.BackgroundActionButtonHandler
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:9-90
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:42:19-87
+receiver#com.adobe.phonegap.push.PushDismissedHandler
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:9-81
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:43:19-78
+service#com.adobe.phonegap.push.FCMService
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:9-49:19
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:18-67
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:46:13-48:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:17-78
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:47:25-75
+service#com.adobe.phonegap.push.PushInstanceIDListenerService
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:9-54:19
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:50:18-86
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:51:13-53:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:52:17-80
+	android:name
+		ADDED from [:capacitor-cordova-android-plugins] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\android\capacitor-cordova-android-plugins\build\intermediates\library_manifest\debug\AndroidManifest.xml:52:25-77
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:35:5-37:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:37:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:36:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:38:5-40:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:40:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:39:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:41:5-43:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:43:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:42:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:46:9-52:63
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:49:13-56
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:48:13-45
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:50:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:52:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:51:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\5ed13f4184482e99bc3a109d8c3da334\jetified-zxing-android-embedded-3.3.0\AndroidManifest.xml:47:13-74
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-81
 	android:name
 		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-78
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-68
-MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:20.1.1] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\199793d6c6cd32607f7663b06913b6b0\jetified-firebase-iid-20.1.1\AndroidManifest.xml:24:5-68
-	android:name
-		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:22-65
 service#com.getcapacitor.plugin.background.BackgroundTaskService
 ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-21:40
 	android:exported
@@ -406,12 +549,6 @@ ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre
 		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:13-41
 	android:name
 		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-78
-intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-35:29
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:17-78
-	android:name
-		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:25-75
 receiver#com.getcapacitor.plugin.notification.LocalNotificationRestoreReceiver
 ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:9-47:20
 	android:exported
@@ -434,6 +571,70 @@ action#android.intent.action.QUICKBOOT_POWERON
 ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:17-82
 	android:name
 		ADDED from [:capacitor-android] C:\Users\xboxk\OneDrive\Documentos\7tmo_semestre\IOT\Aplicacion\Trackpill\node_modules\@capacitor\android\capacitor\build\intermediates\library_manifest\debug\AndroidManifest.xml:45:25-79
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.17] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\673f340dca48c60abe830ef950753aaa\jetified-ShortcutBadger-1.1.17\AndroidManifest.xml:50:22-86
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:20.1.2] C:\Users\xboxk\.gradle\caches\transforms-2\files-2.1\c6fe0f05486c9f14086b1b659ca69db6\jetified-firebase-messaging-20.1.2\AndroidManifest.xml:28:9-34:19
 	android:exported

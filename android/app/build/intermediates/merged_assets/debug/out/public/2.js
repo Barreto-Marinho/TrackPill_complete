@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "hgI1":
+/***/ "./node_modules/@ionic/core/dist/esm/ion-app_8.entry.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/ion-app_8.entry.js ***!
   \**************************************************************/
@@ -17,13 +17,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_router_outlet", function() { return RouterOutlet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_title", function() { return ToolbarTitle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_toolbar", function() { return Toolbar; });
-/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "wEJo");
-/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "E/Mt");
-/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "74mu");
-/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "1vRN");
-/* harmony import */ var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cubic-bezier-eea9a7a9.js */ "bC4P");
-/* harmony import */ var _framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./framework-delegate-4392cd63.js */ "acej");
-/* harmony import */ var _index_c3ff7f2e_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index-c3ff7f2e.js */ "k4ps");
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ "./node_modules/@ionic/core/dist/esm/index-7a8b7a1c.js");
+/* harmony import */ var _ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-global-63a97a32.js */ "./node_modules/@ionic/core/dist/esm/ionic-global-63a97a32.js");
+/* harmony import */ var _theme_ff3fc52f_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme-ff3fc52f.js */ "./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js");
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ "./node_modules/@ionic/core/dist/esm/helpers-dd7e4b7b.js");
+/* harmony import */ var _cubic_bezier_eea9a7a9_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cubic-bezier-eea9a7a9.js */ "./node_modules/@ionic/core/dist/esm/cubic-bezier-eea9a7a9.js");
+/* harmony import */ var _framework_delegate_4392cd63_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./framework-delegate-4392cd63.js */ "./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js");
+/* harmony import */ var _index_c3ff7f2e_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index-c3ff7f2e.js */ "./node_modules/@ionic/core/dist/esm/index-c3ff7f2e.js");
 
 
 
@@ -43,15 +43,15 @@ const App = class {
       rIC(async () => {
         const isHybrid = Object(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["a"])(window, 'hybrid');
         if (!_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('_testing')) {
-          __webpack_require__.e(/*! import() | tap-click-cc1ae2b2-js */ "tap-click-cc1ae2b2-js").then(__webpack_require__.bind(null, /*! ./tap-click-cc1ae2b2.js */ "cg4z")).then(module => module.startTapClick(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
+          __webpack_require__.e(/*! import() | tap-click-cc1ae2b2-js */ "tap-click-cc1ae2b2-js").then(__webpack_require__.bind(null, /*! ./tap-click-cc1ae2b2.js */ "./node_modules/@ionic/core/dist/esm/tap-click-cc1ae2b2.js")).then(module => module.startTapClick(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
         }
         if (_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('statusTap', isHybrid)) {
-          __webpack_require__.e(/*! import() | status-tap-bdecfebf-js */ "status-tap-bdecfebf-js").then(__webpack_require__.bind(null, /*! ./status-tap-bdecfebf.js */ "PaPO")).then(module => module.startStatusTap());
+          __webpack_require__.e(/*! import() | status-tap-bdecfebf-js */ "status-tap-bdecfebf-js").then(__webpack_require__.bind(null, /*! ./status-tap-bdecfebf.js */ "./node_modules/@ionic/core/dist/esm/status-tap-bdecfebf.js")).then(module => module.startStatusTap());
         }
         if (_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('inputShims', needInputShims())) {
-          __webpack_require__.e(/*! import() | input-shims-73f15161-js */ "input-shims-73f15161-js").then(__webpack_require__.bind(null, /*! ./input-shims-73f15161.js */ "3Iwd")).then(module => module.startInputShims(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
+          __webpack_require__.e(/*! import() | input-shims-73f15161-js */ "input-shims-73f15161-js").then(__webpack_require__.bind(null, /*! ./input-shims-73f15161.js */ "./node_modules/@ionic/core/dist/esm/input-shims-73f15161.js")).then(module => module.startInputShims(_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"]));
         }
-        const hardwareBackButtonModule = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./hardware-back-button-4a6b37fb.js */ "B4Jq"));
+        const hardwareBackButtonModule = await Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./hardware-back-button-4a6b37fb.js */ "./node_modules/@ionic/core/dist/esm/hardware-back-button-4a6b37fb.js"));
         if (_ionic_global_63a97a32_js__WEBPACK_IMPORTED_MODULE_1__["c"].getBoolean('hardwareBackButton', isHybrid)) {
           hardwareBackButtonModule.startHardwareBackButton();
         }
@@ -59,9 +59,9 @@ const App = class {
           hardwareBackButtonModule.blockHardwareBackButton();
         }
         if (typeof window !== 'undefined') {
-          __webpack_require__.e(/*! import() | keyboard-5742b5da-js */ "keyboard-5742b5da-js").then(__webpack_require__.bind(null, /*! ./keyboard-5742b5da.js */ "nGaW")).then(module => module.startKeyboardAssist(window));
+          __webpack_require__.e(/*! import() | keyboard-5742b5da-js */ "keyboard-5742b5da-js").then(__webpack_require__.bind(null, /*! ./keyboard-5742b5da.js */ "./node_modules/@ionic/core/dist/esm/keyboard-5742b5da.js")).then(module => module.startKeyboardAssist(window));
         }
-        __webpack_require__.e(/*! import() | focus-visible-f4ad4f1a-js */ "focus-visible-f4ad4f1a-js").then(__webpack_require__.bind(null, /*! ./focus-visible-f4ad4f1a.js */ "Tsnu")).then(module => module.startFocusVisible());
+        __webpack_require__.e(/*! import() | focus-visible-f4ad4f1a-js */ "focus-visible-f4ad4f1a-js").then(__webpack_require__.bind(null, /*! ./focus-visible-f4ad4f1a.js */ "./node_modules/@ionic/core/dist/esm/focus-visible-f4ad4f1a.js")).then(module => module.startFocusVisible());
       });
     }
   }
@@ -740,7 +740,7 @@ const RouterOutlet = class {
     }
   }
   async connectedCallback() {
-    this.gesture = (await __webpack_require__.e(/*! import() | swipe-back-ee838cf8-js */ "swipe-back-ee838cf8-js").then(__webpack_require__.bind(null, /*! ./swipe-back-ee838cf8.js */ "IYAk"))).createSwipeBackGesture(this.el, () => !!this.swipeHandler && this.swipeHandler.canStart() && this.animationEnabled, () => this.swipeHandler && this.swipeHandler.onStart(), step => this.ani && this.ani.progressStep(step), (shouldComplete, step, dur) => {
+    this.gesture = (await __webpack_require__.e(/*! import() | swipe-back-ee838cf8-js */ "swipe-back-ee838cf8-js").then(__webpack_require__.bind(null, /*! ./swipe-back-ee838cf8.js */ "./node_modules/@ionic/core/dist/esm/swipe-back-ee838cf8.js"))).createSwipeBackGesture(this.el, () => !!this.swipeHandler && this.swipeHandler.canStart() && this.animationEnabled, () => this.swipeHandler && this.swipeHandler.onStart(), step => this.ani && this.ani.progressStep(step), (shouldComplete, step, dur) => {
       if (this.ani) {
         this.animationEnabled = false;
         this.ani.onFinish(() => {
