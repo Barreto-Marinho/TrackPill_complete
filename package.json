@@ -25,6 +25,7 @@
     "@capacitor/android": "^2.4.7",
     "@capacitor/core": "2.4.7",
     "@ionic-native/push": "^5.33.0",
+    "@ionic-native/qr-scanner": "^5.33.0",
     "@ionic/angular": "^5.6.4",
     "chart.js": "^3.2.1",
     "cordova-plugin-qrscanner": "^3.0.1",
