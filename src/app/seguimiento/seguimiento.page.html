@@ -18,6 +18,21 @@
     </ion-button>
   </ion-row>
 
+<ion-card color="warning" *ngIf="posicion == 30">
+  <ion-item color="dark">
+    <ion-icon name="file-tray-stacked-outline" slot="start"></ion-icon>
+    <ion-label>{{textoc}} </ion-label>
+  </ion-item>
+  <ion-card-content>
+    <ion-row> 
+    {{pasti2}}
+  </ion-row>
+  <ion-row> 
+    {{pastillas_trata}}
+  </ion-row>
+</ion-card-content>
+</ion-card>
+
 <ion-col *ngFor="let p of AlarmaHora" >
   <ion-card *ngIf="p.estados == cond"  color="secondary">
     <ion-item color="dark">

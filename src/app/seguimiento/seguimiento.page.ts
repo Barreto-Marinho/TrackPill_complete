@@ -28,6 +28,9 @@ export class SeguimientoPage implements OnInit {
   public medicamento_v :string
   public posicion;
   public fecha_datos;
+  public pastillas_trata
+  public pasti2
+  public textoc 
   constructor(private authSvc:AuthService) { }
 
   ngOnInit() {
@@ -136,7 +139,9 @@ export class SeguimientoPage implements OnInit {
 
   async ionViewWillEnter(){
     await this.authSvc.leer_dato_thing_speak()
-    console.log("Ey Hola",this.authSvc.datos_seg)
+    this.textoc= "Conteo pastillas: " + this.authSvc.compar1$.medicamento ;
+    this.pasti2         =  "En el compartimiento: " + this.authSvc.an_pasti[0]
+    this.pastillas_trata=  "Para finalizar tratamiento:  "+ this.authSvc.an_pasti[1]
     this.posicion = 30
     this.fecha_datos= this.func_fecha(this.posicion)
     this.modificar(this.posicion)

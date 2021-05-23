@@ -26,6 +26,7 @@ export class AuthService {
     host: "test.mosquitto.org", port: 8081, clientId: "mqtt"};
 
   public mqttClient;
+  public an_pasti= [];
 
 
   
@@ -118,6 +119,10 @@ async leer_dato_thing_speak() : Promise<void>{
                       , field7:leido["field7"] ,field8: leido["field8"] }
       this.datos_seg.push(adicion);
       console.log( this.datos_seg)
+      this.an_pasti=[]
+      this.an_pasti.push(leido["field1"])
+      this.an_pasti.push(leido["field2"])
+      console.log("Algo distintivo",this.an_pasti)
     }
     );
    }
