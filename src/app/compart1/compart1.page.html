@@ -43,7 +43,7 @@
 
         <ion-row>
           <ion-button (click)="Boton_guardar(marca,medicamento,Npastilla,Ntratamiento,temp_max,hum_max)">{{nombre_boton}}  </ion-button>
-          <ion-button (click)="leerqr()">Leer QR code</ion-button>
+          <ion-button *ngIf="habilitar==true" (click)="leerqr()">Leer QR code</ion-button>
           <ion-button *ngIf="habilitar==true" (click)="cancelar()">Cancelar </ion-button>
         </ion-row>
 
