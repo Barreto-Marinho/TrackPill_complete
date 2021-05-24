@@ -21,6 +21,7 @@ export class AuthService {
   public compar1$: compartimento; 
   public datos_seg ;
   public datos_t_h ;
+  public correo_acudiente;
   public TOPIC: string[] = [];
   public MQTT_CONFIG: {host: string, port: number,clientId: string} = {
     host: "test.mosquitto.org", port: 8081, clientId: "mqtt"};
@@ -75,6 +76,36 @@ verdadero o no, dependiendo si el usuario esta verificado o no
  isEmailVerify(user:User):boolean{
       return(user.emailVerified===true ?true:false);
   }
+
+/*****************************************************************************************************  
+La funcion envio_dato_thing_speak 
+******************************************************************************************************/ 
+async leer_dato_correo() : Promise<void>{
+  try{
+    await this.http.get('https://api.thingspeak.com/channels/1397650/feeds.json?api_key=5OP4OUGKW21F6TRF&results=1')
+    .toPromise()
+    .then(res => {
+      const leido    = res['feeds'][0]['field1'];
+      this.correo_acudiente= leido;
+    }
+    );
+   }
+   catch(error){
+     console.log('Error->',error)
+  }
+
+        //.then(res => console.log(res['feeds']));
+}
+/*****************************************************************************************************  
+La funcion envio_dato_thing_speak 
+******************************************************************************************************/ 
+
+async envio_correo_acudiente(mensaje: string){
+  const apikey= '7JXZL4VX4M2E4W2Y';
+  var texto = 'https://api.thingspeak.com/update?api_key='+ apikey+ '&field1='+ mensaje;
+  await this.http.get(texto).toPromise();
+  console.log("Se envio: ", texto)
+}
 
 /*****************************************************************************************************  
 La funcion envio_dato_thing_speak 

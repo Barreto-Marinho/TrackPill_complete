@@ -18,6 +18,7 @@ export class AppComponent {
   }
   Conf_alarm(){
     this.router.navigate(['/alarma']);
+    
   }
 
   acerca(){
@@ -31,4 +32,13 @@ export class AppComponent {
       this.router.navigate(['/cuenta']);
       }
   }
+
+  Acudiente(){
+    if(this.authSvc.usuario$ != undefined){
+      this.router.navigate(['/acudiente']);
+    }else{
+      this.router.navigate(['/acudiente']);//cuenta
+      }
+  }
+
 }
