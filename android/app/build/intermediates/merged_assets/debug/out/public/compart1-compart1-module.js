@@ -275,7 +275,35 @@ let Compart1Page = class Compart1Page {
         console.log('QR Code Secan', texto, 'Working');
         this.enable = 1;
         console.log('Enable es:', this.enable);
+        texto = texto.split("/");
+        const marca = texto[0];
+        const medicamento = texto[1];
+        const Npastilla = texto[2];
+        const Ntratamiento = texto[3];
+        const temp_max = texto[4];
+        const hum_max = texto[5];
+        var i;
+        var hora = "/";
+        console.log(texto);
+        this.miVariableHora = [];
+        console.log(texto.length);
+        for (i = 6; i < texto.length; i++) {
+            console.log(texto[i]);
+            if (texto[i] != "") {
+                hora = hora + texto[i] + "/";
+                const new_fecha = { fecha_ini: texto[i] };
+                this.miVariableHora.push(new_fecha);
+            }
+        }
+        this.place_marca = marca;
+        this.place_medicamento = medicamento;
+        this.place_N_pastillas = Npastilla;
+        this.place_pastillas_tra = Ntratamiento;
+        this.place_temperatura_max = temp_max;
+        this.place_humedad_max = hum_max;
         window.document.querySelector('ion-app').classList.remove('cameraView');
+        this.authSvc.modificar_compartimento(this.authSvc.usuario$, marca, medicamento, Npastilla, Ntratamiento, temp_max, hum_max, hora);
+        this.authSvc.envio_info_usuario_thing_speak(this.authSvc.usuario$.uid, Npastilla, hora, hum_max, marca, medicamento, temp_max, Ntratamiento);
         this.scanSubscription.unsubscribe();
         this.qrScanner.hide();
     }

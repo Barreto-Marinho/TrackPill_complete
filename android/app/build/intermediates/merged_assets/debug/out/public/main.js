@@ -270,7 +270,7 @@ module.exports = webpackAsyncContext;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-app>\r\n  <ion-split-pane contentId=\"main-content\">\r\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\r\n      <ion-content>\r\n          <ion-col> \r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-row>\r\n              <ion-button  (click)=\"pag_princ()\" >\r\n                <ion-icon  [ios]=\"'analytics' + '-outline'\" [md]=\"'analytics' + '-sharp'\"></ion-icon>\r\n                <ion-label>  Pagina Principal           </ion-label>\r\n              </ion-button>\r\n              </ion-row>\r\n              <ion-row>\r\n                <ion-button  (click)=\"Conf_alarm()\" >\r\n                  <ion-icon  [ios]=\"'construct' + '-outline'\" [md]=\"'construct' + '-sharp'\"></ion-icon>\r\n                  <ion-label>  Alarma estado  </ion-label>\r\n                </ion-button>\r\n                </ion-row>\r\n                <ion-row>\r\n                  <ion-button  (click)=\"Cuenta()\" >\r\n                    <ion-icon  [ios]=\"'person' + '-outline'\" [md]=\"'person' + '-sharp'\"></ion-icon>\r\n                    <ion-label>Cuenta</ion-label>\r\n                  </ion-button>\r\n                </ion-row>\r\n                <ion-row>\r\n                <ion-button  (click)=\"acerca()\" >\r\n                    <ion-icon  name=\"people-outline\"></ion-icon>\r\n                    <ion-label>Acerca de nosotros</ion-label>\r\n                  </ion-button>\r\n                </ion-row>\r\n            </ion-menu-toggle>\r\n        </ion-col>\r\n\r\n        \r\n      </ion-content>\r\n    </ion-menu>\r\n  <ion-router-outlet id=\"main-content\"></ion-router-outlet>\r\n</ion-split-pane>\r\n</ion-app>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-app>\r\n  <ion-split-pane contentId=\"main-content\">\r\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\r\n      <ion-content>\r\n          <ion-col> \r\n            <ion-menu-toggle auto-hide=\"false\">\r\n              <ion-row>\r\n              <ion-button  (click)=\"pag_princ()\" >\r\n                <ion-icon  [ios]=\"'analytics' + '-outline'\" [md]=\"'analytics' + '-sharp'\"></ion-icon>\r\n                <ion-label>  Pagina Principal           </ion-label>\r\n              </ion-button>\r\n              </ion-row>\r\n              <ion-row>\r\n                <ion-button  (click)=\"Conf_alarm()\" >\r\n                  <ion-icon  [ios]=\"'construct' + '-outline'\" [md]=\"'construct' + '-sharp'\"></ion-icon>\r\n                  <ion-label>  Alarma estado  </ion-label>\r\n                </ion-button>\r\n                </ion-row>\r\n                <ion-row>\r\n                  <ion-button  (click)=\"Cuenta()\" >\r\n                    <ion-icon  [ios]=\"'person' + '-outline'\" [md]=\"'person' + '-sharp'\"></ion-icon>\r\n                    <ion-label>Cuenta</ion-label>\r\n                  </ion-button>\r\n                </ion-row>\r\n                <ion-row>\r\n                  <ion-button  (click)=\"Acudiente()\" >\r\n                    <ion-icon  name= \"people-circle-outline\"></ion-icon>\r\n                    <ion-label>Acudiente</ion-label>\r\n                  </ion-button>\r\n                </ion-row>\r\n                <ion-row>\r\n                <ion-button  (click)=\"acerca()\" >\r\n                    <ion-icon  name=\"flask-outline\"></ion-icon>\r\n                    <ion-label>Acerca de nosotros</ion-label>\r\n                  </ion-button>\r\n                </ion-row>\r\n            </ion-menu-toggle>\r\n        </ion-col>\r\n\r\n        \r\n      </ion-content>\r\n    </ion-menu>\r\n  <ion-router-outlet id=\"main-content\"></ion-router-outlet>\r\n</ion-split-pane>\r\n</ion-app>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n");
 
 /***/ }),
 
@@ -357,6 +357,10 @@ const routes = [
     {
         path: 'acercade',
         loadChildren: () => __webpack_require__.e(/*! import() | acercade-acercade-module */ "acercade-acercade-module").then(__webpack_require__.bind(null, /*! ./acercade/acercade.module */ "./src/app/acercade/acercade.module.ts")).then(m => m.AcercadePageModule)
+    },
+    {
+        path: 'acudiente',
+        loadChildren: () => __webpack_require__.e(/*! import() | acudiente-acudiente-module */ "acudiente-acudiente-module").then(__webpack_require__.bind(null, /*! ./acudiente/acudiente.module */ "./src/app/acudiente/acudiente.module.ts")).then(m => m.AcudientePageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -429,6 +433,14 @@ let AppComponent = class AppComponent {
         }
         else {
             this.router.navigate(['/cuenta']);
+        }
+    }
+    Acudiente() {
+        if (this.authSvc.usuario$ != undefined) {
+            this.router.navigate(['/acudiente']);
+        }
+        else {
+            this.router.navigate(['/acudiente']); //cuenta
         }
     }
 };
@@ -643,6 +655,7 @@ let AuthService = class AuthService {
         this.MQTT_CONFIG = {
             host: "test.mosquitto.org", port: 8081, clientId: "mqtt"
         };
+        this.an_pasti = [];
         this.user$ = this.afAuth.authState.pipe(Object(rxjs_Operators__WEBPACK_IMPORTED_MODULE_5__["switchMap"])((user) => {
             if (user) {
                 return this.afs.doc(`users/${user.uid}`).valueChanges();
@@ -678,6 +691,36 @@ let AuthService = class AuthService {
     ******************************************************************************************************/
     isEmailVerify(user) {
         return (user.emailVerified === true ? true : false);
+    }
+    /*****************************************************************************************************
+    La funcion envio_dato_thing_speak
+    ******************************************************************************************************/
+    leer_dato_correo() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                yield this.http.get('https://api.thingspeak.com/channels/1397650/feeds.json?api_key=5OP4OUGKW21F6TRF&results=1')
+                    .toPromise()
+                    .then(res => {
+                    const leido = res['feeds'][0]['field1'];
+                    this.correo_acudiente = leido;
+                });
+            }
+            catch (error) {
+                console.log('Error->', error);
+            }
+            //.then(res => console.log(res['feeds']));
+        });
+    }
+    /*****************************************************************************************************
+    La funcion envio_dato_thing_speak
+    ******************************************************************************************************/
+    envio_correo_acudiente(mensaje) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const apikey = '7JXZL4VX4M2E4W2Y';
+            var texto = 'https://api.thingspeak.com/update?api_key=' + apikey + '&field1=' + mensaje;
+            yield this.http.get(texto).toPromise();
+            console.log("Se envio: ", texto);
+        });
     }
     /*****************************************************************************************************
     La funcion envio_dato_thing_speak
@@ -723,6 +766,10 @@ let AuthService = class AuthService {
                         field7: leido["field7"], field8: leido["field8"] };
                     this.datos_seg.push(adicion);
                     console.log(this.datos_seg);
+                    this.an_pasti = [];
+                    this.an_pasti.push(leido["field1"]);
+                    this.an_pasti.push(leido["field2"]);
+                    console.log("Algo distintivo", this.an_pasti);
                 });
             }
             catch (error) {
