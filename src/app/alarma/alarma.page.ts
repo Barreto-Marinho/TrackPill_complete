@@ -43,6 +43,7 @@ async ionViewWillEnter(){
     }
     this.nombre_boton= "Cambiar a Humedad"
     this.puntos()
+    console.log(this.puntos_temp)
     if(this.lineChart != undefined){
         this.lineChart.destroy();
     }
@@ -64,8 +65,8 @@ public puntos(){
   this.puntos_temp = [];
   this.puntos_humedad = [];
   this.fecha_Vec = []
-  console.log(this.authSvc.datos_seg[1])
-  for(var i = 0; i<10; i++){
+  console.log(this.authSvc.datos_seg)
+  for(var i = 20; i<30; i++){
     this.puntos_temp.push((1/3)*(Number(this.authSvc.datos_seg[i]["field7"])));
     this.puntos_humedad.push((1/3)*(Number(this.authSvc.datos_seg[i]["field8"])));
     const fechas = String(this.func_fecha(i)).split(" ")

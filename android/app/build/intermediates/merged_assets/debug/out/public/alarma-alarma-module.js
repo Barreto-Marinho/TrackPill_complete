@@ -12893,7 +12893,7 @@ function styleChanged(style, prevStyle) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-header class=\"ion-no-border\">\r\n  <ion-toolbar >\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>Alarma</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-row class=\"graf_v\" > <ion-row  class = \"graf\"> <canvas id=\"temp\" #lineCanvas ></canvas> </ion-row> </ion-row>\r\n  <ion-row><ion-col></ion-col><ion-col class=\"Boton_graf\"><ion-button class=\"Boton_graf\" (click)=\"Boton()\">{{nombre_boton}}  </ion-button></ion-col> <ion-col></ion-col>   </ion-row>\r\n  <ion-row  class=\"rowtemp\" >\r\n    <ion-col>\r\n     <ion-label class=\"Temperatura\">Temperatura:</ion-label> \r\n    </ion-col>\r\n    <ion-col  >\r\n     <ion-label class=\"temp\">{{place_temperatura}}</ion-label>\r\n    </ion-col>\r\n   </ion-row>\r\n\r\n   <ion-row class=\"rowhum\" >\r\n    <ion-col>\r\n     <ion-label class=\"Humedad\">Humedad:</ion-label> \r\n    </ion-col>\r\n    <ion-col>\r\n     <ion-label class=\"hum\">{{place_humedad}}</ion-label>\r\n    </ion-col>\r\n   </ion-row>\r\n\r\n\r\n   <ion-row class=\"row2\"> <!--Se inicia la segunda columna-->  \r\n    <ion-col class=\"col1\" > \r\n      <ion-row class=\"row1\"><ion-button class=\"Comp1\">{{estado}}</ion-button> </ion-row>\r\n      <ion-row class=\"row1\"><ion-button class=\"Comp3\">Normal</ion-button> </ion-row>\r\n      <ion-row class=\"row1\">  <ion-button class=\"Comp5\">Normal</ion-button> </ion-row>\r\n    </ion-col>\r\n    <ion-col class=\"col2\">  <!--se inicia la columna 2-->  \r\n      <ion-row class=\"row1\"><ion-button class=\"Comp2\">Normal</ion-button> </ion-row>\r\n      <ion-row class=\"row1\"><ion-button class=\"Comp4\">Normal</ion-button> </ion-row>\r\n      <ion-row class=\"row1\"><ion-button class=\"Comp6\">Normal</ion-button> </ion-row>\r\n    </ion-col>\r\n  </ion-row>\r\n\r\n\r\n</ion-content>\r\n\r\n\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-header class=\"ion-no-border\">\r\n  <ion-toolbar >\r\n    <ion-buttons slot=\"start\">\r\n      <ion-menu-button></ion-menu-button>\r\n    </ion-buttons>\r\n    <ion-title>Alarma</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-row class=\"graf_v\" > <ion-row  class = \"graf\"> <canvas id=\"temp\" #lineCanvas ></canvas> </ion-row> </ion-row>\r\n  <ion-row><ion-col></ion-col><ion-col class=\"Boton_graf\"><ion-button class=\"Boton_graf\" (click)=\"Boton()\">{{nombre_boton}}  </ion-button></ion-col> <ion-col></ion-col>   </ion-row>\r\n  <ion-row  class=\"rowtemp\" >\r\n    <ion-col>\r\n     <ion-label class=\"Temperatura\">Temperatura:</ion-label> \r\n    </ion-col>\r\n    <ion-col  >\r\n     <ion-label class=\"temp\">{{place_temperatura}}</ion-label>\r\n    </ion-col>\r\n   </ion-row>\r\n\r\n   <ion-row class=\"rowhum\" >\r\n    <ion-col>\r\n     <ion-label class=\"Humedad\">Humedad:</ion-label> \r\n    </ion-col>\r\n    <ion-col>\r\n     <ion-label class=\"hum\">{{place_humedad}}</ion-label>\r\n    </ion-col>\r\n   </ion-row>\r\n\r\n\r\n   <ion-row class=\"row2\"> <!--Se inicia la segunda columna-->  \r\n    <ion-col class=\"col1\" > \r\n      <ion-row class=\"row1\"><ion-button class=\"Comp1\">{{estado}}</ion-button> </ion-row>\r\n      <ion-row class=\"row1\"><ion-button class=\"Comp3\">Normal</ion-button> </ion-row>\r\n      <ion-row class=\"row1\">  <ion-button class=\"Comp5\">Normal</ion-button> </ion-row>\r\n    </ion-col>\r\n    <ion-col class=\"col2\">  <!--se inicia la columna 2-->  \r\n      <ion-row class=\"row1\"><ion-button class=\"Comp2\">Peligro</ion-button> </ion-row>\r\n      <ion-row class=\"row1\"><ion-button class=\"Comp4\">Normal</ion-button> </ion-row>\r\n      <ion-row class=\"row1\"><ion-button class=\"Comp6\">Peligro</ion-button> </ion-row>\r\n    </ion-col>\r\n  </ion-row>\r\n\r\n\r\n</ion-content>\r\n\r\n\r\n\r\n");
 
 /***/ }),
 
@@ -13039,6 +13039,7 @@ let AlarmaPage = class AlarmaPage {
             }
             this.nombre_boton = "Cambiar a Humedad";
             this.puntos();
+            console.log(this.puntos_temp);
             if (this.lineChart != undefined) {
                 this.lineChart.destroy();
             }
@@ -13060,8 +13061,8 @@ let AlarmaPage = class AlarmaPage {
         this.puntos_temp = [];
         this.puntos_humedad = [];
         this.fecha_Vec = [];
-        console.log(this.authSvc.datos_seg[1]);
-        for (var i = 0; i < 10; i++) {
+        console.log(this.authSvc.datos_seg);
+        for (var i = 20; i < 30; i++) {
             this.puntos_temp.push((1 / 3) * (Number(this.authSvc.datos_seg[i]["field7"])));
             this.puntos_humedad.push((1 / 3) * (Number(this.authSvc.datos_seg[i]["field8"])));
             const fechas = String(this.func_fecha(i)).split(" ");
